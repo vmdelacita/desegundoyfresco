@@ -1,0 +1,60 @@
+---
+import { getEntry, render } from 'astro:content';
+import Base from '../../../../layouts/Base.astro';
+import { formatearFecha, migasDeZona, todasLasVias, urlAutor, urlEtiqueta, urlGrado, urlVia } from '../../../../lib/vias';
+
+// Una página por vía, en /AAAA/MM/DD/nombre/ (la misma dirección que tenía en WordPress).
+export async function getStaticPaths() {
+  const vias = await todasLasVias();
+  return vias.map((via) => {
+    const [, year, month, day, slug] = urlVia(via).split('/');
+    return { params: { year, month, day, slug }, props: { via } };
+  });
+}
+
+const { via } = Astro.props;
+const { Content } = await render(via);
+const d = via.data;
+const autor = await getEntry(d.autor);
+if (!autor) throw new Error(`«${via.id}»: el autor «${d.autor.id}» no existe. Añade src/content/autores/${d.autor.id}.json.`);
+const zona = migasDeZona(via);
+const { lat, lng } = d.coordenadas ?? {};
+---
+
+<Base titulo={d.titulo} descripcion={`${d.grado} · ${zona.at(-1)?.nombre ?? ''}`}>
+  <article>
+    <h1>{d.titulo}</h1>
+    <p class="suave">
+      <time datetime={d.fecha.toISOString()}>{formatearFecha(d.fecha)}</time>{' · '}<a href={urlAutor(autor.id)}>{autor.data.nombre}</a>
+    </p>
+    <img src={d.portada} alt="" width="1000" />
+
+    <dl class="ficha">
+      <dt>Grado</dt><dd><a href={urlGrado(d.grado)}>{d.grado}</a></dd>
+      {d.longitud && <><dt>Longitud</dt><dd>{d.longitud} m</dd></>}
+      <dt>Zona</dt>
+      <dd>{zona.map((z, i) => <>{i > 0 && ' › '}<a href={z.url}>{z.nombre}</a></>)}</dd>
+      <dt>Roca</dt><dd>{d.roca}</dd>
+      <dt>Tipo</dt><dd>{d.tipo}</dd>
+      {d.material && <><dt>Material</dt><dd>{d.material}</dd></>}
+      {d.horario && <><dt>Horario</dt><dd>{d.horario}</dd></>}
+      {d.fechaEscalada && <><dt>Escalada el</dt><dd>{formatearFecha(d.fechaEscalada)}</dd></>}
+      {lat !== undefined && <><dt>Coordenadas</dt><dd>{lat}, {lng}</dd></>}
+    </dl>
+
+    <div class="texto"><Content /></div>
+
+    {d.etiquetas.length > 0 && (
+      <p class="suave">
+        Etiquetas: {d.etiquetas.map((e, i) => <>{i > 0 && ', '}<a href={urlEtiqueta(e)}>{e}</a></>)}
+      </p>
+    )}
+  </article>
+</Base>
+
+<style>
+  .ficha { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; padding: 12px 16px; margin: 20px 0; border: 1px solid var(--linea); border-radius: 6px; font-size: 16px; }
+  .ficha dt { color: var(--suave); }
+  .ficha dd { margin: 0; }
+  .texto :global(img) { display: block; margin: 20px 0; }
+</style>

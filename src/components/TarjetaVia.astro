@@ -1,0 +1,27 @@
+---
+import { formatearFecha, migasDeZona, urlVia, type Via } from '../lib/vias';
+
+interface Props {
+  via: Via;
+}
+const { via } = Astro.props;
+const { titulo, grado, portada, fecha } = via.data;
+const zona = migasDeZona(via).at(-1);
+---
+
+<article class="tarjeta">
+  <a href={urlVia(via)}>
+    <img src={portada} alt="" loading="lazy" width="720" />
+  </a>
+  <h2><a href={urlVia(via)}>{titulo}</a></h2>
+  <p class="suave">
+    {grado} · {zona?.nombre} · <time datetime={fecha.toISOString()}>{formatearFecha(fecha)}</time>
+  </p>
+</article>
+
+<style>
+  .tarjeta h2 { font-size: 1.15rem; margin: 8px 0 0; }
+  .tarjeta h2 a { color: inherit; text-decoration: none; }
+  .tarjeta img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+  .tarjeta p { margin: 4px 0 0; }
+</style>

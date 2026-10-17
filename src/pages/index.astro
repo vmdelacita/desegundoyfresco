@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import TarjetaVia from '../components/TarjetaVia.astro';
+import { todasLasVias } from '../lib/vias';
+import { POR_PAGINA } from '../lib/paginacion';
+
+const vias = await todasLasVias();
+const recientes = vias.slice(0, POR_PAGINA);
+const hayMas = vias.length > POR_PAGINA;
+---
+
+<Base titulo="De segundo y fresco">
+  <h1>Últimas vías</h1>
+  <ul class="lista">
+    {recientes.map((via) => <li><TarjetaVia via={via} /></li>)}
+  </ul>
+  {hayMas && <p class="paginacion"><span></span><a href="/page/2/">Vías anteriores →</a></p>}
+</Base>

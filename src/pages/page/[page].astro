@@ -1,0 +1,33 @@
+---
+import Base from '../../layouts/Base.astro';
+import TarjetaVia from '../../components/TarjetaVia.astro';
+import { todasLasVias } from '../../lib/vias';
+import { POR_PAGINA } from '../../lib/paginacion';
+
+// La página 1 es la portada (/); aquí solo van de la 2 en adelante.
+export async function getStaticPaths() {
+  const vias = await todasLasVias();
+  const total = Math.ceil(vias.length / POR_PAGINA);
+  return Array.from({ length: Math.max(total - 1, 0) }, (_, i) => {
+    const pagina = i + 2;
+    return {
+      params: { page: String(pagina) },
+      props: { pagina, total, vias: vias.slice((pagina - 1) * POR_PAGINA, pagina * POR_PAGINA) },
+    };
+  });
+}
+
+const { pagina, total, vias } = Astro.props;
+const anterior = pagina === 2 ? '/' : `/page/${pagina - 1}/`;
+---
+
+<Base titulo={`Página ${pagina}`}>
+  <h1>Vías anteriores · página {pagina}</h1>
+  <ul class="lista">
+    {vias.map((via) => <li><TarjetaVia via={via} /></li>)}
+  </ul>
+  <p class="paginacion">
+    <a href={anterior}>← Más recientes</a>
+    {pagina < total ? <a href={`/page/${pagina + 1}/`}>Vías anteriores →</a> : <span></span>}
+  </p>
+</Base>

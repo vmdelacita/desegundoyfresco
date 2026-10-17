@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import { formatearFecha, todasLasVias, urlVia } from '../lib/vias';
+
+const vias = await todasLasVias();
+const porAnio = new Map<number, typeof vias>();
+for (const via of vias) {
+  const anio = via.data.fecha.getUTCFullYear();
+  porAnio.set(anio, [...(porAnio.get(anio) ?? []), via]);
+}
+---
+
+<Base titulo="Archivo">
+  <h1>Archivo</h1>
+  {[...porAnio].map(([anio, lista]) => (
+    <section>
+      <h2>{anio}</h2>
+      <ul>
+        {lista.map((via) => (
+          <li>
+            <a href={urlVia(via)}>{via.data.titulo}</a>
+            <span class="suave"> · {formatearFecha(via.data.fecha)}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Base>

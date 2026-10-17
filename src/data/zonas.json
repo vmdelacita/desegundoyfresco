@@ -1,0 +1,184 @@
+[
+  {
+    "nombre": "Aragón",
+    "slug": "aragon",
+    "hijos": [
+      {
+        "nombre": "Maladeta",
+        "slug": "maladeta"
+      },
+      {
+        "nombre": "Ordesa",
+        "slug": "ordesa"
+      },
+      {
+        "nombre": "Riglos",
+        "slug": "riglos"
+      }
+    ]
+  },
+  {
+    "nombre": "Catalunya",
+    "slug": "catalunya",
+    "hijos": [
+      {
+        "nombre": "Aigüestortes",
+        "slug": "aiguestortes",
+        "hijos": [
+          {
+            "nombre": "Amitges",
+            "slug": "amitges"
+          }
+        ]
+      },
+      {
+        "nombre": "Garraf",
+        "slug": "garraf"
+      },
+      {
+        "nombre": "L'Escala",
+        "slug": "lescala"
+      },
+      {
+        "nombre": "Montrebei",
+        "slug": "montrebei"
+      },
+      {
+        "nombre": "Montsant",
+        "slug": "montsant"
+      },
+      {
+        "nombre": "Montserrat",
+        "slug": "montserrat",
+        "hijos": [
+          {
+            "nombre": "Agulles",
+            "slug": "agulles"
+          },
+          {
+            "nombre": "Cara norte",
+            "slug": "cara-norte"
+          },
+          {
+            "nombre": "Ecos",
+            "slug": "ecos"
+          },
+          {
+            "nombre": "Gorros",
+            "slug": "gorros"
+          },
+          {
+            "nombre": "Montserrat sur",
+            "slug": "montserrat-sur"
+          },
+          {
+            "nombre": "Sant Benet",
+            "slug": "sant-benet"
+          }
+        ]
+      },
+      {
+        "nombre": "Pedraforca",
+        "slug": "pedraforca"
+      },
+      {
+        "nombre": "Sant Llorenç de Montgai",
+        "slug": "sant-llorenc-de-montgai"
+      },
+      {
+        "nombre": "Terradets",
+        "slug": "terradets"
+      },
+      {
+        "nombre": "Vilanova de Meià",
+        "slug": "vilanova-de-meia"
+      }
+    ]
+  },
+  {
+    "nombre": "Levante",
+    "slug": "levante",
+    "hijos": [
+      {
+        "nombre": "Montanejos",
+        "slug": "montanejos"
+      },
+      {
+        "nombre": "Morro de Toix",
+        "slug": "morro-de-toix"
+      },
+      {
+        "nombre": "Peñon de Ifach",
+        "slug": "penon-de-ifach"
+      },
+      {
+        "nombre": "Puig Campana",
+        "slug": "puig-campana"
+      }
+    ]
+  },
+  {
+    "nombre": "Mallorca",
+    "slug": "mallorca"
+  },
+  {
+    "nombre": "Otros países",
+    "slug": "otros-paises",
+    "hijos": [
+      {
+        "nombre": "Colombia",
+        "slug": "colombia"
+      },
+      {
+        "nombre": "EEUU",
+        "slug": "eeuu"
+      },
+      {
+        "nombre": "Francia",
+        "slug": "francia"
+      },
+      {
+        "nombre": "Grecia",
+        "slug": "grecia"
+      },
+      {
+        "nombre": "México",
+        "slug": "mexico"
+      },
+      {
+        "nombre": "Peru",
+        "slug": "peru"
+      },
+      {
+        "nombre": "Suiza",
+        "slug": "suiza"
+      }
+    ]
+  },
+  {
+    "nombre": "Picos de Europa",
+    "slug": "picos-de-europa"
+  },
+  {
+    "nombre": "Zona centro",
+    "slug": "zona-centro",
+    "hijos": [
+      {
+        "nombre": "Barranco de la Hoz",
+        "slug": "barranco-de-la-hoz"
+      },
+      {
+        "nombre": "Galayos",
+        "slug": "galayos"
+      },
+      {
+        "nombre": "La cabrera",
+        "slug": "la-cabrera"
+      },
+      {
+        "nombre": "La Pedriza",
+        "slug": "la-pedriza"
+      }
+    ]
+  }
+]

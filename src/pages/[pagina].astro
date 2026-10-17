@@ -1,0 +1,18 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+// Páginas fijas en la raíz, como en WordPress: /quienes-somos/, /como-monto-reuniones/…
+export async function getStaticPaths() {
+  const paginas = await getCollection('paginas');
+  return paginas.map((pagina) => ({ params: { pagina: pagina.id }, props: { pagina } }));
+}
+
+const { pagina } = Astro.props;
+const { Content } = await render(pagina);
+---
+
+<Base titulo={pagina.data.titulo}>
+  <h1>{pagina.data.titulo}</h1>
+  <Content />
+</Base>

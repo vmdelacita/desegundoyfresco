@@ -1,0 +1,81 @@
+---
+// Estructura común de todas las páginas. El aspecto es provisional hasta la Fase 3 (diseño).
+interface Props {
+  titulo: string;
+  descripcion?: string;
+}
+const { titulo, descripcion = 'Un blog de escalada en pared, fundamentalmente en Catalunya y alrededores' } = Astro.props;
+const nombreSitio = 'De segundo y fresco';
+const tituloCompleto = titulo === nombreSitio ? titulo : `${titulo} · ${nombreSitio}`;
+const canonica = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{tituloCompleto}</title>
+    <meta name="description" content={descripcion} />
+    <link rel="canonical" href={canonica} />
+    <link rel="alternate" type="application/rss+xml" title={nombreSitio} href="/feed.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+  </head>
+  <body>
+    <header class="cabecera">
+      <a class="marca" href="/">{nombreSitio}</a>
+      <nav>
+        <a href="/category/zona/">Zonas</a>
+        <a href="/category/grado/">Grados</a>
+        <a href="/mapa-de-escaladas/">Mapa</a>
+        <a href="/archivo/">Archivo</a>
+        <a href="/quienes-somos/">Quiénes somos</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="pie">
+      <a href="/feed.xml">RSS</a>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    color-scheme: light dark;
+    --fondo: #fbfaf7;
+    --texto: #1d1d1b;
+    --suave: #6b6b66;
+    --enlace: #8a3b12;
+    --linea: #e3e0d8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: #171716;
+      --texto: #ecebe6;
+      --suave: #a3a39b;
+      --enlace: #e8a574;
+      --linea: #33332f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto;
+    padding: 0 16px 48px;
+    max-width: 44rem;
+    background: var(--fondo);
+    color: var(--texto);
+    font: 18px/1.6 system-ui, sans-serif;
+  }
+  a { color: var(--enlace); }
+  img, video { max-width: 100%; height: auto; border-radius: 4px; }
+  h1, h2 { line-height: 1.2; }
+  .cabecera { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid var(--linea); }
+  .cabecera nav { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 16px; }
+  .marca { font-weight: 700; font-size: 20px; color: var(--texto); text-decoration: none; }
+  .pie { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--linea); color: var(--suave); font-size: 15px; }
+  .suave { color: var(--suave); font-size: 15px; }
+  .lista { list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; }
+  .paginacion { display: flex; justify-content: space-between; margin-top: 32px; }
+</style>

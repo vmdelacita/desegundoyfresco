@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import TarjetaVia from '../../components/TarjetaVia.astro';
+import { todasLasCategorias } from '../../lib/vias';
+
+// Zonas, grados, tipos de piedra y tipos de escalada, con las mismas direcciones que WordPress:
+// /category/zona/aragon/ordesa/, /category/grado/6a/, /category/tipo-de-piedra/granito/…
+export async function getStaticPaths() {
+  const categorias = await todasLasCategorias();
+  return categorias.map((categoria) => ({ params: { ruta: categoria.ruta }, props: { categoria } }));
+}
+
+const { categoria } = Astro.props;
+---
+
+<Base titulo={categoria.titulo}>
+  {categoria.padre && <p class="suave"><a href={categoria.padre.url}>← {categoria.padre.titulo}</a></p>}
+  <h1>{categoria.titulo}</h1>
+
+  {categoria.hijos.length > 0 && (
+    <ul>
+      {categoria.hijos.map((h) => <li><a href={h.url}>{h.titulo}</a> <span class="suave">({h.total})</span></li>)}
+    </ul>
+  )}
+
+  {categoria.vias.length > 0 && (
+    <>
+      <p class="suave">{categoria.vias.length} {categoria.vias.length === 1 ? 'vía' : 'vías'}</p>
+      <ul class="lista">
+        {categoria.vias.map((via) => <li><TarjetaVia via={via} /></li>)}
+      </ul>
+    </>
+  )}
+</Base>

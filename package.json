@@ -1,0 +1,19 @@
+{
+  "name": "desegundoyfresco",
+  "version": "0.1.0",
+  "description": "De segundo y fresco: blog de escalada (Astro)",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "fotos": "node scripts/fotos.mjs"
+  },
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.4.0",
+    "sharp": "^0.35.5"
+  }
+}
