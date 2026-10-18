@@ -13,7 +13,7 @@ export async function GET(context: APIContext) {
       title: via.data.titulo,
       pubDate: via.data.fecha,
       link: urlVia(via),
-      description: `${via.data.grado} · ${migasDeZona(via).map((z) => z.nombre).join(' › ')}`,
+      description: [via.data.grado, migasDeZona(via).map((z) => z.nombre).join(' › ')].filter(Boolean).join(' · '),
     })),
     customData: '<language>es</language>',
   });

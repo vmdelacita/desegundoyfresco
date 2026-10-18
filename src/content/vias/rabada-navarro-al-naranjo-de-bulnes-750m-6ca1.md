@@ -1,0 +1,47 @@
+---
+titulo: Rabadá Navarro al Naranjo de Bulnes (750m, 6c/A1)
+fecha: 2017-09-13
+autor: otnoesmusica
+zona: [Picos de Europa]
+grado: 6c/A1
+longitud: 750
+roca: Caliza
+tipo: Vía larga
+fechaEscalada: 2017-08-02
+material: Un juego de friends, uno de empotradores, 16 cintas (la mitad largas) y muchas vagas. Mejor repetir algún friend mediano
+horario: 11 horas
+portada: /wp-content/uploads/2017/09/img_20170803_100239_hdr-01.jpg
+etiquetas: [Arnau, autoproteccion, bulnes, diedro, exposición, fisura, helicóptero, naranjo, navarro, picu, placa, rabada, rapel, urriellu]
+---
+
+Son las seis y media, suena el despertador. **Una alarma inútil en una noche de poco sueño**, en parte por el ruido de la tienda de campaña ante el fuerte viento y en parte por el nerviosismo que llevo por dentro, **peor que en una primera cita**. Asomo la cabeza y está despejado, por fin veo entera la Oeste.
+
+Hacía cinco días que Arnau y yo habíamos salido de Barcelona, con el objetivo de subir quizá la vía más famosa de España, la Rabadá Navarro al Urriellu. **Por el camino habíamos parado en Riglos** para hacer primero la Galletas y luego la [Norte al Puro](/2017/09/06/norte-al-puro_riglos/). **Una vez la meteo empezó a mejorar por Picos, tiramos para Asturias**, aunque el primer día tuvimos que retirarnos de la Peña de Fresnidiello en mitad de un buen chaparrón. Ese mismo día, no contentos con la chupa que nos había caído, preparamos los macutos y **caminamos bajo un *orbayu* desesperante las dos horas que separan Sotres del Picu**. Montamos la tienda, descansamos algo y como al día siguiente la meteo todavía era variable, nos fuimos a hacer la Nani (300m, V+) en cuatro largos, **apurando ensambles de hasta 140m**. Esa tarde, al menos, sí descansamos. **Arnau incluso fingió haber aprendido a jugar al mus con unos vascos.**
+
+![](/wp-content/uploads/2017/09/croquis.png "Croquis del refugio, con las reuniones que utilizamos marcadas con círculos")
+
+La Rabadá-Navarro a la Oeste del Naranjo es LA vía, no creo que pueda añadir gran cosa yo. **Su logica, su dificultad, su longitud, su historia... hay que estar loco para no querer subirla.** **Según hacíamos la corta aproximación iba acordándome de Noel,** de las veces que habíamos hablado de esta vía y de lo que hacía falta para subirla. Cacharrear, escalar fisuras, practicar artifo, acostumbrarse a largas jornadas en pared... poco a poco habíamos ido adquiriendo las herramientas necesarias para ponernos ahora en la piel de la cordada aragonesa más famosa. Preparando el material a pie de vía aparecen una cordada de parlanchines que nos sacan un poco de tono, así que empiezo a subir con algo de prisa.
+
+![](/wp-content/uploads/2017/09/img_20170802_080604.jpg "Ahí estoy yo peleándome con nuestro segundo largo")
+
+**El primer artifo (equipado) se hace bien en A0** y llego a la primera reunión, que hay que saltarse. Como iba despistado la monto, cometiendo el primero de los tres grandes errores del día. Arnau recupera el largo y vuelvo a tirar yo, cometiendo el segundo error: **empalmo los largos 2 y 3, a pesar de que el tercero es el más duro de la vía.** Éste es un diedro fisurado con varios desplomes que actualmente se encuentra completamente limpio y, aunque la reseña le da el grado *relativamente* amable de 6c, **la roca lavadísima y los pies patinosos no invitan a probarlo en libre**. Yo tuve que ir alternando pasos de A1 con alguna salida en libre más larga de lo que me hubiese gustado, ya que no repetimos ningún número de friend; aunque ese contratiempo **me obligó a disfrutar del paso del techito en libre, una auténtica joya.** Para pasar entero en artificial, mejor repetir los números medianos. Arnau recuperó el largo haciendo gala de las tablas que ya vamos teniendo en tapia, metiendo él algún friend que había recuperado antes para ahorrarse las incómodas salidas en libre y procurando ignorar a la cordada persecutora, que seguía metiendo prisa. **Solo quedaba un largo de 50 metros para terminar el primer diedro del día, montarnos sobre la lastra y que cambiasen un poco las tornas.**
+
+![](/wp-content/uploads/2017/09/img_20170802_091450_hdr-01.jpg "Si se escucha atentamente se puede oir a Arnau pensando: después del largo jodido que llevamos, me toca un desplome para terminar? No me jodas...")
+
+Efectivamente a partir de aquí pudimos empezar a saborear de verdad la pared. La cordada que nos seguía desapareció, el viento se relajó un poquito y, **con la confianza de habernos merendado ya los largos más duros de la vía, atacamos los que nos venían con el ánimo por las nubes.** De toda la jornada, quizá el largo que más disfruté fue el siguiente. Primero una salida fina en placa, en torno al 6a, que te exige navegar y ser preciso, y luego **los 40 metros de fisura de La Cicatriz,** en la que me salté una reunión intermedia para ir directo al final de ésta. **Una fisura diagonal completamente limpia, con presas de manos siempre buenísimas pero que exigen pasos largos, y con un patio increíble.**
+
+![](/wp-content/uploads/2017/09/img_20170802_110856_hdr-01.jpeg "Arnau gozando del patio de la Cicatriz, pese al viento")
+
+Aquí coge los cacharros Arnau y se abre el largo, curiosamente el que quizá sea de más difícil navegación. Primero una cornisa a la derecha, luego un diedro y **para terminar hay que acertar el momento exacto para hacer la transición a izquierda que te deja en la reunión previa a la Gran Travesía.** Casi 70 metros limpios donde ir gestionando cuerdas, cacharros e intuición. Y por fin nos plantamos en el largo de las fotos, **la placa inmisericorde que separa la cornisa del entreacto de la gran laja de la Guitarra, el último gran escollo que tuvieron que superar los aperturistas** antes de llegar a los diedros fáciles que se ven más adelante.
+
+La verdad es que la travesía es espectacular. Súmamente fina, con pasos largos sobre presas pequeñas, siempre exigiéndote que leas la roca bien para bajar o subir unos metros que te permitan alcanzar **las presas justas que, como las meigas, haberlas haylas.** Es casi ridículo pensarlo y mucho más ponerlo por escrito, pero **me sentí todo un Tommy Caldwell en el Dawn Wall** cuando en un pasito tuve que usar el pulgar en un invertido mientras respiraba flojito. Sutil diferencia que aquello sea 9a y esto 6a, por descontado. La roca, además, es impresionante. La caliza del Picu, gris y áspera como ninguna, reduce la cantidad de fuerza que has de aplicar en cada agarre, y hace que confiar en los pies sea mucho más sencillo. **No me extraña que los grandes nombres vengan a apretar en las vías duras de la Oeste.**
+
+![](/wp-content/uploads/2017/09/img_20170802_122826.jpg "La foto obligada en la gran travesía")
+
+Montados sobre la Guitarra cometimos el tercer error del día: decidimos que haríamos un corto rapel y pararíamos en la reunión colgada que tiene justo debajo, en lugar de hacer la maniobra para descolgar al primero, que termine el largo en travesía y luego descolgar al segundo. **La reunión bajo el rapel es super incómoda y se monta sobre 3 clavos, algo que no da mucha confianza con ese patio.** Para más inri, en ese momento apareció un helicóptero que iba a rescatar a un herido en la Sagitario (oculta para nosotros), levantando aún más viento y haciendo más penoso el momento. Así que salí de ahí y empalmé un par de largos para montar reunión en la base del gran diedro. Arnau recupera el largo y miramos el reloj: **son las 2 de la tarde y ya nos hemos merendado la mitad dura de la vía, ahora toca relajarnos y disfrutar.**
+
+Después de comer algo y descansar, tira Arnau los primeros 30 metros del Gran Diedro. **Este largo, como el siguiente, son ya mucho más amables, medio en diedro medio en chimenea,** y serían los primeros en los que nos tocase algo el sol. Como la vía va girando hacia norte, de alguna manera vas huyendo del sol, que volvió a dejar de darnos hacia el final. Arnau se encarga del destrepe hasta la plaza Rocasolano y yo le sigo. [Como aprendí en Galayos](/2015/09/12/punta-maria-luisa-torreon/), es importante meter seguros en las destrepadas, así que se lo recuerdo para no tener que pasar luego yo un mal rato. Desde la repisa de esta reunión solo quedan **5 metros de V+, que todavía reservaban un regalito en forma de dos monodedos para superar el murete** (en A0 sale fácil). A partir de ahí ya podemos olvidarnos del V grado y solo nos queda progresar por terreno de IV. Un diedro sencillo para mí, una tirada de las largas para Arnau, de nuevo con una componente bastante grande de navegación, y **los últimos 60m de paseo para mí, cada vez menos verticales.** Foto de cima, más significativa que nunca, bajada por la sur, con atascada de cuerdas en el último rápel incluída, y vuelta a la tienda, donde disfrutar de una merecida cena. **Aunque soñábamos con el cachopo en Sotres, tuvimos que esperar a bajar a la mañana siguiente.**
+
+![](/wp-content/uploads/2017/09/img_20170802_184314_hdr.jpg "Cima!")
+
+**Esta vía nos exigió mucho.** Todas las técnicas, todos los truquillos y todas las horas echadas en las rocas fueron necesarias. Pero sobretodo fue imprescindible la química entre la cordada, saber que los dos teníamos las mismas motivaciones y **las mismas ganas de repetir este trocito de historia**. Con más de 6000 metros de escalada compartidos (de momento), fue todo un lujo subir esta vía con Arnau. **Una cordada, al fin y al cabo, es una orden judicial de acercamiento: en 6 días no tuvimos permitido alejarnos más de 60 metros.** Y que sigamos sumando vías.

@@ -1,18 +1,30 @@
 ---
 import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
 import TarjetaVia from '../components/TarjetaVia.astro';
-import { todasLasVias } from '../lib/vias';
-import { POR_PAGINA } from '../lib/paginacion';
+import MenuCategorias from '../components/MenuCategorias.astro';
+import { chipsDeVia, tituloCorto, todasLasVias, urlVia } from '../lib/vias';
+import { totalPaginas, viasDePagina } from '../lib/paginacion';
 
 const vias = await todasLasVias();
-const recientes = vias.slice(0, POR_PAGINA);
-const hayMas = vias.length > POR_PAGINA;
+// La más reciente va a todo el ancho con su foto; el resto, en tarjetas debajo.
+const [destacada, ...resto] = viasDePagina(vias, 1);
+const hayMas = totalPaginas(vias.length) > 1;
 ---
 
 <Base titulo="De segundo y fresco">
-  <h1>Últimas vías</h1>
-  <ul class="lista">
-    {recientes.map((via) => <li><TarjetaVia via={via} /></li>)}
-  </ul>
-  {hayMas && <p class="paginacion"><span></span><a href="/page/2/">Vías anteriores →</a></p>}
+  <h1 class="solo-lectores">De segundo y fresco: un blog de escalada en pared</h1>
+  {destacada && (
+    <Hero imagen={destacada.data.portada} titulo={tituloCorto(destacada.data.titulo)} href={urlVia(destacada)} chips={chipsDeVia(destacada)} />
+  )}
+  <div class="contenedor con-lateral">
+    <section>
+      <h2 class="seccion">Últimas vías</h2>
+      <ul class="rejilla rejilla-dos">
+        {resto.map((via) => <li><TarjetaVia via={via} /></li>)}
+      </ul>
+      {hayMas && <p class="paginacion"><span></span><a class="boton" href="/page/2/">Vías anteriores →</a></p>}
+    </section>
+    <MenuCategorias />
+  </div>
 </Base>

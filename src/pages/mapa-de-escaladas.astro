@@ -1,9 +1,16 @@
 ---
 import Base from '../layouts/Base.astro';
+import TituloPagina from '../components/TituloPagina.astro';
 ---
 
 <!-- Mantiene la dirección que tenía la página de WordPress. El mapa real (Leaflet) se hace en la Fase 5. -->
 <Base titulo="Mapa de escaladas">
-  <h1>Mapa de escaladas</h1>
-  <p>El mapa estará disponible próximamente.</p>
+  <TituloPagina titulo="Mapa de escaladas" />
+  <div class="contenedor">
+    <p class="pendiente">El mapa estará disponible próximamente.</p>
+  </div>
 </Base>
+
+<style>
+  .pendiente { display: grid; place-items: center; min-height: 50vh; margin: 40px 0 0; background: var(--fondo-suave); color: var(--suave); font: 600 20px/1 var(--etiquetas); letter-spacing: 0.1em; text-transform: uppercase; }
+</style>

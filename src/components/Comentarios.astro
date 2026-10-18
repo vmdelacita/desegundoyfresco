@@ -1,0 +1,35 @@
+---
+import { formatearFecha } from '../lib/vias';
+
+// Comentarios que tenía la entrada en WordPress, como texto fijo (sin formulario para escribir).
+interface Props {
+  comentarios: { autor: string; fecha: Date; texto: string; respuesta?: boolean }[];
+}
+const { comentarios } = Astro.props;
+---
+
+{comentarios.length > 0 && (
+  <section class="comentarios columna" aria-labelledby="comentarios-titulo">
+    <h2 id="comentarios-titulo">{comentarios.length === 1 ? '1 comentario' : `${comentarios.length} comentarios`}</h2>
+    <ol>
+      {comentarios.map((c) => (
+        <li class:list={{ respuesta: c.respuesta }}>
+          <p class="quien"><strong>{c.autor}</strong> · <time datetime={c.fecha.toISOString().slice(0, 10)}>{formatearFecha(c.fecha)}</time></p>
+          {c.texto.split(/\n{2,}/).map((parrafo) => <p class="texto-comentario">{parrafo}</p>)}
+        </li>
+      ))}
+    </ol>
+  </section>
+)}
+
+<style>
+  .comentarios { margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--linea); }
+  h2 { margin: 0 0 20px; font-size: 30px; }
+  ol { margin: 0; padding: 0; list-style: none; }
+  li { margin: 0 0 24px; }
+  li.respuesta { margin-left: 28px; padding-left: 16px; border-left: 3px solid var(--turquesa); }
+  p { margin: 0 0 8px; }
+  .quien { color: var(--suave); font: 600 15px/1.3 var(--etiquetas); letter-spacing: 0.06em; text-transform: uppercase; }
+  .quien strong { color: var(--texto); }
+  .texto-comentario { font-size: 17px; line-height: 1.6; white-space: pre-line; overflow-wrap: anywhere; }
+</style>

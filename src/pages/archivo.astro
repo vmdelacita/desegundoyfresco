@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import TituloPagina from '../components/TituloPagina.astro';
 import { formatearFecha, todasLasVias, urlVia } from '../lib/vias';
 
 const vias = await todasLasVias();
@@ -11,18 +12,27 @@ for (const via of vias) {
 ---
 
 <Base titulo="Archivo">
-  <h1>Archivo</h1>
-  {[...porAnio].map(([anio, lista]) => (
-    <section>
-      <h2>{anio}</h2>
-      <ul>
-        {lista.map((via) => (
-          <li>
-            <a href={urlVia(via)}>{via.data.titulo}</a>
-            <span class="suave"> · {formatearFecha(via.data.fecha)}</span>
-          </li>
-        ))}
-      </ul>
-    </section>
-  ))}
+  <TituloPagina titulo="Archivo" detalle={`${vias.length} ${vias.length === 1 ? 'vía' : 'vías'} desde ${[...porAnio.keys()].at(-1) ?? ''}`} />
+  <div class="contenedor">
+    <div class="columna">
+      {[...porAnio].map(([anio, lista]) => (
+        <section>
+          <h2 class="seccion">{anio}</h2>
+          <ul class="archivo">
+            {lista.map((via) => (
+              <li>
+                <a href={urlVia(via)}>{via.data.titulo}</a>
+                <span class="suave"> · {formatearFecha(via.data.fecha)}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </div>
 </Base>
+
+<style>
+  .archivo { margin: 0; padding: 0; list-style: none; }
+  .archivo li { padding: 8px 0; border-bottom: 1px solid var(--linea); }
+</style>

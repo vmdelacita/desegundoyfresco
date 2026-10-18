@@ -1,5 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
+import TituloPagina from '../../components/TituloPagina.astro';
+import Tesela from '../../components/Tesela.astro';
 import TarjetaVia from '../../components/TarjetaVia.astro';
 import { todasLasCategorias } from '../../lib/vias';
 
@@ -11,24 +13,45 @@ export async function getStaticPaths() {
 }
 
 const { categoria } = Astro.props;
+// Las zonas se muestran como fotos; grados, piedra y tipo, como etiquetas.
+const comoFotos = categoria.grupo === 'Zona';
+// En la página raíz («Zonas», «Grados»…) no hay vías propias: se cuentan las de sus grupos.
+const total = categoria.vias.length || categoria.hijos.reduce((suma, h) => suma + h.total, 0);
+const plural = (n: number) => `${n} ${n === 1 ? 'vía' : 'vías'}`;
 ---
 
 <Base titulo={categoria.titulo}>
-  {categoria.padre && <p class="suave"><a href={categoria.padre.url}>← {categoria.padre.titulo}</a></p>}
-  <h1>{categoria.titulo}</h1>
+  <TituloPagina
+    titulo={categoria.titulo}
+    etiqueta={categoria.padre ? categoria.grupo : undefined}
+    detalle={plural(total)}
+    atras={categoria.padre}
+  />
 
-  {categoria.hijos.length > 0 && (
-    <ul>
-      {categoria.hijos.map((h) => <li><a href={h.url}>{h.titulo}</a> <span class="suave">({h.total})</span></li>)}
-    </ul>
-  )}
-
-  {categoria.vias.length > 0 && (
-    <>
-      <p class="suave">{categoria.vias.length} {categoria.vias.length === 1 ? 'vía' : 'vías'}</p>
-      <ul class="lista">
-        {categoria.vias.map((via) => <li><TarjetaVia via={via} /></li>)}
+  <div class="contenedor">
+    {categoria.hijos.length > 0 && comoFotos && (
+      <ul class="rejilla teselas">
+        {categoria.hijos.map((h) => <li><Tesela titulo={h.titulo} url={h.url} total={h.total} imagen={h.portada} /></li>)}
       </ul>
-    </>
-  )}
+    )}
+    {categoria.hijos.length > 0 && !comoFotos && (
+      <ul class="chips">
+        {categoria.hijos.map((h) => <li><a href={h.url}>{h.titulo} <span>({h.total})</span></a></li>)}
+      </ul>
+    )}
+
+    {categoria.vias.length > 0 && (
+      <>
+        {categoria.hijos.length > 0 && <h2 class="seccion">Todas las vías</h2>}
+        <ul class="rejilla" style={categoria.hijos.length === 0 ? 'margin-top: 40px' : undefined}>
+          {categoria.vias.map((via) => <li><TarjetaVia via={via} /></li>)}
+        </ul>
+      </>
+    )}
+  </div>
 </Base>
+
+<style>
+  .teselas { margin-top: 40px; }
+  .chips { margin-top: 32px; }
+</style>

@@ -1,6 +1,8 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { copyFile, mkdir } from 'node:fs/promises';
+import { satteri } from '@astrojs/markdown-satteri';
+import { piesDeFoto } from './src/lib/pies-de-foto.mjs';
 
 // WordPress servía el RSS en /feed/. GitHub Pages solo sirve /feed/ si existe
 // feed/index.html, así que copiamos feed.xml ahí al terminar la compilación.
@@ -20,5 +22,6 @@ export default defineConfig({
   // Igual que WordPress: todas las URLs terminan en barra y cada página es una carpeta.
   trailingSlash: 'always',
   build: { format: 'directory' },
+  markdown: { processor: satteri({ hastPlugins: [piesDeFoto] }) },
   integrations: [sitemap(), feedEnRutaWordPress],
 });

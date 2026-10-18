@@ -1,8 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
+import TituloPagina from '../components/TituloPagina.astro';
 ---
 
 <Base titulo="Página no encontrada">
-  <h1>Página no encontrada</h1>
-  <p>Esta dirección no existe. Prueba desde la <a href="/">portada</a> o el <a href="/archivo/">archivo</a>.</p>
+  <TituloPagina titulo="Página no encontrada" />
+  <div class="contenedor">
+    <div class="columna">
+      <p>Esta dirección no existe. Prueba desde la <a href="/">portada</a>, las <a href="/category/zona/">zonas</a> o el <a href="/archivo/">archivo</a>.</p>
+    </div>
+  </div>
 </Base>

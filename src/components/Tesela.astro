@@ -1,0 +1,29 @@
+---
+// Zona (o subzona) como foto con su nombre en un bloque de color y el número de vías.
+interface Props {
+  titulo: string;
+  url: string;
+  total: number;
+  imagen: string;
+}
+const { titulo, url, total, imagen } = Astro.props;
+---
+
+<a class="tesela" href={url}>
+  <img src={imagen} alt="" loading="lazy" width="800" height="450" />
+  <span class="texto">
+    <span class="nombre"><span>{titulo}</span></span>
+    <span class="cuenta">{total} {total === 1 ? 'vía' : 'vías'}</span>
+  </span>
+</a>
+
+<style>
+  .tesela { position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden; background: var(--fondo-suave); color: inherit; text-decoration: none; }
+  .tesela img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+  .tesela:hover img { transform: scale(1.04); }
+  .texto { position: absolute; left: 16px; right: 16px; bottom: 16px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .nombre { font: 500 clamp(30px, 3.2vw, 44px)/1.42 var(--titulos); }
+  .nombre span { padding: 0 0.3em; background: var(--velo); color: #fff; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  .cuenta { padding: 6px 10px; background: #fff; color: var(--texto); font: 600 14px/1 var(--etiquetas); letter-spacing: 0.1em; text-transform: uppercase; }
+  @media (prefers-reduced-motion: reduce) { .tesela img { transition: none; } }
+</style>

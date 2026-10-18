@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import TituloPagina from '../../components/TituloPagina.astro';
 import TarjetaVia from '../../components/TarjetaVia.astro';
 import { todasLasVias } from '../../lib/vias';
 
@@ -17,9 +18,10 @@ const { nombre, vias } = Astro.props;
 ---
 
 <Base titulo={`Vías de ${nombre}`}>
-  <h1>Vías de {nombre}</h1>
-  <p class="suave">{vias.length} {vias.length === 1 ? 'vía' : 'vías'}</p>
-  <ul class="lista">
-    {vias.map((via) => <li><TarjetaVia via={via} /></li>)}
-  </ul>
+  <TituloPagina etiqueta="Autor" titulo={nombre} detalle={`${vias.length} ${vias.length === 1 ? 'vía' : 'vías'}`} />
+  <div class="contenedor">
+    <ul class="rejilla" style="margin-top: 40px">
+      {vias.map((via) => <li><TarjetaVia via={via} /></li>)}
+    </ul>
+  </div>
 </Base>

@@ -1,5 +1,12 @@
 ---
-// Estructura común de todas las páginas. El aspecto es provisional hasta la Fase 3 (diseño).
+// Estructura común de todas las páginas: cabecera con el menú, contenido y pie.
+// Las tipografías van incluidas en la web (no se piden a Google), así que no hay avisos de cookies ni de terceros.
+import '@fontsource/barlow-condensed/600.css';
+import '@fontsource/barlow-condensed/700.css';
+import '@fontsource/montserrat/800.css';
+import '@fontsource-variable/source-serif-4/wght.css';
+import '@fontsource-variable/source-serif-4/wght-italic.css';
+
 interface Props {
   titulo: string;
   descripcion?: string;
@@ -8,6 +15,11 @@ const { titulo, descripcion = 'Un blog de escalada en pared, fundamentalmente en
 const nombreSitio = 'De segundo y fresco';
 const tituloCompleto = titulo === nombreSitio ? titulo : `${titulo} · ${nombreSitio}`;
 const canonica = new URL(Astro.url.pathname, Astro.site);
+
+const menu = [
+  { texto: 'Cómo monto reuniones', url: '/como-monto-reuniones/' },
+  { texto: 'Mapa', url: '/mapa-de-escaladas/' },
+];
 ---
 
 <!doctype html>
@@ -23,59 +35,125 @@ const canonica = new URL(Astro.url.pathname, Astro.site);
   </head>
   <body>
     <header class="cabecera">
-      <a class="marca" href="/">{nombreSitio}</a>
-      <nav>
-        <a href="/category/zona/">Zonas</a>
-        <a href="/category/grado/">Grados</a>
-        <a href="/mapa-de-escaladas/">Mapa</a>
-        <a href="/archivo/">Archivo</a>
-        <a href="/quienes-somos/">Quiénes somos</a>
-      </nav>
+      <div class="contenedor">
+        <a class="marca" href="/">De segundo <span>y fresco</span></a>
+        <nav class="menu" aria-label="Principal">
+          {menu.map((m) => (
+            <a href={m.url} aria-current={Astro.url.pathname.startsWith(m.url) ? 'page' : undefined}>{m.texto}</a>
+          ))}
+        </nav>
+      </div>
     </header>
     <main>
       <slot />
     </main>
     <footer class="pie">
-      <a href="/feed.xml">RSS</a>
+      <div class="contenedor">
+        <span>De segundo y fresco · Un blog de escalada en pared</span>
+        <a href="/feed.xml">RSS</a>
+      </div>
     </footer>
   </body>
 </html>
 
 <style is:global>
+  /* EB Garamond (licencia OFL, en src/assets/fonts/): copia propia reducida al alfabeto latino que conserva las cifras
+     elzevirianas (onum) y las versalitas (smcp), que los paquetes de Fontsource y Google recortan. */
+  @font-face { font-family: 'EB Garamond'; font-style: normal; font-weight: 500; font-display: swap; src: url('../assets/fonts/ebgaramond-500.woff2') format('woff2'); }
+  @font-face { font-family: 'EB Garamond'; font-style: normal; font-weight: 600; font-display: swap; src: url('../assets/fonts/ebgaramond-600.woff2') format('woff2'); }
+  @font-face { font-family: 'EB Garamond'; font-style: italic; font-weight: 500; font-display: swap; src: url('../assets/fonts/ebgaramond-500-italic.woff2') format('woff2'); }
+
   :root {
-    color-scheme: light dark;
-    --fondo: #fbfaf7;
-    --texto: #1d1d1b;
-    --suave: #6b6b66;
-    --enlace: #8a3b12;
-    --linea: #e3e0d8;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --fondo: #171716;
-      --texto: #ecebe6;
-      --suave: #a3a39b;
-      --enlace: #e8a574;
-      --linea: #33332f;
-    }
+    color-scheme: light;
+    --fondo: #fff;
+    --fondo-suave: #eff4f5;
+    --texto: #1a1d1e;
+    --suave: #62696b;
+    --linea: #dfe6e8;
+    /* Turquesa: --turquesa para rellenos, --acento para texto y enlaces (más oscuro, para que se lea sobre blanco) */
+    --turquesa: #0f9fae;
+    --acento: #07757f;
+    --acento-oscuro: #055a62;
+    /* Bloques semitransparentes con texto blanco sobre las fotos */
+    --velo: rgba(8, 130, 143, 0.8);
+    /* Títulos con serifa; etiquetas, menú y datos en sans condensada; texto de las entradas con otra serifa */
+    --titulos: 'EB Garamond', Garamond, 'Times New Roman', serif;
+    /* Nombres de las vías: sans ancha y geométrica, siempre en mayúsculas (alternativa libre a Lemon Milk, que solo es gratis para uso personal) */
+    --nombres: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    --etiquetas: 'Barlow Condensed', 'Arial Narrow', 'Roboto Condensed', sans-serif;
+    --lectura: 'Source Serif 4 Variable', Georgia, 'Times New Roman', serif;
+    --ancho: 1200px;
+    --margen: clamp(16px, 4vw, 32px);
   }
   * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
   body {
-    margin: 0 auto;
-    padding: 0 16px 48px;
-    max-width: 44rem;
+    margin: 0;
     background: var(--fondo);
     color: var(--texto);
-    font: 18px/1.6 system-ui, sans-serif;
+    font: 18px/1.65 var(--lectura);
   }
-  a { color: var(--enlace); }
-  img, video { max-width: 100%; height: auto; border-radius: 4px; }
-  h1, h2 { line-height: 1.2; }
-  .cabecera { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid var(--linea); }
-  .cabecera nav { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 16px; }
-  .marca { font-weight: 700; font-size: 20px; color: var(--texto); text-decoration: none; }
-  .pie { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--linea); color: var(--suave); font-size: 15px; }
+  a { color: var(--acento); }
+  a:hover { color: var(--acento-oscuro); }
+  img, video { display: block; max-width: 100%; height: auto; }
+  /* Garamond con cifras elzevirianas (como \oldstylenums en LaTeX): «2026», «6b»… */
+  h1, h2, h3 { font-family: var(--titulos); font-weight: 500; line-height: 1.12; font-variant-numeric: oldstyle-nums; }
+
+  /* Anchos: .contenedor es la página entera, .columna la columna de lectura. */
+  .contenedor { max-width: var(--ancho); margin-inline: auto; padding-inline: var(--margen); }
+  .columna { max-width: 42rem; margin-inline: auto; }
+  .solo-lectores { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+  /* Cabecera y menú */
+  .cabecera { background: var(--fondo); border-bottom: 1px solid var(--linea); }
+  .cabecera .contenedor { display: flex; flex-direction: column; gap: 4px; padding-block: 14px 6px; }
+  .marca { font: 600 34px/1 var(--titulos); color: var(--texto); text-decoration: none; }
+  .marca span { color: var(--acento); font-style: italic; font-weight: 500; }
+  .menu { display: flex; justify-content: flex-start; gap: 6px 28px; font: 600 14px/1 var(--etiquetas); letter-spacing: 0.08em; text-transform: uppercase; }
+  .menu a { padding: 10px 0; border-bottom: 3px solid transparent; color: var(--texto); text-decoration: none; }
+  .menu a:hover { border-color: var(--linea); }
+  .menu a[aria-current] { border-color: var(--turquesa); }
+  @media (min-width: 720px) {
+    .cabecera { position: sticky; top: 0; z-index: 10; }
+    .cabecera .contenedor { flex-direction: row; align-items: center; justify-content: space-between; padding-block: 12px; }
+    .menu { justify-content: flex-end; font-size: 16px; letter-spacing: 0.1em; }
+  }
+
+  /* Títulos de sección, botones y etiquetas */
+  .seccion { margin: 56px 0 28px; font-size: clamp(34px, 4.4vw, 46px); line-height: 1; }
+  .seccion::before { content: ''; display: block; width: 40px; height: 4px; margin-bottom: 14px; background: var(--turquesa); }
+  .boton { display: inline-block; padding: 14px 28px; border: 2px solid var(--texto); color: var(--texto); font: 600 16px/1 var(--etiquetas); letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; }
+  .boton:hover { background: var(--texto); color: #fff; }
+  .paginacion { display: flex; justify-content: space-between; gap: 16px; margin: 48px 0 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .chips a { display: block; padding: 9px 14px; border: 1px solid var(--linea); color: var(--texto); font: 600 15px/1 var(--etiquetas); letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; }
+  .chips a:hover { border-color: var(--turquesa); color: var(--acento); }
+  .chips span { color: var(--suave); }
   .suave { color: var(--suave); font-size: 15px; }
-  .lista { list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; }
-  .paginacion { display: flex; justify-content: space-between; margin-top: 32px; }
+
+  /* Rejilla de tarjetas: 3 × 3 en escritorio, 2 en tableta, 1 en móvil */
+  .rejilla { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 44px 28px; margin: 0; padding: 0; list-style: none; }
+  /* Portada y «vías anteriores»: dos columnas de tarjetas y, a la derecha, el menú de categorías (debajo en pantallas estrechas) */
+  .rejilla-dos { grid-template-columns: 1fr; }
+  @media (min-width: 600px) { .rejilla-dos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .con-lateral { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0 56px; }
+  @media (min-width: 960px) { .con-lateral { grid-template-columns: minmax(0, 1fr) 270px; } }
+
+  /* Texto de las entradas y páginas */
+  .texto { font-size: 19px; line-height: 1.7; }
+  .texto h2, .texto h3 { margin: 2em 0 0.5em; }
+  .texto h2 { font-size: 34px; }
+  .texto h3 { font-size: 26px; }
+  .texto img, .texto video { margin: 1.8em auto; }
+  /* Foto con pie: ![texto](foto.jpg "Pie de foto") */
+  .texto figure { margin: 1.8em 0; }
+  .texto figure img, .texto figure video { margin: 0 auto; }
+  .texto figcaption { margin-top: 10px; color: var(--suave); font-size: 16px; line-height: 1.45; text-align: center; }
+  .texto blockquote { margin: 1.5em 0; padding-left: 20px; border-left: 4px solid var(--acento); color: var(--suave); font-style: italic; }
+  .texto ul, .texto ol { padding-left: 1.4em; }
+
+  /* Pie */
+  .pie { margin-top: 96px; padding: 24px 0 32px; border-top: 1px solid var(--linea); color: var(--suave); font-size: 15px; }
+  .pie .contenedor { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+  .pie a { color: var(--suave); }
 </style>

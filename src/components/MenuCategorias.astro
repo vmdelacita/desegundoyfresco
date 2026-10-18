@@ -1,0 +1,45 @@
+---
+// Columna derecha de la portada: elegir una zona, grado, tipo de piedra o tipo de escalada.
+// Cada grupo se despliega con su título (HTML puro, sin JavaScript).
+import { menuDeCategorias } from '../lib/vias';
+
+const grupos = await menuDeCategorias();
+// Abiertos al entrar: zonas y grados; piedra y tipo, cerrados.
+const abiertos = new Set(['Zonas', 'Grados']);
+---
+
+<aside class="categorias" aria-label="Categorías">
+  <h2 class="seccion">Categorías</h2>
+  {grupos.map((grupo) => (
+    <details open={abiertos.has(grupo.titulo)}>
+      <summary>{grupo.titulo}</summary>
+      <ul>
+        {grupo.items.map((item) => (
+          <li style={`--nivel: ${item.nivel}`}>
+            <a href={item.url}>{item.titulo}</a> <span>{item.total}</span>
+          </li>
+        ))}
+        <li class="todas"><a href={grupo.url}>Ver todas →</a></li>
+      </ul>
+    </details>
+  ))}
+</aside>
+
+<style>
+  details { border-top: 1px solid var(--linea); }
+  details:last-of-type { border-bottom: 1px solid var(--linea); }
+  summary { padding: 14px 0; font: 600 16px/1 var(--etiquetas); letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; }
+  ul { margin: 0 0 16px; padding: 0; list-style: none; }
+  li { padding: 4px 0 4px calc(var(--nivel, 0) * 16px); font-size: 16px; line-height: 1.35; }
+  li[style*="--nivel: 0"] { font-weight: 600; }
+  li[style*="--nivel: 1"], li[style*="--nivel: 2"] { font-size: 15px; }
+  a { color: var(--texto); text-decoration: none; }
+  a:hover { color: var(--acento); text-decoration: underline; }
+  li span { color: var(--suave); font-size: 14px; }
+  .todas { padding-top: 10px; font-size: 14px; }
+  .todas a { color: var(--acento); }
+  @media (min-width: 960px) {
+    /* La columna acompaña al bajar, con su propio scroll si la lista es larga */
+    .categorias { position: sticky; top: 88px; align-self: start; max-height: calc(100vh - 110px); overflow-y: auto; padding-right: 4px; }
+  }
+</style>

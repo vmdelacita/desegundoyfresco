@@ -1,0 +1,40 @@
+---
+// Foto grande a todo el ancho con el título en bloques de color. Se usa en la portada, en cada vía y en las páginas con foto.
+interface Props {
+  imagen: string;
+  titulo: string;
+  /** Si se da, la foto y el título enlazan ahí. */
+  href?: string;
+  /** Datos sueltos bajo el título: grado, longitud, zona… */
+  chips?: string[];
+  /** h1 en la propia página de la vía; h2 en la portada. */
+  nivel?: 'h1' | 'h2';
+}
+const { imagen, titulo, href, chips = [], nivel = 'h2' } = Astro.props;
+const Titulo = nivel;
+---
+
+<section class="hero">
+  <img src={imagen} alt="" width="2000" height="900" fetchpriority="high" />
+  <div class="contenedor hero-texto">
+    <Titulo class="hero-titulo">
+      {href ? <a href={href}><span>{titulo}</span></a> : <span>{titulo}</span>}
+    </Titulo>
+    {chips.length > 0 && <p class="hero-chips">{chips.map((chip) => <span>{chip}</span>)}</p>}
+  </div>
+</section>
+
+<style>
+  .hero { position: relative; background: var(--fondo-suave); }
+  .hero img { width: 100%; height: clamp(360px, 66vh, 660px); object-fit: cover; object-position: center 40%; }
+  .hero-texto { position: absolute; left: 0; right: 0; bottom: clamp(20px, 4vw, 48px); }
+  /* Bloque turquesa semitransparente por línea; el interlineado evita que se solapen (si no, se vería una franja más oscura) */
+  .hero-titulo { margin: 0; max-width: 17em; font: 800 clamp(24px, 4.2vw, 50px)/1.4 var(--nombres); letter-spacing: 0.02em; text-transform: uppercase; }
+  .hero-titulo span { padding: 0.05em 0.45em; background: var(--velo); color: #fff; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  .hero-titulo a { color: inherit; text-decoration: none; }
+  /* Toda la foto es clicable cuando hay enlace */
+  .hero-titulo a::after { content: ''; position: absolute; inset: 0; }
+  .hero-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0 0; }
+  /* Garamond, sin mayúsculas y con cifras elzevirianas: «6b», «200 m», «24 de julio de 2026» */
+  .hero-chips span { padding: 7px 12px 8px; background: #fff; color: var(--texto); font: 500 21px/1 var(--titulos); font-variant-numeric: oldstyle-nums; }
+</style>

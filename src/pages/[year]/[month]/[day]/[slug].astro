@@ -1,60 +1,90 @@
 ---
 import { getEntry, render } from 'astro:content';
 import Base from '../../../../layouts/Base.astro';
-import { formatearFecha, migasDeZona, todasLasVias, urlAutor, urlEtiqueta, urlGrado, urlVia } from '../../../../lib/vias';
+import Hero from '../../../../components/Hero.astro';
+import Comentarios from '../../../../components/Comentarios.astro';
+import NavegacionVias from '../../../../components/NavegacionVias.astro';
+import { chipsDeVia, formatearFecha, migasDeZona, tituloCorto, todasLasVias, urlAutor, urlEtiqueta, urlGrado, urlVia } from '../../../../lib/vias';
 
 // Una página por vía, en /AAAA/MM/DD/nombre/ (la misma dirección que tenía en WordPress).
 export async function getStaticPaths() {
-  const vias = await todasLasVias();
-  return vias.map((via) => {
+  const vias = await todasLasVias(); // de la más reciente a la más antigua
+  return vias.map((via, i) => {
     const [, year, month, day, slug] = urlVia(via).split('/');
-    return { params: { year, month, day, slug }, props: { via } };
+    return { params: { year, month, day, slug }, props: { via, anterior: vias[i + 1], siguiente: vias[i - 1] } };
   });
 }
 
-const { via } = Astro.props;
+const { via, anterior, siguiente } = Astro.props;
 const { Content } = await render(via);
 const d = via.data;
 const autor = await getEntry(d.autor);
 if (!autor) throw new Error(`«${via.id}»: el autor «${d.autor.id}» no existe. Añade src/content/autores/${d.autor.id}.json.`);
 const zona = migasDeZona(via);
 const { lat, lng } = d.coordenadas ?? {};
+const detalles = [
+  d.material && ['Material', d.material],
+  d.horario && ['Horario', d.horario],
+  d.fechaEscalada && ['Escalada el', formatearFecha(d.fechaEscalada)],
+  lat !== undefined && ['Coordenadas', `${lat}, ${lng}`],
+].filter(Boolean) as [string, string][];
 ---
 
-<Base titulo={d.titulo} descripcion={`${d.grado} · ${zona.at(-1)?.nombre ?? ''}`}>
+<!-- La etiqueta <title> lleva el título completo de WordPress; la cabecera, sin el «(285m, 6b)», que ya está en la ficha. -->
+<Base titulo={d.titulo} descripcion={[d.grado, zona.at(-1)?.nombre].filter(Boolean).join(' · ')}>
   <article>
-    <h1>{d.titulo}</h1>
-    <p class="suave">
-      <time datetime={d.fecha.toISOString()}>{formatearFecha(d.fecha)}</time>{' · '}<a href={urlAutor(autor.id)}>{autor.data.nombre}</a>
-    </p>
-    <img src={d.portada} alt="" width="1000" />
+    <Hero imagen={d.portada} titulo={tituloCorto(d.titulo)} nivel="h1" chips={chipsDeVia(via)} />
 
-    <dl class="ficha">
-      <dt>Grado</dt><dd><a href={urlGrado(d.grado)}>{d.grado}</a></dd>
-      {d.longitud && <><dt>Longitud</dt><dd>{d.longitud} m</dd></>}
-      <dt>Zona</dt>
-      <dd>{zona.map((z, i) => <>{i > 0 && ' › '}<a href={z.url}>{z.nombre}</a></>)}</dd>
-      <dt>Roca</dt><dd>{d.roca}</dd>
-      <dt>Tipo</dt><dd>{d.tipo}</dd>
-      {d.material && <><dt>Material</dt><dd>{d.material}</dd></>}
-      {d.horario && <><dt>Horario</dt><dd>{d.horario}</dd></>}
-      {d.fechaEscalada && <><dt>Escalada el</dt><dd>{formatearFecha(d.fechaEscalada)}</dd></>}
-      {lat !== undefined && <><dt>Coordenadas</dt><dd>{lat}, {lng}</dd></>}
-    </dl>
+    <section class="ficha">
+      <div class="contenedor">
+        <dl class="datos">
+          {d.grado && <div><dt>Grado</dt><dd><a href={urlGrado(d.grado)}>{d.grado}</a></dd></div>}
+          {d.longitud && <div><dt>Longitud</dt><dd>{d.longitud} m</dd></div>}
+          <div><dt>Roca</dt><dd>{d.roca}</dd></div>
+          <div class="zona">
+            <dt>Zona</dt>
+            <dd>{zona.map((z, i) => <>{i > 0 && ' › '}<a href={z.url}>{z.nombre}</a></>)}</dd>
+          </div>
+        </dl>
+        {detalles.length > 0 && (
+          <dl class="detalles">
+            {detalles.map(([nombre, valor]) => <div><dt>{nombre}</dt><dd>{valor}</dd></div>)}
+          </dl>
+        )}
+      </div>
+    </section>
 
-    <div class="texto"><Content /></div>
+    <div class="contenedor">
+      <div class="columna texto" style="margin-top: 48px"><Content /></div>
 
-    {d.etiquetas.length > 0 && (
-      <p class="suave">
-        Etiquetas: {d.etiquetas.map((e, i) => <>{i > 0 && ', '}<a href={urlEtiqueta(e)}>{e}</a></>)}
-      </p>
-    )}
+      <Comentarios comentarios={d.comentarios} />
+
+      <footer class="columna pie-entrada">
+        <p class="suave">
+          Por <a href={urlAutor(autor.id)}>{autor.data.nombre}</a> · <time datetime={d.fecha.toISOString().slice(0, 10)}>{formatearFecha(d.fecha)}</time>
+        </p>
+        {d.etiquetas.length > 0 && (
+          <ul class="chips">
+            {d.etiquetas.map((e) => <li><a href={urlEtiqueta(e)}>{e}</a></li>)}
+          </ul>
+        )}
+      </footer>
+
+      <NavegacionVias anterior={anterior} siguiente={siguiente} />
+    </div>
   </article>
 </Base>
 
 <style>
-  .ficha { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; padding: 12px 16px; margin: 20px 0; border: 1px solid var(--linea); border-radius: 6px; font-size: 16px; }
-  .ficha dt { color: var(--suave); }
-  .ficha dd { margin: 0; }
-  .texto :global(img) { display: block; margin: 20px 0; }
+  .ficha { border-bottom: 1px solid var(--linea); }
+  .datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 20px 24px; margin: 0; padding: 28px 0 24px; }
+  .datos .zona { grid-column: span 2; }
+  dt { margin-bottom: 4px; color: var(--acento); font: 600 13px/1 var(--etiquetas); letter-spacing: 0.14em; text-transform: uppercase; }
+  /* Sin mayúsculas: «6a» y «100 m» perderían su sentido */
+  .datos dd { margin: 0; font: 700 clamp(28px, 3vw, 36px)/1.1 var(--etiquetas); }
+  .datos dd a { color: inherit; text-decoration-color: var(--turquesa); text-underline-offset: 4px; }
+  .detalles { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px 24px; margin: 0; padding: 20px 0 28px; border-top: 1px solid var(--linea); font-size: 16px; line-height: 1.45; }
+  .detalles dd { margin: 0; }
+  .pie-entrada { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--linea); }
+  .pie-entrada p { margin: 0 0 16px; }
 </style>

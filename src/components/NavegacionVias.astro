@@ -1,0 +1,32 @@
+---
+import TarjetaVia from './TarjetaVia.astro';
+import type { Via } from '../lib/vias';
+
+// Al final de cada vía: la entrada anterior (más antigua) y la siguiente (más reciente), con su foto de portada.
+interface Props {
+  anterior?: Via;
+  siguiente?: Via;
+}
+const { anterior, siguiente } = Astro.props;
+---
+
+{(anterior || siguiente) && (
+  <nav class="vecinas" aria-label="Otras entradas">
+    <ul class="rejilla rejilla-dos">
+      <li class:list={{ vacio: !anterior }}>
+        {anterior && <><p class="direccion">← Entrada anterior</p><TarjetaVia via={anterior} nivel="h3" /></>}
+      </li>
+      <li class:list={{ vacio: !siguiente }}>
+        {siguiente && <><p class="direccion derecha">Entrada siguiente →</p><TarjetaVia via={siguiente} nivel="h3" /></>}
+      </li>
+    </ul>
+  </nav>
+)}
+
+<style>
+  .vecinas { margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--linea); }
+  .direccion { margin: 0 0 12px; color: var(--acento); font: 600 15px/1 var(--etiquetas); letter-spacing: 0.14em; text-transform: uppercase; }
+  /* La «siguiente» se queda a la derecha aunque no haya «anterior» (en pantallas estrechas el hueco no se muestra) */
+  @media (min-width: 600px) { .derecha { text-align: right; } }
+  @media (max-width: 599px) { .vacio { display: none; } }
+</style>

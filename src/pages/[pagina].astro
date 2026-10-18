@@ -1,6 +1,9 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import TituloPagina from '../components/TituloPagina.astro';
+import Comentarios from '../components/Comentarios.astro';
 
 // Páginas fijas en la raíz, como en WordPress: /quienes-somos/, /como-monto-reuniones/…
 export async function getStaticPaths() {
@@ -13,6 +16,13 @@ const { Content } = await render(pagina);
 ---
 
 <Base titulo={pagina.data.titulo}>
-  <h1>{pagina.data.titulo}</h1>
-  <Content />
+  {pagina.data.portada
+    ? <Hero imagen={pagina.data.portada} titulo={pagina.data.titulo} nivel="h1" />
+    : <TituloPagina titulo={pagina.data.titulo} />}
+  <div class="contenedor">
+    <div class="columna texto" style="margin-top: 48px">
+      <Content />
+    </div>
+    <Comentarios comentarios={pagina.data.comentarios} />
+  </div>
 </Base>

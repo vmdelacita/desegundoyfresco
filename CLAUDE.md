@@ -17,11 +17,10 @@ Blog de escalada que se migra de WordPress.com a una web estática con Astro, al
 | 0 Preparativos y cuentas | Hecha |
 | 1 Exportar contenido e inventario | Hecha (`INVENTARIO.md`) |
 | 2 Proyecto Astro y estructura | Hecha: esqueleto funcionando con 3 vías de muestra; repositorio `vmdelacita/desegundoyfresco` |
-| 3 Diseño | Siguiente. Víctor debe aportar 2 o 3 referencias y lo que no quiere. El aspecto actual es provisional |
-| 4 Convertir las entradas antiguas | Pendiente |
+| 3 Diseño | Primera dirección programada (ver «Diseño»); Víctor debe probarla en local y ajustar. Faltan logo, la página «Explorar» y decidir si habrá modo oscuro |
+| 4 Convertir las entradas antiguas | Hecha el 18 oct 2026 (ver «Conversión»): 128 publicadas + 13 borradores + 2 páginas, la web compila; Víctor debe revisarla en local y decidir las coordenadas que faltan |
 | 5, 5b, 6, 7, 8 | Pendientes |
 
-Las 3 vías de muestra (`aliga-al-tozal-200m-6b`, `fulgencio-al-hueso`, `griviola-bella-al-montgros-250m-6a`) tienen el texto abreviado y la Fase 4 las sustituye por la conversión completa, con el mismo nombre de archivo.
 
 ## Decisiones ya tomadas
 
@@ -32,6 +31,34 @@ Las 3 vías de muestra (`aliga-al-tozal-200m-6b`, `fulgencio-al-hueso`, `griviol
 - **Autores**: se usa el nombre de usuario de WordPress (Víctor es `otnoesmusica`, mostrado como «Víctor»).
 - **Colaboradores**: solo escribe Víctor.
 - **Generador**: Astro. Editor web, comentarios y suscripción por email se deciden en la Fase 5.
+
+## Diseño (Fase 3, 17 oct 2026)
+
+- **Referencias de Víctor**: Baker Mountain Guides (Awwwards), panoramicas360.net y auntirdepedra.com. Lo común: fondo blanco, fotos grandes, menú simple.
+- **Fondo blanco**, sin modo oscuro por ahora: Víctor pidió el blanco y el plan preveía modo oscuro automático, así que queda por confirmar si lo quiere.
+- **Menú superior** (fijo al bajar en escritorio): «Cómo monto reuniones» y «Mapa». «Quiénes somos» sobra; «Zonas» sale porque la navegación por zonas irá dentro del mapa (Fase 5). Las páginas de zona y de «Quiénes somos» siguen existiendo (conservan su URL); a las zonas se llega desde el menú de categorías de la portada.
+- **La foto de portada es la imagen destacada de WordPress**: las 128 entradas publicadas la tienen y está en la biblioteca. La Fase 4 debe rellenar `portada` con la `_thumbnail_id` de cada entrada, no con la primera foto del texto. La página «¿Cómo monto reuniones?» también tiene (campo `portada` opcional en `paginas`).
+- Portada = la vía más reciente a todo el ancho (`Hero.astro`) + «Últimas vías» en **dos columnas** (`TarjetaVia.astro`) y, a la derecha, el **menú de categorías** (`MenuCategorias.astro`: zonas, grados, piedra y tipo, desplegables y sin JavaScript; debajo de las tarjetas en pantallas estrechas). Lo mismo en `/page/N/`. Las páginas de zona, etiqueta y autor siguen a tres columnas y sin menú lateral. Las zonas son fotos con su nombre (`Tesela.astro`). Paginación: 9 en la portada (1 + 8) y 8 por página después (`src/lib/paginacion.ts`).
+- **Página de la vía** (ajustes del 18 oct): bajo el título van las mismas tres tarjetas que en la portada (grado, longitud, zona; `chipsDeVia` en `src/lib/vias.ts`); la ficha no muestra el «tipo» (el campo sigue en la ficha y en las páginas de `/category/tipo-de-escalada/`); la fecha de publicación va en el pie, junto al autor; y al final hay dos tarjetas con la entrada anterior (más antigua) y la siguiente (más reciente) por fecha de publicación (`NavegacionVias.astro`, que reutiliza `TarjetaVia`).
+- Tarjetas y cabeceras muestran el título **sin el «(285m, 6b)»** (`tituloCorto` en `src/lib/vias.ts`); la etiqueta `<title>` conserva el título completo. Grado y longitud salen en la ficha. Las **URLs no se tocan**: son las de WordPress (62 de las 128 llevan la longitud en el nombre, p. ej. `…-260m-v`, y el resto nunca la tuvo).
+- **Color principal turquesa**. Los títulos sobre fotos (portada, vía, zonas, grado de la tarjeta) van en bloques turquesa **semitransparentes** (`--velo`) con texto blanco; `--turquesa` es para rellenos y `--acento` (más oscuro) para texto y enlaces, para que se lean sobre blanco.
+- Tipografías **incluidas en la web con `@fontsource`**, sin pedirlas a Google (sin terceros ni aviso de cookies): **EB Garamond** para los títulos y las fichas bajo el título (referencia de Víctor: portadas de Quaderns Crema; se puede cambiar con `--titulos`). Con **cifras elzevirianas** (`oldstyle-nums`, como `\oldstylenums` en LaTeX): el paquete de Fontsource trae Garamond sin esa función, así que la web usa **una copia propia reducida a latín** en `src/assets/fonts/` (hecha con `pyftsubset` desde el Garamond completo, que conserva `onum` y `smcp`; licencia OFL incluida en la carpeta), **Montserrat ExtraBold (800)** en mayúsculas para los nombres de las vías (`--nombres`; el 900, Black, es aún más grueso; Víctor quería Lemon Milk, pero solo es gratis para uso personal y su archivo acabaría en el repositorio público, así que se usa esta alternativa libre OFL), **Barlow Condensed** para menú, etiquetas y datos de la ficha (`--etiquetas`) y **Source Serif 4** para el texto de las entradas (`--lectura`).
+- Colores y tipografías, como variables CSS al principio de `src/layouts/Base.astro`.
+- Pendiente de la Fase 5/6: las fotos de portada pesan hasta 1 MB y las tarjetas las cargan enteras; hará falta una versión reducida para las miniaturas.
+
+## Conversión (Fase 4, 18 oct 2026)
+
+- **Herramienta**: `scripts/convertir.mjs` (`npm run convertir`; README, «Convertir la exportación»). Por defecto es un informe en seco; `--escribir --sobrescribir` pisa lo corregido a mano, así que para rehacer entradas sueltas se usa `--solo`.
+- **Resultado**: 141 entradas (128 publicadas, 13 borradores) y 2 páginas (`quienes-somos`, `como-monto-reuniones`); 31 comentarios reales; 801 fotos reducidas (552 MB en `public/wp-content/uploads/`); 3 GIF a `.mp4`. 12.498 enlaces y fotos internos del resultado comprobados (0 rotos); el texto convertido conserva las palabras del original. Informe privado: `import/informe-fase4.md`.
+- **Grado y longitud salen del título** («(285m, 6b)»; con varias longitudes se suman), no de las categorías; la zona, la roca y el tipo, de las categorías de WordPress, resueltas por `slug` contra `src/data/zonas.json`.
+- **Inferencias hechas** (listadas en el informe): 4 vías sin tipo → «Vía larga» (por longitud), Haus-Estrems Parte I copia de la Parte II, Cassiopea → Caliza (como las otras 16 de Montrebei), Mompart usa la primera foto como portada (no tenía imagen destacada).
+- **Sin grado**: Gelida y Cavallers son crónicas de sector. El esquema ya no exige `grado`; esas dos no salen en las páginas de grado. Víctor puede ponerles un rango si lo prefiere.
+- **Coordenadas**: 35 automáticas desde el GPS de las fotos (`coordenadasAuto: true`) y 2 de WordPress (Gelida, Cavallers). **91 vías sin punto**, listadas por zona en `import/sin-coordenadas.csv` (con columna `coordenadas` para rellenar). Pendiente de decidir: aceptar un mapa que crece poco a poco o rellenarlas a mano (un punto por pared).
+- **Pies de foto**: la foto es `![](ruta "Pie")`; el plugin `src/lib/pies-de-foto.mjs` la convierte en `<figure>` con `<figcaption>`. El texto alternativo solo se conserva si WordPress tenía una frase (casi todos eran nombres de archivo y se descartan). Las fotos ya no enlazan a su archivo grande.
+- **Enlaces internos** pasan a rutas relativas (`/2016/12/12/…`); los vídeos de YouTube quedan como enlace (incrustarlos cargaría YouTube, sin terceros).
+- **Comentarios**: campo `comentarios` de la ficha (autor, fecha, texto; `respuesta: true` si contestan a otro), mostrados al final por `Comentarios.astro`. No se importa ni el correo ni la IP de quien comentó.
+- **Borradores**: pueden dejar vacíos zona, roca, tipo y portada; el esquema lo exige solo a las publicadas.
+- **Pendiente para Fases 6/7**: 5 direcciones antiguas que necesitan alias (tabla al final del informe y de `INVENTARIO.md`).
 
 ## Cómo está montado
 
@@ -44,6 +71,7 @@ Las 3 vías de muestra (`aliga-al-tozal-200m-6b`, `fulgencio-al-hueso`, `griviol
 
 ## Trampas conocidas
 
+- **Markdown en Astro 7**: el procesador por defecto es Sätteri, no remark/rehype. Los plugins van en `markdown.processor: satteri({ hastPlugins: [...] })` (ver `astro.config.mjs`); poner `rehypePlugins` hace fallar la compilación.
 - **YAML**: al escribir la ficha, entrecomilla los textos con « #» o «:». Sin comillas, `#3` se pierde como comentario. El conversor de la Fase 4 debe escribir el frontmatter con una librería YAML, no con plantillas de texto.
 - **Mayúsculas**: GitHub Pages distingue mayúsculas; cuatro fotos de `2018/12/` se llaman `IMG_20181208_*.jpg` y hay que conservar el nombre exacto.
 - **Editores**: 59 de las 128 entradas publicadas están en formato de bloques de WordPress y 69 en el editor clásico (`[caption]`); el conversor tiene que manejar ambos.
