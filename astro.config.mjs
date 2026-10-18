@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { copyFile, mkdir } from 'node:fs/promises';
-import { createReadStream, existsSync } from 'node:fs';
+import { createReadStream, existsSync, readFileSync } from 'node:fs';
 import { extname, join, normalize } from 'node:path';
 import { satteri } from '@astrojs/markdown-satteri';
 import { piesDeFoto } from './src/lib/pies-de-foto.mjs';
@@ -44,8 +44,13 @@ const buscadorEnDesarrollo = {
   },
 };
 
+// Direcciones antiguas que ahora llevan a otra (src/data/alias.json: antigua → actual): entradas que cambiaron de nombre
+// y la categoría «Otros» de WordPress. GitHub Pages no redirige, así que Astro crea en la dirección antigua una página que lleva a la nueva.
+const alias = JSON.parse(readFileSync(new URL('./src/data/alias.json', import.meta.url), 'utf8'));
+
 export default defineConfig({
   site: 'https://desegundoyfresco.com',
+  redirects: alias,
   // Igual que WordPress: todas las URLs terminan en barra y cada página es una carpeta.
   trailingSlash: 'always',
   build: { format: 'directory' },

@@ -19,8 +19,10 @@ Blog de escalada que se migra de WordPress.com a una web estática con Astro, al
 | 2 Proyecto Astro y estructura | Hecha: esqueleto funcionando con 3 vías de muestra; repositorio `vmdelacita/desegundoyfresco` |
 | 3 Diseño | Primera dirección programada (ver «Diseño»); Víctor debe probarla en local y ajustar. Faltan logo, la página «Explorar» y decidir si habrá modo oscuro |
 | 4 Convertir las entradas antiguas | Hecha el 18 oct 2026 (ver «Conversión»): 128 publicadas + 13 borradores + 2 páginas, la web compila; Víctor debe revisarla en local y decidir las coordenadas que faltan |
-| 5 Funcionalidades | En marcha: el **mapa** (`src/pages/mapa-de-escaladas.astro`) está programado y probado en local (19 oct 2026); buscador con Pagefind programado (ver «Buscador»); contacto (ver «Contacto»); editor web (Sveltia en `/admin/`, ver «Editor web») programado, falta que Víctor lo pruebe en local con Chrome; estadísticas (GoatCounter, ver «Estadísticas») programadas pero apagadas hasta que Víctor cree la cuenta y ponga el código |
-| 5b, 6, 7, 8 | Pendientes |
+| 5 Funcionalidades | En marcha: el **mapa** (`src/pages/mapa-de-escaladas.astro`) está programado y probado en local (19 oct 2026); buscador con Pagefind programado (ver «Buscador»); contacto (ver «Contacto»); editor web (Sveltia en `/admin/`, ver «Editor web») programado, falta que Víctor lo pruebe en local con Chrome; estadísticas (GoatCounter, ver «Estadísticas») activas en la web publicada; falta que Víctor pruebe el editor |
+| 5b | Sin hacer, y en buena parte superada: el editor borra el GPS y las coordenadas se ponen a mano por pared (ver «Editor web») |
+| 6 Publicar en GitHub Pages | Preparado en local (ver «Publicación»); falta que Víctor active Pages y el DNS. No está subido |
+| 7, 8 | Pendientes |
 
 
 ## Decisiones ya tomadas
@@ -95,6 +97,14 @@ Blog de escalada que se migra de WordPress.com a una web estática con Astro, al
 - **Visitas propias**: GoatCounter no cuenta `localhost`; para no contarse a sí mismo en la web publicada, Víctor abre una vez `https://desegundoyfresco.com/#toggle-goatcounter` en cada navegador.
 - **Comprobado el 18 oct**: con código de prueba, 523 de 525 HTML llevan el script (faltan `/admin/` y `/feed/`); con el código vacío, ninguno; con uno inválido, la compilación se detiene. **No se ha podido comprobar el conteo real** (hace falta la cuenta y la web publicada). Tras la Fase 6, mirar en el panel que llegan visitas.
 - **Comparar con WordPress.com**: las cifras de partida (unas 60–65 vistas al día) son de WordPress.com, que cuenta distinto (incluye bots y lectores de RSS); no esperar números idénticos.
+
+## Publicación (Fase 6, 18 oct 2026)
+
+- **Despliegue**: `.github/workflows/desplegar.yml` usa el flujo oficial de Astro (`actions/checkout@v7`, `withastro/action@v6` con Node 24 y `actions/deploy-pages@v5`; versiones vistas en GitHub el 18 oct). En cada push a `main` ejecuta `npm ci` y `npm run build` y publica `dist/`. **Sin probar en GitHub todavía**: solo se ha validado el YAML y que un clon limpio del repositorio (`npm ci` y `npm run build`, sin `import/`) compila.
+- **Tamaño**: `dist/` pesa unos 562 MB reales (`du` en macOS marca más, ~680 MB, por bloques). El límite de GitHub Pages es 1 GB; casi todo son las 802 fotos de `public/wp-content/uploads/` (551 MB), así que el margen se gasta con fotos.
+- **Alias** (`src/data/alias.json`, leído por `redirects` en `astro.config.mjs`): las 5 direcciones que WordPress redirigía por cambio de nombre (informe de la Fase 4) ahora son páginas con `<meta refresh>` y `canonical` hacia la dirección actual, `noindex` y fuera del mapa del sitio. Mismo mecanismo para `/category/otros/` → portada (decisión de Víctor, 18 oct): «Otros» era una categoría suelta de WordPress, ni zona, ni grado, ni roca, ni tipo, con 2 vías publicadas (Haus-Estrems Parte I y Regular Northwest Face), que no tiene página propia en la web nueva. Cuando se active la redirección de WordPress.com, el `<slug>` antiguo llega a esas páginas y de ahí a la entrada.
+- **Comprobador** (`npm run comprobar-urls`, tras `npm run build`; lee el XML de `import/`): comprueba que existen en `dist/` las 128 entradas, las 5 direcciones antiguas, las páginas, las categorías, etiquetas y autores que usan, y las 656 fotos que muestran las entradas. Los GIF cuentan como hechos si existe su `.mp4`. Las 4 etiquetas descartadas (`victor`, `destacado`, `destacada`, `via-larga`) se cuentan aparte. Resultado del 18 oct: todo existe (sale con código 0). Las fotos de la biblioteca que ninguna entrada usa (897 adjuntos, 656 direcciones usadas) no se migraron.
+- **Pasos de Víctor** (plan, Fase 6; todos hacia fuera, los decide él): verificar el dominio en GitHub (TXT en Porkbun), DNS en Porkbun (4 A, 4 AAAA y un CNAME `www`; confirmar antes las IP en la documentación de GitHub Pages), Settings → Pages → Source «GitHub Actions», Custom domain `desegundoyfresco.com` y «Enforce HTTPS». Antes de subir el flujo conviene tener ya el dominio configurado: sin él, la primera publicación quedaría en `vmdelacita.github.io/desegundoyfresco/`, donde las rutas que empiezan por `/` no cargan fotos ni estilos.
 
 ## Cómo está montado
 

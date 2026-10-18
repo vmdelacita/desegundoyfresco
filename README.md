@@ -12,6 +12,7 @@ Blog de escalada hecho con [Astro](https://astro.build). El plan completo de la 
 | `npm run preview` | Sirve `dist/` tal y como quedará en GitHub Pages. |
 | `npm run fotos -- --usadas` | Reduce las fotos que usan las vías (ver más abajo). |
 | `npm run convertir` | Convierte la exportación de WordPress en vías y páginas (ver «Convertir la exportación»). Sin opciones no escribe nada. |
+| `npm run comprobar-urls` | Después de `npm run build`, comprueba que las direcciones de la web antigua (entradas, categorías, etiquetas, autores, fotos) existen en `dist/`. Necesita `import/`. |
 
 Para parar el servidor de desarrollo: `npx astro dev stop`.
 
@@ -22,6 +23,8 @@ src/content/vias/       una vía por archivo .md (el nombre del archivo es el fi
 src/content/autores/    un archivo .json por autor (el nombre es su usuario de WordPress)
 src/content/paginas/    páginas fijas (/quienes-somos/…)
 src/data/estadisticas.json  código de GoatCounter (vacío = sin estadísticas)
+src/data/alias.json     direcciones antiguas que ahora redirigen a otra (entradas renombradas, /category/otros/)
+.github/workflows/      desplegar.yml: publica la web en GitHub Pages en cada cambio en main
 src/data/zonas.json     lista de zonas (Aragón, Aragón › Ordesa…); rocas.json y tipos.json, las listas de roca y de tipo
 public/admin/           el editor web (Sveltia CMS) en /admin/ y su configuración, config.yml
 src/content.config.ts   la ficha de la vía y sus validaciones
@@ -93,6 +96,15 @@ Las rocas y los tipos de escalada se añaden igual en `src/data/rocas.json` y `s
 - **En local** (sin token): abre `http://localhost:4321/admin/` en Chrome o Edge, pulsa «Work with Local Repository» y elige la carpeta del proyecto. Los cambios se escriben en los archivos; después los subes con Git como siempre.
 - **En la web publicada**: «Sign In Using Access Token» con un token de GitHub de grano fino limitado a este repositorio y con permiso de lectura y escritura sobre «Contents». Cada «Guardar» es un commit en `main`. («Sign In with GitHub» necesita un servicio OAuth que no hemos montado.)
 - Las fotos que se suben desde el editor se reducen en el navegador (2000 px, WebP, sin GPS) y van a `public/wp-content/uploads/nuevas/`.
+
+## Publicar en GitHub Pages
+
+`.github/workflows/desplegar.yml` compila la web (`npm ci` y `npm run build`, con el flujo oficial de Astro) y la publica en GitHub Pages cada vez que se sube algo a `main`, también desde el editor web. También se puede lanzar a mano desde la pestaña «Actions» del repositorio. Tarda un par de minutos.
+
+- La primera vez, en el repositorio: Settings → Pages → Source: «GitHub Actions». El dominio propio se configura en la misma pantalla (Custom domain) y en Porkbun; el paso a paso está en la Fase 6 del plan. Con este tipo de despliegue no hace falta un archivo `CNAME`.
+- GitHub Pages admite webs de hasta 1 GB. La actual pesa unos 560 MB, casi todo fotos.
+- Si una dirección deja de existir o cambia (una entrada que cambia de nombre, una categoría que desaparece), añade una línea a `src/data/alias.json` (`"/dirección/antigua/": "/dirección/nueva/"`): GitHub Pages no redirige por sí solo, así que se crea una página en la antigua que lleva a la nueva.
+- Antes de activar la redirección de WordPress.com, ejecuta `npm run build && npm run comprobar-urls`: lista las direcciones antiguas que faltan en la web nueva.
 
 ## Estadísticas
 

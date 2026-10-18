@@ -9,7 +9,8 @@
     "build": "astro build && pagefind --site dist",
     "preview": "astro preview",
     "fotos": "node scripts/fotos.mjs",
-    "convertir": "node scripts/convertir.mjs"
+    "convertir": "node scripts/convertir.mjs",
+    "comprobar-urls": "node scripts/comprobar-urls.mjs"
   },
   "type": "module",
   "private": true,
