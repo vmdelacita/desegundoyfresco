@@ -16,6 +16,7 @@ const { Content } = await render(pagina);
 ---
 
 <Base titulo={pagina.data.titulo}>
+  <div data-pagefind-body>
   {pagina.data.portada
     ? <Hero imagen={pagina.data.portada} titulo={pagina.data.titulo} nivel="h1" />
     : <TituloPagina titulo={pagina.data.titulo} />}
@@ -24,5 +25,6 @@ const { Content } = await render(pagina);
       <Content />
     </div>
     <Comentarios comentarios={pagina.data.comentarios} />
+  </div>
   </div>
 </Base>

@@ -4,7 +4,7 @@
   "description": "De segundo y fresco: blog de escalada (Astro)",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && pagefind --site dist",
     "preview": "astro preview",
     "fotos": "node scripts/fotos.mjs",
     "convertir": "node scripts/convertir.mjs"
@@ -25,6 +25,7 @@
   "devDependencies": {
     "exifr": "^7.1.3",
     "fast-xml-parser": "^5.11.2",
+    "pagefind": "^1.5.2",
     "turndown": "^7.2.4",
     "yaml": "^2.9.1"
   }

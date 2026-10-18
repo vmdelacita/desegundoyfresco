@@ -15,12 +15,12 @@ const Titulo = nivel;
 ---
 
 <section class="hero">
-  <img src={imagen} alt="" width="2000" height="900" fetchpriority="high" />
+  <img src={imagen} alt="" width="2000" height="900" fetchpriority="high" data-pagefind-meta="image[src]" />
   <div class="contenedor hero-texto">
     <Titulo class="hero-titulo">
       {href ? <a href={href}><span>{titulo}</span></a> : <span>{titulo}</span>}
     </Titulo>
-    {chips.length > 0 && <p class="hero-chips">{chips.map((chip) => <span>{chip}</span>)}</p>}
+    {chips.length > 0 && <p class="hero-chips" data-pagefind-ignore>{chips.map((chip) => <span>{chip}</span>)}</p>}
   </div>
 </section>
 

@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import TituloPagina from '../components/TituloPagina.astro';
+---
+
+<!-- El índice y la interfaz los genera Pagefind al compilar (npm run build), en /pagefind/. En `npm run dev` se sirven desde dist/pagefind (astro.config.mjs), así que hace falta haber compilado una vez. -->
+<Base titulo="Buscar" descripcion="Busca en todas las vías del blog por nombre, zona, grado o cualquier palabra del texto.">
+  <TituloPagina titulo="Buscar" />
+  <div class="contenedor">
+    <div id="buscador" class="buscador"></div>
+  </div>
+</Base>
+
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', () => {
+    const caja = document.getElementById('buscador');
+    const css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.href = '/pagefind/pagefind-ui.css';
+    document.head.append(css);
+
+    const js = document.createElement('script');
+    js.src = '/pagefind/pagefind-ui.js';
+    js.onload = () => {
+      const ui = new PagefindUI({ element: '#buscador', showImages: true, showSubResults: false, pageSize: 8, excerptLength: 24, autofocus: true, showEmptyFilters: false });
+      const q = new URLSearchParams(location.search).get('q');
+      if (q) ui.triggerSearch(q);
+      // Las fotos de los resultados se piden solo al acercarse a ellas
+      new MutationObserver(() => caja.querySelectorAll('img:not([loading])').forEach((i) => i.setAttribute('loading', 'lazy'))).observe(caja, { childList: true, subtree: true });
+    };
+    js.onerror = () => {
+      caja.innerHTML = '<p class="aviso">El buscador no está disponible. Si estás en local, se genera al compilar: ejecuta <code>npm run build</code> y recarga esta página.</p>';
+    };
+    document.head.append(js);
+  });
+</script>
+
+<style is:global>
+  .buscador { --pagefind-ui-scale: 1; --pagefind-ui-primary: var(--acento); --pagefind-ui-text: var(--texto); --pagefind-ui-background: var(--fondo); --pagefind-ui-border: var(--linea); --pagefind-ui-tag: var(--fondo-suave); --pagefind-ui-border-width: 1px; --pagefind-ui-border-radius: 0; --pagefind-ui-image-border-radius: 0; --pagefind-ui-font: var(--lectura); min-height: 50vh; margin: 28px 0 64px; }
+  .buscador .aviso { margin: 0; padding: 24px; background: var(--fondo-suave); color: var(--suave); }
+  .buscador .pagefind-ui__search-input { font-size: 18px; }
+  .buscador .pagefind-ui__result-link { color: var(--acento); font: 700 16px/1.25 var(--nombres); letter-spacing: 0.02em; text-transform: uppercase; text-decoration: none; }
+  .buscador .pagefind-ui__result-link:hover { text-decoration: underline; }
+  .buscador .pagefind-ui__result-image { width: 120px; height: 90px; object-fit: cover; }
+  .buscador .pagefind-ui__result-tag { font: 600 14px/1 var(--etiquetas); letter-spacing: 0.06em; text-transform: uppercase; }
+  .buscador .pagefind-ui__filter-name { font: 600 16px/1 var(--etiquetas); letter-spacing: 0.1em; text-transform: uppercase; }
+</style>

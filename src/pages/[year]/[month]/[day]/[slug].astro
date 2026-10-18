@@ -4,6 +4,7 @@ import Base from '../../../../layouts/Base.astro';
 import Hero from '../../../../components/Hero.astro';
 import Comentarios from '../../../../components/Comentarios.astro';
 import NavegacionVias from '../../../../components/NavegacionVias.astro';
+import { gradoBase } from '../../../../lib/taxonomia';
 import { chipsDeVia, formatearFecha, migasDeZona, tituloCorto, todasLasVias, urlAutor, urlEtiqueta, urlGrado, urlVia } from '../../../../lib/vias';
 
 // Una página por vía, en /AAAA/MM/DD/nombre/ (la misma dirección que tenía en WordPress).
@@ -32,10 +33,16 @@ const detalles = [
 
 <!-- La etiqueta <title> lleva el título completo de WordPress; la cabecera, sin el «(285m, 6b)», que ya está en la ficha. -->
 <Base titulo={d.titulo} descripcion={[d.grado, zona.at(-1)?.nombre].filter(Boolean).join(' · ')}>
-  <article>
+  <article data-pagefind-body>
+    <!-- Filtros del buscador (zona, grado y roca): no se ven -->
+    <div hidden data-pagefind-ignore>
+      {zona.map((z) => <span data-pagefind-filter="zona">{z.nombre}</span>)}
+      {d.grado && <span data-pagefind-filter="grado">{gradoBase(d.grado)}</span>}
+      <span data-pagefind-filter="roca">{d.roca}</span>
+    </div>
     <Hero imagen={d.portada} titulo={tituloCorto(d.titulo)} nivel="h1" chips={chipsDeVia(via)} />
 
-    <section class="ficha">
+    <section class="ficha" data-pagefind-ignore>
       <div class="contenedor">
         <dl class="datos">
           {d.grado && <div><dt>Grado</dt><dd><a href={urlGrado(d.grado)}>{d.grado}</a></dd></div>}
@@ -70,7 +77,7 @@ const detalles = [
         )}
       </footer>
 
-      <NavegacionVias anterior={anterior} siguiente={siguiente} />
+      <div data-pagefind-ignore><NavegacionVias anterior={anterior} siguiente={siguiente} /></div>
     </div>
   </article>
 </Base>

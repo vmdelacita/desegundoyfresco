@@ -19,7 +19,7 @@ Blog de escalada que se migra de WordPress.com a una web estática con Astro, al
 | 2 Proyecto Astro y estructura | Hecha: esqueleto funcionando con 3 vías de muestra; repositorio `vmdelacita/desegundoyfresco` |
 | 3 Diseño | Primera dirección programada (ver «Diseño»); Víctor debe probarla en local y ajustar. Faltan logo, la página «Explorar» y decidir si habrá modo oscuro |
 | 4 Convertir las entradas antiguas | Hecha el 18 oct 2026 (ver «Conversión»): 128 publicadas + 13 borradores + 2 páginas, la web compila; Víctor debe revisarla en local y decidir las coordenadas que faltan |
-| 5 Funcionalidades | En marcha: el **mapa** (`src/pages/mapa-de-escaladas.astro`) está programado y probado en local (19 oct 2026); faltan buscador, comentarios, editor web, estadísticas |
+| 5 Funcionalidades | En marcha: el **mapa** (`src/pages/mapa-de-escaladas.astro`) está programado y probado en local (19 oct 2026); buscador con Pagefind programado (ver «Buscador»); faltan comentarios, editor web, estadísticas |
 | 5b, 6, 7, 8 | Pendientes |
 
 
@@ -65,6 +65,12 @@ Blog de escalada que se migra de WordPress.com a una web estática con Astro, al
 
 - Leaflet 1.9.4 (npm, sin CDN) con teselas de **OpenTopoMap** (único tercero: ven la IP, sin cookies). Un marcador por punto distinto (75 para 128 vías); si hay varias vías en el punto, el marcador lleva su número y el cuadro las lista. Botones por zona de primer nivel (`zonas.json`) que encuadran el mapa, más «Península y Pirineos» (vista inicial) y «Ver todo». Los datos salen de las fichas al compilar. La rueda del ratón solo hace zoom cuando el mapa tiene el foco. En móvil los botones van en una fila deslizante.
 - Fuera de esta versión: filtros por grado y roca (irán en «Explorar»), agrupar marcadores al alejarse, fotos en los cuadros.
+
+## Buscador (Fase 5, 19 oct 2026)
+
+- **Pagefind** (`devDependencies`), sin servidor ni terceros. `npm run build` ahora es `astro build && pagefind --site dist`: genera el índice en `dist/pagefind/`. En `npm run dev` se sirve desde `dist/pagefind/` (integración `buscadorEnDesarrollo` de `astro.config.mjs`), así que hace falta haber ejecutado `npm run build` una vez; sin eso, `/buscar/` muestra un aviso. El índice de desarrollo es el de la última compilación.
+- Página `/buscar/` (`src/pages/buscar.astro`) con la interfaz por defecto de Pagefind restilizada con las variables de la web; acepta `?q=`. Está en el menú. Solo se indexa lo marcado con `data-pagefind-body`: cada vía y las 2 páginas fijas (130 páginas). Se indexan título, texto y comentarios; la ficha, las tarjetas de la cabecera y la navegación a vías vecinas llevan `data-pagefind-ignore` para que los extractos salgan limpios. Filtros: zona, grado (base) y roca, en `<div hidden data-pagefind-ignore>` de la página de la vía.
+- Limitación: como la ficha no se indexa, buscar «Riglos» solo encuentra vías que lo nombren en el texto (los filtros sí cubren la zona). Miniaturas: son la foto de portada entera (hasta 1 MB), cargada en diferido; hará falta una versión reducida (pendiente ya anotado para las tarjetas).
 
 ## Cómo está montado
 
