@@ -1,0 +1,90 @@
+---
+import Base from '../layouts/Base.astro';
+import TituloPagina from '../components/TituloPagina.astro';
+import contacto from '../data/contacto.json';
+
+// El mensaje lo recibe Web3Forms y lo reenvía al correo de Víctor, que no aparece en la web.
+// La clave (src/data/contacto.json) es pública por diseño: solo permite enviarle mensajes.
+const clave = contacto.claveWeb3Forms;
+---
+
+<Base titulo="Contacto" descripcion="Escríbeme si quieres contarme algo sobre una vía o sobre el blog.">
+  <TituloPagina titulo="Contacto" />
+  <div class="contenedor">
+    <div class="columna">
+      <p class="intro">Si quieres contarme algo sobre una vía, una corrección o cualquier otra cosa, escríbeme y te contestaré en cuanto pueda.</p>
+
+      {clave ? (
+        <form id="contacto" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value={clave} />
+          <input type="hidden" name="subject" value="Mensaje desde desegundoyfresco.com" />
+          <input type="hidden" name="from_name" value="De segundo y fresco" />
+          <!-- Campo trampa contra el spam: las personas no lo ven y los robots lo rellenan -->
+          <input type="checkbox" name="botcheck" class="trampa" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <label for="nombre">Tu nombre</label>
+          <input id="nombre" name="name" type="text" autocomplete="name" required />
+
+          <label for="correo">Tu correo, para poder contestarte</label>
+          <input id="correo" name="email" type="email" autocomplete="email" required />
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="message" rows="8" required></textarea>
+
+          <button class="boton" type="submit">Enviar</button>
+          <p class="estado" id="estado" role="status" aria-live="polite"></p>
+        </form>
+      ) : (
+        <p class="aviso">El formulario no está activado: falta la clave de Web3Forms en <code>src/data/contacto.json</code>.</p>
+      )}
+
+      <p class="suave privacidad">
+        Tu mensaje pasa por un servicio externo (Web3Forms), que me lo reenvía por correo. Solo lo uso para contestarte y no lo publico.
+      </p>
+    </div>
+  </div>
+</Base>
+
+<script>
+  const form = document.getElementById('contacto') as HTMLFormElement | null;
+  const estado = document.getElementById('estado');
+  if (form && estado) {
+    form.addEventListener('submit', async (evento) => {
+      evento.preventDefault();
+      const boton = form.querySelector('button')!;
+      boton.disabled = true;
+      estado.className = 'estado';
+      estado.textContent = 'Enviando…';
+      try {
+        const respuesta = await fetch(form.action, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) });
+        const datos = await respuesta.json();
+        if (!datos.success) throw new Error(datos.message);
+        form.reset();
+        estado.classList.add('ok');
+        estado.textContent = 'Mensaje enviado. Gracias, te contestaré en cuanto pueda.';
+      } catch {
+        estado.classList.add('error');
+        estado.textContent = 'No se ha podido enviar el mensaje. Inténtalo de nuevo dentro de un rato.';
+      } finally {
+        boton.disabled = false;
+      }
+    });
+  }
+</script>
+
+<style>
+  .intro { margin: 32px 0 28px; font-size: 19px; line-height: 1.6; }
+  form { display: grid; gap: 8px; }
+  label { margin-top: 12px; font: 600 15px/1 var(--etiquetas); letter-spacing: 0.1em; text-transform: uppercase; }
+  input[type='text'], input[type='email'], textarea { box-sizing: border-box; width: 100%; padding: 12px 14px; border: 1px solid var(--linea); border-radius: 0; background: var(--fondo); color: var(--texto); font: 400 18px/1.4 var(--lectura); }
+  input:focus-visible, textarea:focus-visible { border-color: var(--turquesa); outline: 2px solid var(--turquesa); outline-offset: 0; }
+  textarea { resize: vertical; }
+  .trampa { position: absolute; left: -9999px; }
+  .boton { justify-self: start; margin-top: 20px; background: var(--fondo); cursor: pointer; }
+  .boton:disabled { opacity: 0.5; cursor: wait; }
+  .estado { min-height: 1.5em; margin: 8px 0 0; }
+  .estado.ok { color: var(--acento); font-weight: 600; }
+  .estado.error { color: #b3261e; font-weight: 600; }
+  .aviso { padding: 24px; background: var(--fondo-suave); color: var(--suave); }
+  .privacidad { margin: 28px 0 64px; }
+</style>

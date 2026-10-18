@@ -20,6 +20,7 @@ const menu = [
   { texto: 'Cómo monto reuniones', url: '/como-monto-reuniones/' },
   { texto: 'Mapa', url: '/mapa-de-escaladas/' },
   { texto: 'Buscar', url: '/buscar/' },
+  { texto: 'Contacto', url: '/contacto/' },
 ];
 ---
 
@@ -110,10 +111,11 @@ const menu = [
   .cabecera .contenedor { display: flex; flex-direction: column; gap: 4px; padding-block: 14px 6px; }
   .marca { font: 600 34px/1 var(--titulos); color: var(--texto); text-decoration: none; }
   .marca span { color: var(--acento); font-style: italic; font-weight: 500; }
-  .menu { display: flex; justify-content: flex-start; gap: 6px 28px; font: 600 14px/1 var(--etiquetas); letter-spacing: 0.08em; text-transform: uppercase; }
-  .menu a { padding: 10px 0; border-bottom: 3px solid transparent; color: var(--texto); text-decoration: none; }
+  .menu { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 6px 28px; font: 600 14px/1 var(--etiquetas); letter-spacing: 0.08em; text-transform: uppercase; }
+  .menu a { padding: 10px 0; border-bottom: 3px solid transparent; color: var(--texto); text-decoration: none; white-space: nowrap; }
   .menu a:hover { border-color: var(--linea); }
   .menu a[aria-current] { border-color: var(--turquesa); }
+  @media (max-width: 719px) { .menu { column-gap: 20px; } }
   @media (min-width: 720px) {
     .cabecera { position: sticky; top: 0; z-index: 10; }
     .cabecera .contenedor { flex-direction: row; align-items: center; justify-content: space-between; padding-block: 12px; }

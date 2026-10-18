@@ -19,7 +19,7 @@ Blog de escalada que se migra de WordPress.com a una web estática con Astro, al
 | 2 Proyecto Astro y estructura | Hecha: esqueleto funcionando con 3 vías de muestra; repositorio `vmdelacita/desegundoyfresco` |
 | 3 Diseño | Primera dirección programada (ver «Diseño»); Víctor debe probarla en local y ajustar. Faltan logo, la página «Explorar» y decidir si habrá modo oscuro |
 | 4 Convertir las entradas antiguas | Hecha el 18 oct 2026 (ver «Conversión»): 128 publicadas + 13 borradores + 2 páginas, la web compila; Víctor debe revisarla en local y decidir las coordenadas que faltan |
-| 5 Funcionalidades | En marcha: el **mapa** (`src/pages/mapa-de-escaladas.astro`) está programado y probado en local (19 oct 2026); buscador con Pagefind programado (ver «Buscador»); faltan comentarios, editor web, estadísticas |
+| 5 Funcionalidades | En marcha: el **mapa** (`src/pages/mapa-de-escaladas.astro`) está programado y probado en local (19 oct 2026); buscador con Pagefind programado (ver «Buscador»); contacto programado (ver «Contacto»); faltan editor web y estadísticas |
 | 5b, 6, 7, 8 | Pendientes |
 
 
@@ -31,7 +31,8 @@ Blog de escalada que se migra de WordPress.com a una web estática con Astro, al
 - **Etiquetas**: se descartan `victor`, `destacado`, `destacada` y «Vía larga» / «via larga»; el resto se conserva.
 - **Autores**: se usa el nombre de usuario de WordPress (Víctor es `otnoesmusica`, mostrado como «Víctor»).
 - **Colaboradores**: solo escribe Víctor.
-- **Generador**: Astro. Editor web, comentarios y suscripción por email se deciden en la Fase 5.
+- **Generador**: Astro. Editor web y suscripción por email se deciden en la Fase 5.
+- **Comentarios** (19 oct 2026): **no habrá comentarios nuevos**. Se descartó Cusdis porque su repositorio está archivado y declarado obsoleto (17 jul 2026); Giscus (exige cuenta de GitHub) y Hyvor Talk (de pago) tampoco convencieron. Los 31 comentarios antiguos siguen como texto fijo (`Comentarios.astro`, campo `comentarios` de la ficha). En su lugar, una página `/contacto/` en el menú superior (ver «Contacto»).
 
 ## Diseño (Fase 3, 17 oct 2026)
 
@@ -71,6 +72,12 @@ Blog de escalada que se migra de WordPress.com a una web estática con Astro, al
 - **Pagefind** (`devDependencies`), sin servidor ni terceros. `npm run build` ahora es `astro build && pagefind --site dist`: genera el índice en `dist/pagefind/`. En `npm run dev` se sirve desde `dist/pagefind/` (integración `buscadorEnDesarrollo` de `astro.config.mjs`), así que hace falta haber ejecutado `npm run build` una vez; sin eso, `/buscar/` muestra un aviso. El índice de desarrollo es el de la última compilación.
 - Página `/buscar/` (`src/pages/buscar.astro`) con la interfaz por defecto de Pagefind restilizada con las variables de la web; acepta `?q=`. Está en el menú. Solo se indexa lo marcado con `data-pagefind-body`: cada vía y las 2 páginas fijas (130 páginas). Se indexan título, texto y comentarios; la ficha, las tarjetas de la cabecera y la navegación a vías vecinas llevan `data-pagefind-ignore` para que los extractos salgan limpios. Filtros: zona, grado (base) y roca, en `<div hidden data-pagefind-ignore>` de la página de la vía.
 - Limitación: como la ficha no se indexa, buscar «Riglos» solo encuentra vías que lo nombren en el texto (los filtros sí cubren la zona). Miniaturas: son la foto de portada entera (hasta 1 MB), cargada en diferido; hará falta una versión reducida (pendiente ya anotado para las tarjetas).
+
+## Contacto (Fase 5, 19 oct 2026)
+
+- Página `/contacto/` (`src/pages/contacto.astro`), en el menú superior, con formulario de nombre, correo y mensaje. Lo recibe **Web3Forms** (gratis, 250 mensajes/mes) y lo reenvía al correo de Víctor, que no aparece en la web. La clave de acceso está en `src/data/contacto.json`: es pública por diseño (solo permite enviar mensajes a Víctor). Si se vacía, la página muestra un aviso en vez del formulario.
+- Contra el spam: campo trampa `botcheck`. Si entrara spam, activar hCaptcha en Web3Forms (cargaría un tercero, por eso solo si hiciera falta). El envío usa `fetch` con respuesta en la propia página; sin JavaScript, el formulario se envía igual y Web3Forms muestra su página de gracias.
+- Al final de cada vía **no** hay enlace al formulario (Víctor lo descartó).
 
 ## Cómo está montado
 
