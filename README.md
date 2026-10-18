@@ -21,6 +21,7 @@ Para parar el servidor de desarrollo: `npx astro dev stop`.
 src/content/vias/       una vía por archivo .md (el nombre del archivo es el final de la URL)
 src/content/autores/    un archivo .json por autor (el nombre es su usuario de WordPress)
 src/content/paginas/    páginas fijas (/quienes-somos/…)
+src/data/estadisticas.json  código de GoatCounter (vacío = sin estadísticas)
 src/data/zonas.json     lista de zonas (Aragón, Aragón › Ordesa…); rocas.json y tipos.json, las listas de roca y de tipo
 public/admin/           el editor web (Sveltia CMS) en /admin/ y su configuración, config.yml
 src/content.config.ts   la ficha de la vía y sus validaciones
@@ -92,6 +93,15 @@ Las rocas y los tipos de escalada se añaden igual en `src/data/rocas.json` y `s
 - **En local** (sin token): abre `http://localhost:4321/admin/` en Chrome o Edge, pulsa «Work with Local Repository» y elige la carpeta del proyecto. Los cambios se escriben en los archivos; después los subes con Git como siempre.
 - **En la web publicada**: «Sign In Using Access Token» con un token de GitHub de grano fino limitado a este repositorio y con permiso de lectura y escritura sobre «Contents». Cada «Guardar» es un commit en `main`. («Sign In with GitHub» necesita un servicio OAuth que no hemos montado.)
 - Las fotos que se suben desde el editor se reducen en el navegador (2000 px, WebP, sin GPS) y van a `public/wp-content/uploads/nuevas/`.
+
+## Estadísticas
+
+Las visitas se cuentan con [GoatCounter](https://www.goatcounter.com/) (sin cookies). Está apagado hasta que pongas tu código en `src/data/estadisticas.json`:
+
+1. Crea la cuenta en goatcounter.com/signup; el código que eliges ahí (por ejemplo `desegundoyfresco`) es el «xxx» de `xxx.goatcounter.com`.
+2. Escríbelo en `"codigoGoatCounter"` y sube el cambio. Solo cuenta en la web publicada, no con `npm run dev`.
+3. Para no contar tus propias visitas, abre una vez `https://desegundoyfresco.com/#toggle-goatcounter` en cada navegador que uses.
+4. En el panel de GoatCounter, «Settings» permite hacer públicas las estadísticas si quieres enseñarlas.
 
 ## Convertir la exportación
 

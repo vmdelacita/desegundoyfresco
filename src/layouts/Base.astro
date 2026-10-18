@@ -1,6 +1,8 @@
 ---
 // Estructura común de todas las páginas: cabecera con el menú, contenido y pie.
-// Las tipografías van incluidas en la web (no se piden a Google), así que no hay avisos de cookies ni de terceros.
+// Las tipografías van incluidas en la web (no se piden a Google). Las estadísticas (GoatCounter, sin cookies) solo
+// se cargan en la web compilada y si hay código en src/data/estadisticas.json; en `npm run dev` no se cuenta nada.
+import estadisticas from '../data/estadisticas.json';
 import '@fontsource/barlow-condensed/600.css';
 import '@fontsource/barlow-condensed/700.css';
 import '@fontsource/montserrat/800.css';
@@ -15,6 +17,13 @@ const { titulo, descripcion = 'Un blog de escalada en pared, fundamentalmente en
 const nombreSitio = 'De segundo y fresco';
 const tituloCompleto = titulo === nombreSitio ? titulo : `${titulo} · ${nombreSitio}`;
 const canonica = new URL(Astro.url.pathname, Astro.site);
+
+// El código es el nombre de la cuenta de GoatCounter (el «xxx» de xxx.goatcounter.com).
+const codigoEstadisticas = estadisticas.codigoGoatCounter.trim();
+if (codigoEstadisticas && !/^[a-z0-9-]+$/.test(codigoEstadisticas)) {
+  throw new Error(`src/data/estadisticas.json: «${codigoEstadisticas}» no es un código de GoatCounter válido (solo minúsculas, cifras y guiones).`);
+}
+const contarVisitas = Boolean(codigoEstadisticas) && import.meta.env.PROD;
 
 const menu = [
   { texto: 'Cómo monto reuniones', url: '/como-monto-reuniones/' },
@@ -34,6 +43,9 @@ const menu = [
     <link rel="canonical" href={canonica} />
     <link rel="alternate" type="application/rss+xml" title={nombreSitio} href="/feed.xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    {contarVisitas && (
+      <script is:inline async data-goatcounter={`https://${codigoEstadisticas}.goatcounter.com/count`} src="https://gc.zgo.at/count.js"></script>
+    )}
   </head>
   <body>
     <header class="cabecera">
@@ -52,7 +64,10 @@ const menu = [
     <footer class="pie">
       <div class="contenedor">
         <span>De segundo y fresco · Un blog de escalada en pared</span>
-        <a href="/feed.xml">RSS</a>
+        <span class="pie-datos">
+          {contarVisitas && <span>Visitas contadas sin cookies con GoatCounter</span>}
+          <a href="/feed.xml">RSS</a>
+        </span>
       </div>
     </footer>
   </body>
@@ -158,5 +173,6 @@ const menu = [
   /* Pie */
   .pie { margin-top: 96px; padding: 24px 0 32px; border-top: 1px solid var(--linea); color: var(--suave); font-size: 15px; }
   .pie .contenedor { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+  .pie-datos { display: flex; flex-wrap: wrap; gap: 8px 24px; }
   .pie a { color: var(--suave); }
 </style>

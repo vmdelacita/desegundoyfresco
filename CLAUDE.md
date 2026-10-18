@@ -19,7 +19,7 @@ Blog de escalada que se migra de WordPress.com a una web estática con Astro, al
 | 2 Proyecto Astro y estructura | Hecha: esqueleto funcionando con 3 vías de muestra; repositorio `vmdelacita/desegundoyfresco` |
 | 3 Diseño | Primera dirección programada (ver «Diseño»); Víctor debe probarla en local y ajustar. Faltan logo, la página «Explorar» y decidir si habrá modo oscuro |
 | 4 Convertir las entradas antiguas | Hecha el 18 oct 2026 (ver «Conversión»): 128 publicadas + 13 borradores + 2 páginas, la web compila; Víctor debe revisarla en local y decidir las coordenadas que faltan |
-| 5 Funcionalidades | En marcha: el **mapa** (`src/pages/mapa-de-escaladas.astro`) está programado y probado en local (19 oct 2026); buscador con Pagefind programado (ver «Buscador»); contacto (ver «Contacto»); editor web (Sveltia en `/admin/`, ver «Editor web») programado, falta que Víctor lo pruebe en local con Chrome; faltan estadísticas |
+| 5 Funcionalidades | En marcha: el **mapa** (`src/pages/mapa-de-escaladas.astro`) está programado y probado en local (19 oct 2026); buscador con Pagefind programado (ver «Buscador»); contacto (ver «Contacto»); editor web (Sveltia en `/admin/`, ver «Editor web») programado, falta que Víctor lo pruebe en local con Chrome; estadísticas (GoatCounter, ver «Estadísticas») programadas pero apagadas hasta que Víctor cree la cuenta y ponga el código |
 | 5b, 6, 7, 8 | Pendientes |
 
 
@@ -86,6 +86,15 @@ Blog de escalada que se migra de WordPress.com a una web estática con Astro, al
 - **Listas ampliables**: `src/data/zonas.json` (lista plana de rutas con « › »; el árbol y los slugs se calculan en `src/lib/taxonomia.ts`), `rocas.json` y `tipos.json`. El esquema valida contra ellas (roca y tipo, con `z.enum`; zona, con `buscarZona`). En el editor son «Listas» y los desplegables de la ficha leen esos mismos archivos (relation sobre una colección de archivos), así que añadir un valor lo ofrece al momento. No hay botón «+» dentro de la ficha. `zona` se guarda como texto (`Aragón › Ordesa`); el esquema sigue aceptando la lista `[Aragón, Ordesa]`, pero **no hay que usarla**: el editor, al guardar una ficha con la zona en lista, la recortaba a su primer nivel (lo vimos en la prueba del 19 oct). Las 131 fichas con zona se migraron a texto.
 - **`config.yml` debe seguir a `src/content.config.ts`**: incluye todos los campos (también `comentarios` y `coordenadasAuto`) para que guardar una ficha antigua no pierda datos. Sin verificar todavía: que el editor conserve los pies de foto (`![](ruta "Pie")`) y el orden de los campos al guardar una ficha antigua.
 - Fotos nuevas: `public/wp-content/uploads/nuevas/` (2000 px, WebP). Las antiguas siguen en `AAAA/MM/` en `.jpg`.
+
+## Estadísticas (Fase 5, 18 oct 2026)
+
+- **Decisión de Víctor: las dos**: GoatCounter para las visitas del día a día y Search Console (Fase 7) para el posicionamiento en Google. GoatCounter es gratis para uso personal, no usa cookies (sin banner) y no guarda la IP; es un tercero más, junto a OpenTopoMap y Web3Forms.
+- **Está apagado**: el código de la cuenta va en `src/data/estadisticas.json` (`codigoGoatCounter`, el «xxx» de `xxx.goatcounter.com`) y sigue vacío porque la cuenta la crea Víctor (goatcounter.com/signup). Mientras esté vacío no se carga nada. Un código con mayúsculas, espacios u otros signos detiene `npm run build` con un mensaje.
+- **Cómo funciona**: `Base.astro` añade el script oficial (`gc.zgo.at/count.js`) al `<head>` solo en la web compilada (`import.meta.env.PROD`), así que `npm run dev` no cuenta nada. Lo llevan todas las páginas con ese layout (también la 404); no lo llevan `/admin/` ni `/feed/`. Con código puesto, el pie muestra «Visitas contadas sin cookies con GoatCounter».
+- **Visitas propias**: GoatCounter no cuenta `localhost`; para no contarse a sí mismo en la web publicada, Víctor abre una vez `https://desegundoyfresco.com/#toggle-goatcounter` en cada navegador.
+- **Comprobado el 18 oct**: con código de prueba, 523 de 525 HTML llevan el script (faltan `/admin/` y `/feed/`); con el código vacío, ninguno; con uno inválido, la compilación se detiene. **No se ha podido comprobar el conteo real** (hace falta la cuenta y la web publicada). Tras la Fase 6, mirar en el panel que llegan visitas.
+- **Comparar con WordPress.com**: las cifras de partida (unas 60–65 vistas al día) son de WordPress.com, que cuenta distinto (incluye bots y lectores de RSS); no esperar números idénticos.
 
 ## Cómo está montado
 
