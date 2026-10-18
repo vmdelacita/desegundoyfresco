@@ -1,16 +1,154 @@
 ---
 import Base from '../layouts/Base.astro';
 import TituloPagina from '../components/TituloPagina.astro';
+import { tituloCorto, todasLasVias, urlVia } from '../lib/vias';
+import { RAIZ_CATEGORIA, zonas } from '../lib/taxonomia';
+
+// Un marcador por punto: las vías de una misma pared comparten coordenadas y salen juntas en un cuadro.
+const vias = (await todasLasVias()).filter((v) => v.data.coordenadas);
+
+interface Punto {
+  lat: number;
+  lng: number;
+  vias: { titulo: string; grado?: string; longitud?: number; url: string }[];
+}
+const puntos = new Map<string, Punto>();
+for (const via of vias) {
+  const { lat, lng } = via.data.coordenadas!;
+  const clave = `${lat},${lng}`;
+  const punto = puntos.get(clave) ?? { lat, lng, vias: [] };
+  punto.vias.push({ titulo: tituloCorto(via.data.titulo), grado: via.data.grado, longitud: via.data.longitud, url: urlVia(via) });
+  puntos.set(clave, punto);
+}
+
+// Zonas del primer nivel con su encuadre, para los botones del mapa.
+const botones = zonas
+  .map((zona) => {
+    const suyas = vias.filter((v) => v.data.zona[0] === zona.nombre).map((v) => v.data.coordenadas!);
+    if (!suyas.length) return null;
+    const lats = suyas.map((c) => c.lat);
+    const lngs = suyas.map((c) => c.lng);
+    return {
+      nombre: zona.nombre,
+      url: `/category/${RAIZ_CATEGORIA.zona}/${zona.slug}/`,
+      total: suyas.length,
+      encuadre: [[Math.min(...lats), Math.min(...lngs)], [Math.max(...lats), Math.max(...lngs)]],
+    };
+  })
+  .filter(Boolean);
+
+const datos = { puntos: [...puntos.values()], zonas: botones };
 ---
 
-<!-- Mantiene la dirección que tenía la página de WordPress. El mapa real (Leaflet) se hace en la Fase 5. -->
-<Base titulo="Mapa de escaladas">
-  <TituloPagina titulo="Mapa de escaladas" />
+<Base titulo="Mapa de escaladas" descripcion="Todas las vías del blog sobre un mapa de montaña.">
+  <TituloPagina titulo="Mapa de escaladas" detalle={`${vias.length} vías en ${puntos.size} paredes`} />
   <div class="contenedor">
-    <p class="pendiente">El mapa estará disponible próximamente.</p>
+    <div class="zonas" id="zonas" role="group" aria-label="Ir a una zona">
+      <button type="button" data-zona="" aria-pressed="true">Península y Pirineos</button>
+      {botones.map((z, i) => <button type="button" data-zona={i} aria-pressed="false">{z!.nombre}</button>)}
+      <button type="button" data-zona="todo" aria-pressed="false">Ver todo</button>
+    </div>
+    <p class="enlace-zona suave" id="enlace-zona" hidden></p>
+    <div class="mapa" id="mapa" role="region" aria-label="Mapa de las vías"></div>
+    <noscript><p class="suave">El mapa necesita JavaScript. Mientras tanto, puedes llegar a las vías desde las <a href="/category/zona/aragon/">zonas</a>.</p></noscript>
+    <script type="application/json" id="datos-mapa" set:html={JSON.stringify(datos)} />
   </div>
 </Base>
 
+<script>
+  import L from 'leaflet';
+  import 'leaflet/dist/leaflet.css';
+
+  interface Via { titulo: string; grado?: string; longitud?: number; url: string }
+  interface Datos {
+    puntos: { lat: number; lng: number; vias: Via[] }[];
+    zonas: { nombre: string; url: string; total: number; encuadre: [[number, number], [number, number]] }[];
+  }
+  const datos: Datos = JSON.parse(document.getElementById('datos-mapa')!.textContent!);
+
+  const mapa = L.map('mapa', {
+    zoomControl: true,
+    scrollWheelZoom: false, // la rueda sigue desplazando la página; se activa al pulsar el mapa
+    worldCopyJump: true,
+  });
+  mapa.on('focus', () => mapa.scrollWheelZoom.enable());
+  mapa.on('blur', () => mapa.scrollWheelZoom.disable());
+
+  L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+    maxZoom: 17,
+    attribution:
+      'Datos © <a href="https://www.openstreetmap.org/copyright">colaboradores de OpenStreetMap</a>, SRTM · Mapa © <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
+  }).addTo(mapa);
+
+  const detalle = (via: Via) => [via.grado, via.longitud && `${via.longitud} m`].filter(Boolean).join(' · ');
+
+  for (const punto of datos.puntos) {
+    const n = punto.vias.length;
+    const icono = L.divIcon({
+      className: '',
+      html: `<span class="punto${n > 1 ? ' punto-varios' : ''}">${n > 1 ? n : ''}</span>`,
+      iconSize: n > 1 ? [30, 30] : [18, 18],
+    });
+    const cuadro = document.createElement('ul');
+    cuadro.className = 'cuadro';
+    for (const via of punto.vias) {
+      const fila = document.createElement('li');
+      const enlace = document.createElement('a');
+      enlace.href = via.url;
+      enlace.textContent = via.titulo;
+      fila.append(enlace);
+      if (detalle(via)) {
+        const datosVia = document.createElement('span');
+        datosVia.textContent = detalle(via);
+        fila.append(datosVia);
+      }
+      cuadro.append(fila);
+    }
+    L.marker([punto.lat, punto.lng], { icon: icono, title: punto.vias.map((v) => v.titulo).join(', '), alt: '' })
+      .bindPopup(cuadro, { maxWidth: 300, autoPanPadding: [24, 24] })
+      .addTo(mapa);
+  }
+
+  // Vistas: la península y los Pirineos al abrir, cada zona y el mundo entero.
+  const iberia: L.LatLngBoundsExpression = [[36.3, -9.3], [43.9, 4.3]];
+  const todo: L.LatLngBoundsExpression = datos.puntos.map((p) => [p.lat, p.lng] as [number, number]);
+  const enlaceZona = document.getElementById('enlace-zona')!;
+  const botones = [...document.querySelectorAll<HTMLButtonElement>('#zonas button')];
+
+  function ir(clave: string) {
+    for (const b of botones) b.setAttribute('aria-pressed', String(b.dataset.zona === clave));
+    enlaceZona.hidden = clave === '' || clave === 'todo';
+    if (clave === '') return void mapa.fitBounds(iberia);
+    if (clave === 'todo') return void mapa.fitBounds(todo, { padding: [30, 30] });
+    const zona = datos.zonas[Number(clave)];
+    mapa.fitBounds(zona.encuadre, { padding: [40, 40], maxZoom: 12 });
+    enlaceZona.innerHTML = `${zona.total} ${zona.total === 1 ? 'vía' : 'vías'} en ${zona.nombre} · <a href="${zona.url}">Ver la página de ${zona.nombre} →</a>`;
+  }
+  for (const b of botones) b.addEventListener('click', () => ir(b.dataset.zona!));
+  ir('');
+</script>
+
 <style>
-  .pendiente { display: grid; place-items: center; min-height: 50vh; margin: 40px 0 0; background: var(--fondo-suave); color: var(--suave); font: 600 20px/1 var(--etiquetas); letter-spacing: 0.1em; text-transform: uppercase; }
+  .zonas { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 14px; }
+  .zonas button { padding: 9px 14px; border: 1px solid var(--linea); background: var(--fondo); color: var(--texto); font: 600 15px/1 var(--etiquetas); letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; }
+  /* En el móvil los botones van en una fila que se desliza, para que el mapa quede a la vista */
+  @media (max-width: 719px) {
+    .zonas { flex-wrap: nowrap; margin-inline: calc(var(--margen) * -1); padding-inline: var(--margen); overflow-x: auto; scrollbar-width: none; }
+    .zonas button { flex: none; }
+  }
+  .zonas button:hover { border-color: var(--turquesa); color: var(--acento); }
+  .zonas button[aria-pressed='true'] { border-color: var(--turquesa); background: var(--turquesa); color: #fff; }
+  .enlace-zona { margin: 0 0 14px; }
+  .mapa { height: clamp(440px, 72vh, 780px); margin-bottom: 56px; border: 1px solid var(--linea); background: var(--fondo-suave); }
+
+  /* Marcadores y cuadros los crea Leaflet fuera de este componente */
+  .mapa :global(.punto) { display: grid; place-items: center; box-sizing: border-box; width: 100%; height: 100%; border: 3px solid #fff; border-radius: 50%; background: var(--acento); box-shadow: 0 1px 5px rgba(0, 0, 0, 0.45); color: #fff; font: 700 15px/1 var(--etiquetas); }
+  .mapa :global(.punto-varios) { background: var(--turquesa); }
+  .mapa :global(.leaflet-marker-icon:focus-visible .punto), .mapa :global(.leaflet-marker-icon:hover .punto) { background: var(--acento-oscuro); }
+  .mapa :global(.leaflet-popup-content) { margin: 14px 18px; font: 400 16px/1.3 var(--lectura); }
+  .mapa :global(.cuadro) { max-height: 220px; margin: 0; padding: 0; overflow-y: auto; list-style: none; }
+  .mapa :global(.cuadro li + li) { margin-top: 10px; }
+  .mapa :global(.cuadro a) { display: block; color: var(--acento); font: 700 14px/1.2 var(--nombres); text-transform: uppercase; text-decoration: none; }
+  .mapa :global(.cuadro a:hover) { text-decoration: underline; }
+  .mapa :global(.cuadro span) { color: var(--suave); font: 600 15px/1.3 var(--etiquetas); letter-spacing: 0.06em; }
 </style>

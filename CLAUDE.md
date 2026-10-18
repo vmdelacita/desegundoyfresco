@@ -19,7 +19,8 @@ Blog de escalada que se migra de WordPress.com a una web estática con Astro, al
 | 2 Proyecto Astro y estructura | Hecha: esqueleto funcionando con 3 vías de muestra; repositorio `vmdelacita/desegundoyfresco` |
 | 3 Diseño | Primera dirección programada (ver «Diseño»); Víctor debe probarla en local y ajustar. Faltan logo, la página «Explorar» y decidir si habrá modo oscuro |
 | 4 Convertir las entradas antiguas | Hecha el 18 oct 2026 (ver «Conversión»): 128 publicadas + 13 borradores + 2 páginas, la web compila; Víctor debe revisarla en local y decidir las coordenadas que faltan |
-| 5, 5b, 6, 7, 8 | Pendientes |
+| 5 Funcionalidades | En marcha: el **mapa** (`src/pages/mapa-de-escaladas.astro`) está programado y probado en local (19 oct 2026); faltan buscador, comentarios, editor web, estadísticas |
+| 5b, 6, 7, 8 | Pendientes |
 
 
 ## Decisiones ya tomadas
@@ -59,6 +60,11 @@ Blog de escalada que se migra de WordPress.com a una web estática con Astro, al
 - **Comentarios**: campo `comentarios` de la ficha (autor, fecha, texto; `respuesta: true` si contestan a otro), mostrados al final por `Comentarios.astro`. No se importa ni el correo ni la IP de quien comentó.
 - **Borradores**: pueden dejar vacíos zona, roca, tipo y portada; el esquema lo exige solo a las publicadas.
 - **Pendiente para Fases 6/7**: 5 direcciones antiguas que necesitan alias (tabla al final del informe y de `INVENTARIO.md`).
+
+## Mapa (Fase 5, 19 oct 2026)
+
+- Leaflet 1.9.4 (npm, sin CDN) con teselas de **OpenTopoMap** (único tercero: ven la IP, sin cookies). Un marcador por punto distinto (75 para 128 vías); si hay varias vías en el punto, el marcador lleva su número y el cuadro las lista. Botones por zona de primer nivel (`zonas.json`) que encuadran el mapa, más «Península y Pirineos» (vista inicial) y «Ver todo». Los datos salen de las fichas al compilar. La rueda del ratón solo hace zoom cuando el mapa tiene el foco. En móvil los botones van en una fila deslizante.
+- Fuera de esta versión: filtros por grado y roca (irán en «Explorar»), agrupar marcadores al alejarse, fotos en los cuadros.
 
 ## Cómo está montado
 
