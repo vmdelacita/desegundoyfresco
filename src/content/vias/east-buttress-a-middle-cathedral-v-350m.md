@@ -2,7 +2,7 @@
 titulo: East Buttress a Middle Cathedral (V+, 350m)
 fecha: 2022-06-07
 autor: otnoesmusica
-zona: [Otros países, EEUU]
+zona: Otros países › EEUU
 grado: V+
 longitud: 350
 roca: Granito

@@ -2,7 +2,7 @@
 titulo: Estación Orbital MIR a la Paret de Catalunya (400m, 6c)
 fecha: 2021-03-15
 autor: otnoesmusica
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: 6c
 longitud: 400
 roca: Caliza

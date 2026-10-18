@@ -2,7 +2,7 @@
 titulo: Tre cime en la Pedriza
 fecha: 2019-06-15
 autor: otnoesmusica
-zona: [Zona centro, La Pedriza]
+zona: Zona centro › La Pedriza
 grado: V+
 roca: Granito
 tipo: Vía larga

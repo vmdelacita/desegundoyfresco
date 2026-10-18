@@ -2,7 +2,7 @@
 titulo: La Nose (1000m, V+/C1)
 fecha: 2022-06-22
 autor: otnoesmusica
-zona: [Otros países, EEUU]
+zona: Otros países › EEUU
 grado: V+/C1
 longitud: 1000
 roca: Granito

@@ -2,7 +2,7 @@
 titulo: Àliga al Tozal (200m, 6b)
 fecha: 2026-07-24
 autor: otnoesmusica
-zona: [Aragón, Ordesa]
+zona: Aragón › Ordesa
 grado: 6b
 longitud: 200
 roca: Arenisca

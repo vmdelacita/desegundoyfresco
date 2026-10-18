@@ -2,7 +2,7 @@
 titulo: Racs a la Pared de la Cascada (300m, 7a+)
 fecha: 2021-09-07
 autor: otnoesmusica
-zona: [Aragón, Ordesa]
+zona: Aragón › Ordesa
 grado: 7a+
 longitud: 300
 roca: Arenisca

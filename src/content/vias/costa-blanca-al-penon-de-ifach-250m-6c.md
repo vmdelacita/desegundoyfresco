@@ -2,7 +2,7 @@
 titulo: Costa Blanca al Peñón de Ifach (250m, 6c+)
 fecha: 2024-12-19
 autor: otnoesmusica
-zona: [Levante, Peñon de Ifach]
+zona: Levante › Peñon de Ifach
 grado: 6c+
 longitud: 250
 roca: Caliza

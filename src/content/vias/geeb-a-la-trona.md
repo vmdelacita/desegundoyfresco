@@ -2,7 +2,7 @@
 titulo: GEEB a la Trona (65m, 7a+)
 fecha: 2021-01-18
 autor: otnoesmusica
-zona: [Catalunya]
+zona: Catalunya
 grado: 7a+
 longitud: 65
 roca: Arenisca

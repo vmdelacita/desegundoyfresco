@@ -2,7 +2,7 @@
 titulo: Kohlmann a la Aiguille du Midi (185m, 6c)
 fecha: 2024-10-02
 autor: otnoesmusica
-zona: [Otros países, Francia]
+zona: Otros países › Francia
 grado: 6c
 longitud: 185
 roca: Granito

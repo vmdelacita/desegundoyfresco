@@ -2,7 +2,7 @@
 titulo: Vía de l'Aranya al Serrat de les Garrigoses (260m, V+)
 fecha: 2015-01-25
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Montserrat sur]
+zona: Catalunya › Montserrat › Montserrat sur
 grado: V+
 longitud: 260
 roca: Conglomerado

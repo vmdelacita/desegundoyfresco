@@ -2,7 +2,7 @@
 titulo: Torras-Nubiola a la Paret de Sant Jeroni (110m, IV+)
 fecha: 2021-07-17
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Cara norte]
+zona: Catalunya › Montserrat › Cara norte
 grado: IV+
 longitud: 110
 roca: Conglomerado

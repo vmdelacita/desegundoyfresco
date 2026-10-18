@@ -2,7 +2,7 @@
 titulo: Llum de lluna a Sa Gubia (215m, 6b)
 fecha: 2015-03-07
 autor: otnoesmusica
-zona: [Mallorca]
+zona: Mallorca
 grado: 6b
 longitud: 215
 roca: Caliza

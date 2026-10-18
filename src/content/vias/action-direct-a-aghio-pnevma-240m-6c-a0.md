@@ -2,7 +2,7 @@
 titulo: Action Direct a Aghio Pnevma (240m, 6c/A0)
 fecha: 2023-11-10
 autor: otnoesmusica
-zona: [Otros países, Grecia]
+zona: Otros países › Grecia
 grado: 6c/A0
 longitud: 240
 roca: Conglomerado

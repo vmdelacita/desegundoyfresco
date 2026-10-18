@@ -2,7 +2,7 @@
 titulo: Visite Obligatoire a l'Agulla Dibona (400m, 6a+)
 fecha: 2019-10-28
 autor: arnaufluvia
-zona: [Otros países, Francia]
+zona: Otros países › Francia
 grado: 6a+
 longitud: 400
 roca: Granito

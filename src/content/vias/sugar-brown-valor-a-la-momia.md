@@ -2,7 +2,7 @@
 titulo: Brown sugar + Valor a la Momia (120m, 6b+)
 fecha: 2019-11-24
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Sant Benet]
+zona: Catalunya › Montserrat › Sant Benet
 grado: 6b+
 longitud: 120
 roca: Conglomerado

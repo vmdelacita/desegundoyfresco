@@ -2,7 +2,7 @@
 titulo: Easy rider a la Paret de l'Aeri (285m, 6b)
 fecha: 2016-08-02
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Cara norte]
+zona: Catalunya › Montserrat › Cara norte
 grado: 6b
 longitud: 285
 roca: Conglomerado

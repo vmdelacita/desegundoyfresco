@@ -2,7 +2,7 @@
 titulo: Normal al Puro + Serón Millán (400 m, 6b)
 fecha: 2016-09-20
 autor: otnoesmusica
-zona: [Aragón, Riglos]
+zona: Aragón › Riglos
 grado: 6b
 longitud: 400
 roca: Conglomerado

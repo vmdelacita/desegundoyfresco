@@ -3,6 +3,9 @@ node_modules/
 dist/
 .astro/
 
+# Copia del editor (la genera scripts/copiar-sveltia.mjs)
+public/admin/sveltia/
+
 # Material de partida: no se sube a GitHub
 import/
 *.tar

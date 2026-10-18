@@ -2,7 +2,7 @@
 titulo: Vía de los Suizos al Grand Capucin (250 + 300m, 6b)
 fecha: 2024-12-01
 autor: otnoesmusica
-zona: [Otros países, Francia]
+zona: Otros países › Francia
 grado: 6b
 longitud: 550
 roca: Granito

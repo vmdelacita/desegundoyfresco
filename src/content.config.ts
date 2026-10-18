@@ -3,7 +3,7 @@ import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { buscarZona, caminosDeZona } from './lib/taxonomia';
+import { buscarZona, caminosDeZona, rocas, SEPARADOR_ZONA, tiposDeEscalada } from './lib/taxonomia';
 
 /** «42.64, -0.04» (como lo copia Google Maps) → { lat, lng }. */
 const coordenadas = z
@@ -51,22 +51,27 @@ const vias = defineCollection({
       titulo: z.string().min(1),
       fecha: z.coerce.date(),
       autor: reference('autores'),
+      // Una lista ([Aragón, Ordesa]) o el texto que escribe el editor web («Aragón › Ordesa»)
       zona: z
-        .array(z.string())
-        .min(1, 'La zona es obligatoria, p. ej. [Aragón, Ordesa]')
-        .superRefine((camino, ctx) => {
-          if (buscarZona(camino)) return;
-          ctx.addIssue({
-            code: 'custom',
-            message: `La zona «${camino.join(' › ')}» no existe. Zonas válidas: ${caminosDeZona().join(' | ')}. Para añadir una nueva, edita src/data/zonas.json.`,
-          });
-        })
+        .preprocess(
+          (valor) => (typeof valor === 'string' ? valor.split('›').map((nivel) => nivel.trim()) : valor),
+          z
+            .array(z.string())
+            .min(1, 'La zona es obligatoria, p. ej. Aragón › Ordesa')
+            .superRefine((camino, ctx) => {
+              if (buscarZona(camino)) return;
+              ctx.addIssue({
+                code: 'custom',
+                message: `La zona «${camino.join(SEPARADOR_ZONA)}» no existe. Zonas válidas: ${caminosDeZona().join(' | ')}. Para añadir una nueva, edítala en src/data/zonas.json (en el editor, «Listas» › «Zonas»).`,
+              });
+            }),
+        )
         .optional(),
       // Una crónica de sector (Gelida, Cavallers) no tiene un solo grado: no sale en las páginas de grado.
       grado: z.string().min(1).optional(),
       longitud: z.number().positive().optional(),
-      roca: z.string().min(1).optional(),
-      tipo: z.string().min(1).optional(),
+      roca: z.enum(rocas as [string, ...string[]], { error: () => `La roca debe ser una de: ${rocas.join(', ')}. Para añadir otra, edítala en src/data/rocas.json (en el editor, «Listas» › «Rocas»).` }).optional(),
+      tipo: z.enum(tiposDeEscalada as [string, ...string[]], { error: () => `El tipo debe ser uno de: ${tiposDeEscalada.join(', ')}. Para añadir otro, edítalo en src/data/tipos.json (en el editor, «Listas» › «Tipos»).` }).optional(),
       fechaEscalada: z.coerce.date().optional(),
       material: z.string().optional(),
       horario: z.string().optional(),

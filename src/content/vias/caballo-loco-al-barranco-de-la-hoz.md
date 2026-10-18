@@ -2,7 +2,7 @@
 titulo: Caballo loco al Barranco de la Hoz (110m, 6a)
 fecha: 2017-09-18
 autor: otnoesmusica
-zona: [Zona centro, Barranco de la Hoz]
+zona: Zona centro › Barranco de la Hoz
 grado: 6a
 longitud: 110
 roca: Arenisca

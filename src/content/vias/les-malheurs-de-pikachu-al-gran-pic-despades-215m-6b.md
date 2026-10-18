@@ -2,7 +2,7 @@
 titulo: Les malheurs de Pikachu al Gran Pic d'Espades (215m, 6b)
 fecha: 2026-07-18
 autor: otnoesmusica
-zona: [Otros países, Francia]
+zona: Otros países › Francia
 grado: 6b
 longitud: 215
 roca: Granito

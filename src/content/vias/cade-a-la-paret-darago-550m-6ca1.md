@@ -2,7 +2,7 @@
 titulo: CADE a la Paret d'Aragó (550m, 6c/A1)
 fecha: 2017-04-04
 autor: otnoesmusica
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: 6c/A1
 longitud: 550
 roca: Caliza

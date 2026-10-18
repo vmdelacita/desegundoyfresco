@@ -2,7 +2,7 @@
 titulo: Diedro ayuso - Cresterío - Valencianos al Torreón (180 + 150 + 110m, 6b)
 fecha: 2017-10-28
 autor: otnoesmusica
-zona: [Zona centro, Galayos]
+zona: Zona centro › Galayos
 grado: 6b
 longitud: 440
 roca: Granito

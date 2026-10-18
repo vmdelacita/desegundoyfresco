@@ -2,7 +2,7 @@
 titulo: Pilier Sud al Midi d'Ossau (400m, 7a)
 fecha: 2021-08-29
 autor: otnoesmusica
-zona: [Otros países, Francia]
+zona: Otros países › Francia
 grado: 7a
 longitud: 400
 roca: Granito

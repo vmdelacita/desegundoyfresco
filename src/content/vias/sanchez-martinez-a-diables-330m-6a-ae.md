@@ -2,7 +2,7 @@
 titulo: Sánchez-Martínez a Diables (330m, 6a/Ae)
 fecha: 2019-05-14
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Cara norte]
+zona: Catalunya › Montserrat › Cara norte
 grado: 6a/Ae
 longitud: 330
 roca: Conglomerado

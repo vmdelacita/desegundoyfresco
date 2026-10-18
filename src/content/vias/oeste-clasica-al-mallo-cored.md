@@ -2,7 +2,7 @@
 titulo: Oeste clásica al Mallo Cored (155m, V)
 fecha: 2016-05-11
 autor: otnoesmusica
-zona: [Aragón, Riglos]
+zona: Aragón › Riglos
 grado: V
 longitud: 155
 roca: Conglomerado

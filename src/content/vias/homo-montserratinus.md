@@ -2,7 +2,7 @@
 titulo: Homo Montserratinus a la Roca d'en Sanhida (145m, 6b)
 fecha: 2015-12-19
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Cara norte]
+zona: Catalunya › Montserrat › Cara norte
 grado: 6b
 longitud: 145
 roca: Conglomerado

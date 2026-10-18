@@ -2,7 +2,7 @@
 titulo: Fulgencio al Hueso (100m, 6a)
 fecha: 2016-12-12
 autor: otnoesmusica
-zona: [Zona centro, La Pedriza]
+zona: Zona centro › La Pedriza
 grado: 6a
 longitud: 100
 roca: Granito

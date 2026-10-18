@@ -2,7 +2,7 @@
 titulo: Santacana Serrano Araguz a la Mòmia (135m, 6b)
 fecha: 2016-12-09
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Sant Benet]
+zona: Catalunya › Montserrat › Sant Benet
 grado: 6b
 longitud: 135
 roca: Conglomerado

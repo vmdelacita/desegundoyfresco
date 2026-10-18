@@ -2,7 +2,7 @@
 titulo: King Kong a Peña Bernal (120m, 6b)
 fecha: 2018-09-18
 autor: otnoesmusica
-zona: [Otros países, México]
+zona: Otros países › México
 grado: 6b
 longitud: 120
 roca: Granito

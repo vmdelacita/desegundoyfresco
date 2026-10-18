@@ -2,7 +2,7 @@
 titulo: Esperó Ribas al Bastó del Frare (210m, 6a+)
 fecha: 2015-05-23
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Cara norte]
+zona: Catalunya › Montserrat › Cara norte
 grado: 6a+
 longitud: 210
 roca: Conglomerado

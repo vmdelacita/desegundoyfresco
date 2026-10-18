@@ -2,7 +2,7 @@
 titulo: Filo noroeste a la Peña de Bernal (320m, V+)
 fecha: 2018-05-19
 autor: otnoesmusica
-zona: [Otros países, México]
+zona: Otros países › México
 grado: V+
 longitud: 320
 roca: Granito

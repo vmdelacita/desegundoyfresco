@@ -2,7 +2,7 @@
 titulo: El dorado 2 al Morro de Toix (100m, 6b)
 fecha: 2024-12-23
 autor: otnoesmusica
-zona: [Levante, Morro de Toix]
+zona: Levante › Morro de Toix
 grado: 6b
 longitud: 100
 roca: Caliza

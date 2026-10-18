@@ -1,4 +1,7 @@
 import zonasJson from '../data/zonas.json';
+import rocasJson from '../data/rocas.json';
+import tiposJson from '../data/tipos.json';
+import { slugify } from './slug';
 
 export interface NodoZona {
   nombre: string;
@@ -6,7 +9,40 @@ export interface NodoZona {
   hijos?: NodoZona[];
 }
 
-export const zonas = zonasJson as NodoZona[];
+/** Separador de los niveles de una zona: «Catalunya › Montserrat › Agulles». */
+export const SEPARADOR_ZONA = ' › ';
+
+/**
+ * src/data/zonas.json es una lista plana de rutas («Catalunya», «Catalunya › Montserrat»…), que es lo que edita
+ * el editor web y lo que ofrece el desplegable de zona. De ahí sale el árbol; el slug de cada zona es su nombre
+ * sin tildes, en minúsculas y con guiones, como en WordPress.
+ */
+export function construirArbol(rutas: string[]): NodoZona[] {
+  const raiz: NodoZona[] = [];
+  const nodos = new Map<string, NodoZona>();
+  for (const ruta of rutas) {
+    const camino = ruta.split('›').map((n) => n.trim());
+    const clave = camino.join(SEPARADOR_ZONA);
+    if (camino.some((n) => !n)) throw new Error(`src/data/zonas.json: la zona «${ruta}» tiene un nivel vacío.`);
+    if (nodos.has(clave)) throw new Error(`src/data/zonas.json: la zona «${clave}» está repetida.`);
+    const nodo: NodoZona = { nombre: camino.at(-1)!, slug: slugify(camino.at(-1)!) };
+    nodos.set(clave, nodo);
+    if (camino.length === 1) {
+      raiz.push(nodo);
+      continue;
+    }
+    const padre = nodos.get(camino.slice(0, -1).join(SEPARADOR_ZONA));
+    if (!padre) throw new Error(`src/data/zonas.json: la zona «${clave}» necesita que exista antes «${camino.slice(0, -1).join(SEPARADOR_ZONA)}».`);
+    (padre.hijos ??= []).push(nodo);
+  }
+  return raiz;
+}
+
+export const zonas = construirArbol(zonasJson.zonas);
+
+/** Valores permitidos de roca y de tipo de escalada (src/data/rocas.json y tipos.json). */
+export const rocas: string[] = rocasJson.valores;
+export const tiposDeEscalada: string[] = tiposJson.valores;
 
 /** Busca una zona por su camino de nombres (["Aragón", "Ordesa"]) y devuelve los nodos recorridos. */
 export function buscarZona(camino: string[]): NodoZona[] | undefined {

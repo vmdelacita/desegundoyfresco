@@ -2,7 +2,7 @@
 titulo: Boy-Roca al Elefant (140m, 6a+)
 fecha: 2016-03-29
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Sant Benet]
+zona: Catalunya › Montserrat › Sant Benet
 grado: 6a+
 longitud: 140
 roca: Conglomerado

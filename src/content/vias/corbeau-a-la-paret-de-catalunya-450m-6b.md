@@ -2,7 +2,7 @@
 titulo: Corbeau a la Paret de Catalunya (450m, 6b)
 fecha: 2022-11-14
 autor: otnoesmusica
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: 6b
 longitud: 450
 roca: Caliza

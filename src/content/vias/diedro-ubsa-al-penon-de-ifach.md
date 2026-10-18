@@ -2,7 +2,7 @@
 titulo: Diedro UBSA al Peñon de Ifach (250m, V+)
 fecha: 2015-12-05
 autor: otnoesmusica
-zona: [Levante, Peñon de Ifach]
+zona: Levante › Peñon de Ifach
 grado: V+
 longitud: 250
 roca: Caliza

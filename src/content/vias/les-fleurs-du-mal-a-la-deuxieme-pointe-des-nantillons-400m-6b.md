@@ -2,7 +2,7 @@
 titulo: Les fleurs du Mal a la Deuxième Pointe des Nantillons (400m, 6b+)
 fecha: 2024-10-01
 autor: otnoesmusica
-zona: [Otros países, Francia]
+zona: Otros países › Francia
 grado: 6b+
 longitud: 400
 roca: Granito

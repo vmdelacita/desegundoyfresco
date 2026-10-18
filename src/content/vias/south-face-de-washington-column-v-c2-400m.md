@@ -2,7 +2,7 @@
 titulo: South Face de Washington Column (V+/C2, 400m)
 fecha: 2022-06-10
 autor: otnoesmusica
-zona: [Otros países, EEUU]
+zona: Otros países › EEUU
 grado: V+/C2
 longitud: 400
 roca: Granito

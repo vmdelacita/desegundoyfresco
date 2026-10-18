@@ -2,7 +2,7 @@
 titulo: Cerda-Riera a la Ven-suri-ven (140m, 6a)
 fecha: 2014-11-08
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Agulles]
+zona: Catalunya › Montserrat › Agulles
 grado: 6a
 longitud: 140
 roca: Conglomerado

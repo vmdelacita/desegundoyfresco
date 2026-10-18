@@ -2,7 +2,7 @@
 titulo: El gran techo a las Rocas de Suesca (100m, V+)
 fecha: 2018-04-17
 autor: otnoesmusica
-zona: [Otros países, Colombia]
+zona: Otros países › Colombia
 grado: V+
 longitud: 100
 roca: Arenisca

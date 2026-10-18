@@ -2,7 +2,7 @@
 titulo: Vía del Abuelo Roger al Mallo Firé (300m, 7b)
 fecha: 2024-04-28
 autor: otnoesmusica
-zona: [Aragón, Riglos]
+zona: Aragón › Riglos
 grado: 7b
 longitud: 300
 roca: Conglomerado

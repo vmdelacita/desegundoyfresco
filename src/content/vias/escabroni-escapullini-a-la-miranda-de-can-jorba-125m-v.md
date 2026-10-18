@@ -2,7 +2,7 @@
 titulo: Escabroni Escapullini a la Miranda de Can Jorba (125m, V)
 fecha: 2016-12-01
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Montserrat sur]
+zona: Catalunya › Montserrat › Montserrat sur
 grado: V
 longitud: 125
 roca: Conglomerado

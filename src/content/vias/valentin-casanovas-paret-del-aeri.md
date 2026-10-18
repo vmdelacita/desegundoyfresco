@@ -2,7 +2,7 @@
 titulo: Valentín Casanovas a la Paret del Aeri (300m, 6a/A1)
 fecha: 2021-05-24
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Cara norte]
+zona: Catalunya › Montserrat › Cara norte
 grado: 6a/A1
 longitud: 300
 roca: Conglomerado

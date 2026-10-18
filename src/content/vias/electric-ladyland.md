@@ -2,7 +2,7 @@
 titulo: Electric Ladyland a la Paret de l'Aeri (300m, 6a/A1)
 fecha: 2016-02-02
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Cara norte]
+zona: Catalunya › Montserrat › Cara norte
 grado: 6a/A1
 longitud: 300
 roca: Conglomerado

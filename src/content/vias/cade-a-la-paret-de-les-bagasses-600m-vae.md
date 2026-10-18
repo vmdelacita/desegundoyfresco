@@ -2,7 +2,7 @@
 titulo: CADE a la Paret de les Bagasses (600m, V+/Ae)
 fecha: 2016-04-27
 autor: otnoesmusica
-zona: [Catalunya, Terradets]
+zona: Catalunya › Terradets
 grado: V+/Ae
 longitud: 600
 roca: Caliza

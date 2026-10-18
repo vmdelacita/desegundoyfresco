@@ -2,7 +2,7 @@
 titulo: Vía Víctor al Urriellu (V+, 175m)
 fecha: 2024-12-17
 autor: otnoesmusica
-zona: [Picos de Europa]
+zona: Picos de Europa
 grado: V+
 longitud: 175
 roca: Caliza

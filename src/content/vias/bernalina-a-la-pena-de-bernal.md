@@ -2,7 +2,7 @@
 titulo: Bernalina a la Peña de Bernal (300m, V+)
 fecha: 2017-12-14
 autor: otnoesmusica
-zona: [Otros países, México]
+zona: Otros países › México
 grado: V+
 longitud: 300
 roca: Granito

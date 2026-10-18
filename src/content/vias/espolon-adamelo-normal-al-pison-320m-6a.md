@@ -2,7 +2,7 @@
 titulo: Espolón Adamelo + Normal al Pisón (320m, 6a)
 fecha: 2016-05-19
 autor: otnoesmusica
-zona: [Aragón, Riglos]
+zona: Aragón › Riglos
 grado: 6a
 longitud: 320
 roca: Conglomerado

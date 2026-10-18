@@ -2,7 +2,7 @@
 titulo: Puñalada trapera a la Pared de Aragón (260m, 6c)
 fecha: 2017-03-21
 autor: otnoesmusica
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: 6c
 longitud: 260
 roca: Caliza

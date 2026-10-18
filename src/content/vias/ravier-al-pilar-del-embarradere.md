@@ -2,7 +2,7 @@
 titulo: Ravier al Pilar del Embarradere (350m, 6c+/A1)
 fecha: 2020-09-14
 autor: otnoesmusica
-zona: [Otros países, Francia]
+zona: Otros países › Francia
 grado: 6c+/A1
 longitud: 350
 roca: Granito

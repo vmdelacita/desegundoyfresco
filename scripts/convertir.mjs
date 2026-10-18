@@ -11,7 +11,7 @@
 // Nunca toca import/. Genera import/informe-fase4.md (lo que hay que revisar a mano) e
 // import/sin-coordenadas.csv (vías sin punto en el mapa). Con --sobrescribir se pierden las
 // correcciones hechas a mano en los archivos que ya existan.
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { mkdir, open, readdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -161,7 +161,19 @@ const adjuntos = new Map(
     .filter((i) => i['wp:post_type'] === 'attachment')
     .map((i) => [i['wp:post_id'], new URL(i['wp:attachment_url']).pathname.replace(/^.*\/wp-content\/uploads\//, '')]),
 );
-const zonasJson = JSON.parse(await readFile(join(RAIZ, 'src/data/zonas.json'), 'utf8'));
+// src/data/zonas.json es una lista plana de rutas («Catalunya › Montserrat»); aquí se reconstruye el árbol con su slug.
+const zonasJson = (() => {
+  const raiz = [];
+  const nodos = new Map();
+  for (const ruta of JSON.parse(readFileSync(join(RAIZ, 'src/data/zonas.json'), 'utf8')).zonas) {
+    const camino = ruta.split('›').map((n) => n.trim());
+    const nodo = { nombre: camino.at(-1), slug: slugify(camino.at(-1)) };
+    nodos.set(camino.join(' › '), nodo);
+    if (camino.length === 1) raiz.push(nodo);
+    else (nodos.get(camino.slice(0, -1).join(' › ')).hijos ??= []).push(nodo);
+  }
+  return raiz;
+})();
 const autoresConocidos = new Set((await readdir(join(RAIZ, 'src/content/autores'))).map((f) => f.replace(/\.json$/, '')));
 
 // ---------------------------------------------------------------------------------------------
@@ -474,7 +486,8 @@ async function coordenadasDe(item, portada, md) {
 // Escritura
 
 function frontmatter(datos) {
-  const doc = new YAML.Document(datos, { version: '1.1' });
+  // La zona se guarda como texto («Aragón › Ordesa»), que es lo que lee y escribe el editor web.
+  const doc = new YAML.Document({ ...datos, ...(datos.zona && { zona: datos.zona.join(' › ') }) }, { version: '1.1' });
   YAML.visit(doc, {
     Seq(_, nodo) {
       if (nodo.items.every((i) => YAML.isScalar(i))) nodo.flow = true;

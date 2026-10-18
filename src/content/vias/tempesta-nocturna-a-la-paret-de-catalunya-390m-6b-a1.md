@@ -2,7 +2,7 @@
 titulo: Tempesta Nocturna a la Paret de Catalunya (390m, 6b/A1)
 fecha: 2019-06-12
 autor: otnoesmusica
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: 6b/A1
 longitud: 390
 roca: Caliza

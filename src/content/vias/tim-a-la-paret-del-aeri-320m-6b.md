@@ -2,7 +2,7 @@
 titulo: TIM a la Paret del Aeri (320m, 6b+)
 fecha: 2021-05-10
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Cara norte]
+zona: Catalunya › Montserrat › Cara norte
 grado: 6b+
 longitud: 320
 roca: Conglomerado

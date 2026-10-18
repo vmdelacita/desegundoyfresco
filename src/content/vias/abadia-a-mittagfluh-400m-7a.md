@@ -2,7 +2,7 @@
 titulo: Abadia a Mittagfluh (400m, 7a)
 fecha: 2024-11-27
 autor: otnoesmusica
-zona: [Otros países, Suiza]
+zona: Otros países › Suiza
 grado: 7a
 longitud: 400
 roca: Granito

@@ -2,7 +2,7 @@
 titulo: Ravier al Tozal del Mallo en Ordesa (350m, 6b)
 fecha: 2017-10-17
 autor: otnoesmusica
-zona: [Aragón, Ordesa]
+zona: Aragón › Ordesa
 grado: 6b
 longitud: 350
 roca: Arenisca

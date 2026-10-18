@@ -2,7 +2,7 @@
 titulo: South Face del North Dome entrando por Royal Arches (600 + 350 m, V+)
 fecha: 2022-06-13
 autor: otnoesmusica
-zona: [Otros países, EEUU]
+zona: Otros países › EEUU
 grado: V+
 longitud: 950
 roca: Granito

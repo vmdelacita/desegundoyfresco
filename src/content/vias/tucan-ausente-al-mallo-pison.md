@@ -2,7 +2,7 @@
 titulo: Tucan Ausente al Mallo Pisón (280m, 7a)
 fecha: 2022-02-25
 autor: otnoesmusica
-zona: [Aragón, Riglos]
+zona: Aragón › Riglos
 grado: 7a
 longitud: 280
 roca: Conglomerado

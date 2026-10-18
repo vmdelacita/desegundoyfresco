@@ -2,7 +2,7 @@
 titulo: Le chic, le chèque, le choc al Petit Clocher du Portalet (200m, 6c)
 fecha: 2024-12-01
 autor: otnoesmusica
-zona: [Otros países, Suiza]
+zona: Otros países › Suiza
 grado: 6c
 longitud: 200
 roca: Granito

@@ -2,7 +2,7 @@
 titulo: Vía Cervera-Raul a la Talaia Gran (190m, 6a/Ae)
 fecha: 2015-04-06
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Ecos]
+zona: Catalunya › Montserrat › Ecos
 grado: 6a/Ae
 longitud: 190
 roca: Conglomerado

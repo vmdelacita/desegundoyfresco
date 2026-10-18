@@ -2,7 +2,7 @@
 titulo: Gritos y susurros (Diedre gris) a la Paret de Catalunya (410m, 6a+)
 fecha: 2016-03-15
 autor: otnoesmusica
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: 6a+
 longitud: 410
 roca: Caliza

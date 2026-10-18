@@ -2,7 +2,7 @@
 titulo: SIDA vertical a la Torre de Marboré (350m, 6c+)
 fecha: 2021-08-30
 autor: otnoesmusica
-zona: [Otros países, Francia]
+zona: Otros países › Francia
 grado: 6c+
 longitud: 350
 roca: Caliza

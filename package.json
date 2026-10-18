@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "De segundo y fresco: blog de escalada (Astro)",
   "scripts": {
+    "predev": "node scripts/copiar-sveltia.mjs",
     "dev": "astro dev",
+    "prebuild": "node scripts/copiar-sveltia.mjs",
     "build": "astro build && pagefind --site dist",
     "preview": "astro preview",
     "fotos": "node scripts/fotos.mjs",
@@ -23,6 +25,7 @@
     "sharp": "^0.35.5"
   },
   "devDependencies": {
+    "@sveltia/cms": "^0.248.0",
     "exifr": "^7.1.3",
     "fast-xml-parser": "^5.11.2",
     "pagefind": "^1.5.2",

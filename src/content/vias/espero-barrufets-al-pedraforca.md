@@ -2,7 +2,7 @@
 titulo: Esperó Barrufets al Pedraforca (275m, 7a)
 fecha: 2021-04-07
 autor: otnoesmusica
-zona: [Catalunya, Pedraforca]
+zona: Catalunya › Pedraforca
 grado: 7a
 longitud: 275
 roca: Caliza

@@ -2,7 +2,7 @@
 titulo: Gelida
 fecha: 2015-01-22
 autor: aidacastellanos
-zona: [Catalunya]
+zona: Catalunya
 roca: Caliza
 tipo: Deportiva
 coordenadas: 41.439915, 1.867201

@@ -2,7 +2,7 @@
 titulo: LP a las Rocas de Suesca (150m, V)
 fecha: 2018-04-14
 autor: otnoesmusica
-zona: [Otros países, Colombia]
+zona: Otros países › Colombia
 grado: V
 longitud: 150
 roca: Arenisca

@@ -2,7 +2,7 @@
 titulo: Via Rosario a la Cueva de la Mora (80m, V)
 fecha: 2015-08-09
 autor: otnoesmusica
-zona: [Zona centro, La Pedriza]
+zona: Zona centro › La Pedriza
 grado: V
 longitud: 80
 roca: Granito

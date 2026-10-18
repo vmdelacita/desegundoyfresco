@@ -2,7 +2,7 @@
 titulo: Empalmada pedricera (600m, V+)
 fecha: 2023-02-23
 autor: otnoesmusica
-zona: [Zona centro, La Pedriza]
+zona: Zona centro › La Pedriza
 grado: V+
 longitud: 600
 roca: Granito

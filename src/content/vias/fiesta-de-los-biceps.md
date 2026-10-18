@@ -2,7 +2,7 @@
 titulo: Fiesta de los bíceps (235m, 7a)
 fecha: 2020-03-22
 autor: otnoesmusica
-zona: [Aragón, Riglos]
+zona: Aragón › Riglos
 grado: 7a
 longitud: 235
 roca: Conglomerado

@@ -2,7 +2,7 @@
 titulo: Guirles-Campos al Yelmo (180m, 6b)
 fecha: 2017-05-26
 autor: otnoesmusica
-zona: [Zona centro, La Pedriza]
+zona: Zona centro › La Pedriza
 grado: 6b
 longitud: 180
 roca: Granito

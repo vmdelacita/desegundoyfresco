@@ -2,7 +2,7 @@
 titulo: Totxaires a la Pared de Aragón (550m, 6c)
 fecha: 2020-03-22
 autor: otnoesmusica
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: 6c
 longitud: 550
 roca: Caliza

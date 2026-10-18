@@ -2,7 +2,7 @@
 titulo: Cassiopea a la Paret de Catalunya (400m, 7a+)
 fecha: 2023-11-25
 autor: otnoesmusica
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: 7a+
 longitud: 400
 roca: Caliza

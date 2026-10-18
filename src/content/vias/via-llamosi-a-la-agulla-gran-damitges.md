@@ -2,7 +2,7 @@
 titulo: Vía Llamosí a la Agulla gran d'Amitges (170m, V+)
 fecha: 2015-07-05
 autor: otnoesmusica
-zona: [Catalunya, Aigüestortes, Amitges]
+zona: Catalunya › Aigüestortes › Amitges
 grado: V+
 longitud: 170
 roca: Granito

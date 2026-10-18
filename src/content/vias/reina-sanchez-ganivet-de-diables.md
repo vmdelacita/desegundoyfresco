@@ -2,7 +2,7 @@
 titulo: Reina-Sànchez al Ganivet de Diables (220m, V+/Ae)
 fecha: 2018-07-04
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Cara norte]
+zona: Catalunya › Montserrat › Cara norte
 grado: V+/Ae
 longitud: 220
 roca: Conglomerado

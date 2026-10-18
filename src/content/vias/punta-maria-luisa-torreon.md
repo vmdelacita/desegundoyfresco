@@ -2,7 +2,7 @@
 titulo: Combinación Punta Maria Luisa - Cresterío - Sur Clásica al Torreón (140 + 150 + 140m, V)
 fecha: 2015-09-12
 autor: otnoesmusica
-zona: [Zona centro, Galayos]
+zona: Zona centro › Galayos
 grado: V
 longitud: 430
 roca: Granito

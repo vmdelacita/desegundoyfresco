@@ -2,7 +2,7 @@
 titulo: Sur clásica al Pájaro (200m, 6a)
 fecha: 2015-08-23
 autor: otnoesmusica
-zona: [Zona centro, La Pedriza]
+zona: Zona centro › La Pedriza
 grado: 6a
 longitud: 200
 roca: Granito

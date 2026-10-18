@@ -2,7 +2,7 @@
 titulo: Markitos a la Paret d'Aragó (275m, 6a+)
 fecha: 2018-12-18
 autor: otnoesmusica
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: 6a+
 longitud: 275
 roca: Caliza

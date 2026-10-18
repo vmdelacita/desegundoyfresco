@@ -2,7 +2,7 @@
 titulo: Haus-Estrems a la Momia (145m, 6a) - Parte II
 fecha: 2014-12-21
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Sant Benet]
+zona: Catalunya › Montserrat › Sant Benet
 grado: 6a
 longitud: 145
 roca: Conglomerado

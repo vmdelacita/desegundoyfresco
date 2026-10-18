@@ -2,7 +2,7 @@
 titulo: Wild Planet a la Roca dels Arcs (265m, 6a/A1)
 fecha: 2019-04-05
 autor: otnoesmusica
-zona: [Catalunya, Vilanova de Meià]
+zona: Catalunya › Vilanova de Meià
 grado: 6a/A1
 longitud: 265
 roca: Caliza

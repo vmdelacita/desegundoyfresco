@@ -2,7 +2,7 @@
 titulo: Regular Northwest Face al Half Dome (730m, V+/C1)
 fecha: 2022-06-25
 autor: otnoesmusica
-zona: [Otros países, EEUU]
+zona: Otros países › EEUU
 grado: V+/C1
 longitud: 730
 roca: Granito

@@ -2,7 +2,7 @@
 titulo: East Buttress al Cap (370m, 6a+)
 fecha: 2022-06-13
 autor: otnoesmusica
-zona: [Otros países, EEUU]
+zona: Otros países › EEUU
 grado: 6a+
 longitud: 370
 roca: Granito

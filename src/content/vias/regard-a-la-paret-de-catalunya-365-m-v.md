@@ -2,7 +2,7 @@
 titulo: Regard a la Paret de Catalunya (365 m, V+)
 fecha: 2018-05-18
 autor: arnaufluvia
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: V+
 longitud: 365
 roca: Caliza

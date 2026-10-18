@@ -2,7 +2,7 @@
 titulo: Sánchez-Martínez a la Paret de Diables (part 1)
 fecha: 2015-05-09
 autor: iprafols
-zona: [Catalunya, Montserrat, Cara norte]
+zona: Catalunya › Montserrat › Cara norte
 grado: V
 roca: Conglomerado
 tipo: Vía larga

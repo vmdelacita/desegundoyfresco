@@ -2,7 +2,7 @@
 titulo: Delfos a la Paret de Catalunya (415m, V+)
 fecha: 2019-05-19
 autor: otnoesmusica
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: V+
 longitud: 415
 roca: Caliza

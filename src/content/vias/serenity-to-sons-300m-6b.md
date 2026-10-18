@@ -2,7 +2,7 @@
 titulo: Serenity to Sons (300m, 6b+)
 fecha: 2022-06-24
 autor: otnoesmusica
-zona: [Otros países, EEUU]
+zona: Otros países › EEUU
 grado: 6b+
 longitud: 300
 roca: Granito

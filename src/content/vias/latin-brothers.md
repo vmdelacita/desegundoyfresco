@@ -2,7 +2,7 @@
 titulo: Latin Brothers a la Pared de Catalunya (500m, 7a)
 fecha: 2020-10-26
 autor: otnoesmusica
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: 7a
 longitud: 500
 roca: Caliza

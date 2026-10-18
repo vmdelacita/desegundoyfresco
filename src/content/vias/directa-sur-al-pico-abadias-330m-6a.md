@@ -2,7 +2,7 @@
 titulo: Directa Sur al Pico Abadías (330m, 6a)
 fecha: 2020-04-24
 autor: otnoesmusica
-zona: [Aragón, Maladeta]
+zona: Aragón › Maladeta
 grado: 6a
 longitud: 330
 roca: Granito

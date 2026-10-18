@@ -2,7 +2,7 @@
 titulo: Félix-Barroeta a Peña Sirio (V/Ae)
 fecha: 2016-09-26
 autor: otnoesmusica
-zona: [Zona centro, La Pedriza]
+zona: Zona centro › La Pedriza
 grado: V/Ae
 roca: Granito
 tipo: Vía larga

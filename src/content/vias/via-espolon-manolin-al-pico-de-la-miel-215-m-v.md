@@ -2,7 +2,7 @@
 titulo: Via "Espolón Manolín" al Pico de la Miel (215 m, V+)
 fecha: 2014-12-30
 autor: malderic
-zona: [Zona centro, La cabrera]
+zona: Zona centro › La cabrera
 grado: V+
 longitud: 215
 roca: Granito

@@ -2,7 +2,7 @@
 titulo: Directa Sur a las Torres del Bassiero (225m, 6b)
 fecha: 2021-07-13
 autor: otnoesmusica
-zona: [Catalunya, Aigüestortes]
+zona: Catalunya › Aigüestortes
 grado: 6b
 longitud: 225
 roca: Granito

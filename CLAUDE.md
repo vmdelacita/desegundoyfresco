@@ -19,7 +19,7 @@ Blog de escalada que se migra de WordPress.com a una web estática con Astro, al
 | 2 Proyecto Astro y estructura | Hecha: esqueleto funcionando con 3 vías de muestra; repositorio `vmdelacita/desegundoyfresco` |
 | 3 Diseño | Primera dirección programada (ver «Diseño»); Víctor debe probarla en local y ajustar. Faltan logo, la página «Explorar» y decidir si habrá modo oscuro |
 | 4 Convertir las entradas antiguas | Hecha el 18 oct 2026 (ver «Conversión»): 128 publicadas + 13 borradores + 2 páginas, la web compila; Víctor debe revisarla en local y decidir las coordenadas que faltan |
-| 5 Funcionalidades | En marcha: el **mapa** (`src/pages/mapa-de-escaladas.astro`) está programado y probado en local (19 oct 2026); buscador con Pagefind programado (ver «Buscador»); contacto programado (ver «Contacto»); faltan editor web y estadísticas |
+| 5 Funcionalidades | En marcha: el **mapa** (`src/pages/mapa-de-escaladas.astro`) está programado y probado en local (19 oct 2026); buscador con Pagefind programado (ver «Buscador»); contacto (ver «Contacto»); editor web (Sveltia en `/admin/`, ver «Editor web») programado, falta que Víctor lo pruebe en local con Chrome; faltan estadísticas |
 | 5b, 6, 7, 8 | Pendientes |
 
 
@@ -78,6 +78,14 @@ Blog de escalada que se migra de WordPress.com a una web estática con Astro, al
 - Página `/contacto/` (`src/pages/contacto.astro`), en el menú superior, con formulario de nombre, correo y mensaje. Lo recibe **Web3Forms** (gratis, 250 mensajes/mes) y lo reenvía al correo de Víctor, que no aparece en la web. La clave de acceso está en `src/data/contacto.json`: es pública por diseño (solo permite enviar mensajes a Víctor). Si se vacía, la página muestra un aviso en vez del formulario.
 - Contra el spam: campo trampa `botcheck`. Si entrara spam, activar hCaptcha en Web3Forms (cargaría un tercero, por eso solo si hiciera falta). El envío usa `fetch` con respuesta en la propia página; sin JavaScript, el formulario se envía igual y Web3Forms muestra su página de gracias.
 - Al final de cada vía **no** hay enlace al formulario (Víctor lo descartó).
+
+## Editor web (Fase 5, 19 oct 2026)
+
+- **Sveltia CMS** en `/admin/` (`public/admin/index.html` + `config.yml`), elegido frente a Pages CMS porque vive en la propia web y reduce las fotos en el navegador (así no hace falta una acción de GitHub para reducirlas; la Fase 5b queda sin el GPS automático, ya que el editor borra el GPS y las coordenadas se ponen a mano por pared). Se instala con npm (`@sveltia/cms`) y `scripts/copiar-sveltia.mjs` lo copia a `public/admin/sveltia/` antes de `dev` y `build` (no se sube a GitHub). Versiones 0.x, pero el proyecto se declara «feature complete».
+- **Entrada**: en local, «Work with Local Repository» en Chrome/Edge (sin token); en la web publicada, token de GitHub de grano fino (solo este repositorio, permiso «Contents: read and write»), caducidad a elección de Víctor, guardado en el navegador de cada dispositivo. No hay servicio OAuth. Cada «Guardar» es un commit en `main`.
+- **Listas ampliables**: `src/data/zonas.json` (lista plana de rutas con « › »; el árbol y los slugs se calculan en `src/lib/taxonomia.ts`), `rocas.json` y `tipos.json`. El esquema valida contra ellas (roca y tipo, con `z.enum`; zona, con `buscarZona`). En el editor son «Listas» y los desplegables de la ficha leen esos mismos archivos (relation sobre una colección de archivos), así que añadir un valor lo ofrece al momento. No hay botón «+» dentro de la ficha. `zona` se guarda como texto (`Aragón › Ordesa`); el esquema sigue aceptando la lista `[Aragón, Ordesa]`, pero **no hay que usarla**: el editor, al guardar una ficha con la zona en lista, la recortaba a su primer nivel (lo vimos en la prueba del 19 oct). Las 131 fichas con zona se migraron a texto.
+- **`config.yml` debe seguir a `src/content.config.ts`**: incluye todos los campos (también `comentarios` y `coordenadasAuto`) para que guardar una ficha antigua no pierda datos. Sin verificar todavía: que el editor conserve los pies de foto (`![](ruta "Pie")`) y el orden de los campos al guardar una ficha antigua.
+- Fotos nuevas: `public/wp-content/uploads/nuevas/` (2000 px, WebP). Las antiguas siguen en `AAAA/MM/` en `.jpg`.
 
 ## Cómo está montado
 

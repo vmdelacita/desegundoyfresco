@@ -2,7 +2,7 @@
 titulo: L'Estimball al Pollegó Inferior (370m, 6a/A1)
 fecha: 2020-05-19
 autor: arnaufluvia
-zona: [Catalunya, Pedraforca]
+zona: Catalunya › Pedraforca
 grado: 6a/A1
 longitud: 370
 roca: Caliza

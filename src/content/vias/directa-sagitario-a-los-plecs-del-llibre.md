@@ -2,7 +2,7 @@
 titulo: Directa Sagitario a los Plecs del Llibre (180m, 6c)
 fecha: 2019-11-10
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Ecos]
+zona: Catalunya › Montserrat › Ecos
 grado: 6c
 longitud: 180
 roca: Conglomerado

@@ -2,7 +2,7 @@
 titulo: Vía Homedes al Gat (430m, V+)
 fecha: 2015-08-02
 autor: otnoesmusica
-zona: [Catalunya, Pedraforca]
+zona: Catalunya › Pedraforca
 grado: V+
 longitud: 430
 roca: Caliza

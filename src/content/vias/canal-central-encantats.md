@@ -2,7 +2,7 @@
 titulo: Canal central a Encantats (~500m, III)
 fecha: 2017-07-13
 autor: otnoesmusica
-zona: [Catalunya, Aigüestortes]
+zona: Catalunya › Aigüestortes
 grado: III
 longitud: 500
 roca: Granito

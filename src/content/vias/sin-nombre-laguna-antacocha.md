@@ -2,7 +2,7 @@
 titulo: Sin nombre a la Laguna de Antacocha (180m, 6a)
 fecha: 2018-08-14
 autor: otnoesmusica
-zona: [Otros países, Peru]
+zona: Otros países › Peru
 grado: 6a
 longitud: 180
 roca: Granito

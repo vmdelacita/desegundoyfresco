@@ -2,7 +2,7 @@
 titulo: Aresta Arcarons a los Plecs del Llibre (190m, 6a/Ae)
 fecha: 2016-10-11
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Ecos]
+zona: Catalunya › Montserrat › Ecos
 grado: 6a/Ae
 longitud: 190
 roca: Conglomerado

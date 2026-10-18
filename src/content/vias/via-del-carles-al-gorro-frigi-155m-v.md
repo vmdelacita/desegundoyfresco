@@ -2,7 +2,7 @@
 titulo: Vía del Carles al Gorro Frigi (155m, V+)
 fecha: 2014-02-23
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Gorros]
+zona: Catalunya › Montserrat › Gorros
 grado: V+
 longitud: 155
 roca: Conglomerado

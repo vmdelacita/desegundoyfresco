@@ -2,7 +2,7 @@
 titulo: Motorhead a Eldorado (500m, 6b)
 fecha: 2023-11-03
 autor: otnoesmusica
-zona: [Otros países, Suiza]
+zona: Otros países › Suiza
 grado: 6b
 longitud: 500
 roca: Granito

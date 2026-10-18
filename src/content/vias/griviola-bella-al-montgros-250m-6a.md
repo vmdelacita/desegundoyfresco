@@ -2,7 +2,7 @@
 titulo: Griviola Bella al Montgròs (250m, 6a)
 fecha: 2018-12-03
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Ecos]
+zona: Catalunya › Montserrat › Ecos
 grado: 6a
 longitud: 250
 roca: Conglomerado

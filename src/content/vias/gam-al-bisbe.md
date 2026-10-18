@@ -2,7 +2,7 @@
 titulo: GAM al Bisbe (230m, 6a/Ae)
 fecha: 2015-07-19
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Cara norte]
+zona: Catalunya › Montserrat › Cara norte
 grado: 6a/Ae
 longitud: 230
 roca: Conglomerado

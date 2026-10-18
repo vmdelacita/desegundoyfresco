@@ -2,7 +2,7 @@
 titulo: Vía del Pájaro al Pisón (270m, 6c)
 fecha: 2021-11-14
 autor: otnoesmusica
-zona: [Aragón, Riglos]
+zona: Aragón › Riglos
 grado: 6c
 longitud: 270
 roca: Conglomerado

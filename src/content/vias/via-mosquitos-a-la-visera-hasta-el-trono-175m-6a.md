@@ -2,7 +2,7 @@
 titulo: Vía Mosquitos a la Visera, hasta el trono (175m, 6a)
 fecha: 2016-05-19
 autor: otnoesmusica
-zona: [Aragón, Riglos]
+zona: Aragón › Riglos
 grado: 6a
 longitud: 175
 roca: Conglomerado

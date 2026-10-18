@@ -2,7 +2,7 @@
 titulo: Aresta Brucs a la Saca Gran (90m, V)
 fecha: 2014-12-01
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Agulles]
+zona: Catalunya › Montserrat › Agulles
 grado: V
 longitud: 90
 roca: Conglomerado

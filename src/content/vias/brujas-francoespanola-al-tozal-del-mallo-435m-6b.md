@@ -2,7 +2,7 @@
 titulo: Brujas-Francoespañola al Tozal del Mallo (435m, 6b)
 fecha: 2019-06-14
 autor: otnoesmusica
-zona: [Aragón, Ordesa]
+zona: Aragón › Ordesa
 grado: 6b
 longitud: 435
 roca: Arenisca

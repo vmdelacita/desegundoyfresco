@@ -2,7 +2,7 @@
 titulo: Arête du Vallon a la Aiguille de Sugiton, Les Calanques (180m, IV)
 fecha: 2017-05-22
 autor: otnoesmusica
-zona: [Otros países, Francia]
+zona: Otros países › Francia
 grado: IV
 longitud: 180
 roca: Caliza

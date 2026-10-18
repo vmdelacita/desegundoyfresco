@@ -2,7 +2,7 @@
 titulo: Diedro Jerónimo López al Pequeño Galayo (120m, 6a)
 fecha: 2016-09-04
 autor: otnoesmusica
-zona: [Zona centro, Galayos]
+zona: Zona centro › Galayos
 grado: 6a
 longitud: 120
 roca: Granito

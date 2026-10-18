@@ -2,7 +2,7 @@
 titulo: Mompart a la Miranda de les Boïgues (100m, 6a)
 fecha: 2014-03-30
 autor: malderic
-zona: [Catalunya, Montserrat, Agulles]
+zona: Catalunya › Montserrat › Agulles
 grado: 6a
 longitud: 100
 roca: Conglomerado

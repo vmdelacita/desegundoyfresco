@@ -2,7 +2,7 @@
 titulo: Esperó Nord al Vignemale (800m, 6b+)
 fecha: 2021-08-29
 autor: arnaufluvia
-zona: [Otros países, Francia]
+zona: Otros países › Francia
 grado: 6b+
 longitud: 800
 roca: Caliza

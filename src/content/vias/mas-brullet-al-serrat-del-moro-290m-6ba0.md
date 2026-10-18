@@ -2,7 +2,7 @@
 titulo: Mas-Brullet al Serrat del Moro (290m, 6b/A0)
 fecha: 2016-04-05
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Cara norte]
+zona: Catalunya › Montserrat › Cara norte
 grado: 6b/A0
 longitud: 290
 roca: Conglomerado

@@ -2,7 +2,7 @@
 titulo: La Pilastreta dels Pardals a la Pared de Aragón (145m, 6a)
 fecha: 2016-11-17
 autor: otnoesmusica
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: 6a
 longitud: 145
 roca: Caliza

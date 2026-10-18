@@ -2,7 +2,7 @@
 titulo: Sacremotion al Chli Bielenhorn (280m, 7a)
 fecha: 2023-11-08
 autor: otnoesmusica
-zona: [Otros países, Suiza]
+zona: Otros países › Suiza
 grado: 7a
 longitud: 280
 roca: Granito

@@ -2,7 +2,7 @@
 titulo: Aresta Brucs a la Bola de la Partió (65m, IV+/Ae)
 fecha: 2015-11-15
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Agulles]
+zona: Catalunya › Montserrat › Agulles
 grado: IV+/Ae
 longitud: 65
 roca: Conglomerado

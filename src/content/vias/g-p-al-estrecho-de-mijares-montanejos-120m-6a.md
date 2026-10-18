@@ -2,7 +2,7 @@
 titulo: G.P. al estrecho de Mijares, Montanejos (120m, 6a)
 fecha: 2016-11-08
 autor: otnoesmusica
-zona: [Levante, Montanejos]
+zona: Levante › Montanejos
 grado: 6a
 longitud: 120
 roca: Caliza

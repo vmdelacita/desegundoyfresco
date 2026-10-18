@@ -2,7 +2,7 @@
 titulo: Vía del Chani a la Falconera de Garraf (130m, V)
 fecha: 2014-06-22
 autor: otnoesmusica
-zona: [Catalunya, Garraf]
+zona: Catalunya › Garraf
 grado: V
 longitud: 130
 roca: Caliza

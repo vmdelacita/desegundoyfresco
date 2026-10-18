@@ -2,7 +2,7 @@
 titulo: Cavallers
 fecha: 2015-08-11
 autor: aidacastellanos
-zona: [Catalunya, Aigüestortes]
+zona: Catalunya › Aigüestortes
 roca: Granito
 tipo: Deportiva
 coordenadas: 42.5282162, 0.848452400000042

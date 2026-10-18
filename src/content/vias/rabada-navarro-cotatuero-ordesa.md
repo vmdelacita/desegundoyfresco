@@ -2,7 +2,7 @@
 titulo: Rabadá-Navarro al Pilar de Cotatuero (450m, 6c/A1)
 fecha: 2018-06-28
 autor: otnoesmusica
-zona: [Aragón, Ordesa]
+zona: Aragón › Ordesa
 grado: 6c/A1
 longitud: 450
 roca: Arenisca

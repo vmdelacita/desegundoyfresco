@@ -2,7 +2,7 @@
 titulo: Primavera a la Falconera (140m, 6b)
 fecha: 2019-12-09
 autor: otnoesmusica
-zona: [Catalunya, Montsant]
+zona: Catalunya › Montsant
 grado: 6b
 longitud: 140
 roca: Conglomerado

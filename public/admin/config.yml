@@ -1,0 +1,153 @@
+# Configuración del editor web (Sveltia CMS), en https://desegundoyfresco.com/admin/
+# Las vías son los archivos de src/content/vias; las listas de zona, roca y tipo, los de src/data.
+# La ficha de la vía y sus validaciones están en src/content.config.ts: si cambias un campo allí, cámbialo aquí.
+
+backend:
+  name: github
+  repo: vmdelacita/desegundoyfresco
+  branch: main
+
+site_url: https://desegundoyfresco.com
+display_url: https://desegundoyfresco.com
+
+# Fotos nuevas: se reducen en el navegador al subirlas (2000 px, WebP) y pierden el GPS
+media_folder: /public/wp-content/uploads/nuevas
+public_folder: /wp-content/uploads/nuevas
+media_libraries:
+  default:
+    config:
+      slugify_filename: true
+      transformations:
+        raster_image:
+          format: webp
+          quality: 85
+          width: 2000
+
+collections:
+  - name: vias
+    label: Vías
+    label_singular: Vía
+    folder: src/content/vias
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    # El nombre del archivo es el final de la dirección: /AAAA/MM/DD/nombre/
+    slug: '{{slug}}'
+    identifier_field: titulo
+    summary: '{{titulo}}'
+    sortable_fields:
+      fields: [fecha, titulo]
+      default:
+        field: fecha
+        direction: Descending
+    fields:
+      - { name: titulo, label: Título, widget: string, hint: 'Con grado y longitud: «Nombre a la Pared (285m, 6b)». Es también el final de la dirección web.' }
+      - { name: fecha, label: Fecha de publicación, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false, picker_utc: true }
+      - { name: autor, label: Autor, widget: hidden, default: otnoesmusica }
+      - name: zona
+        label: Zona
+        widget: relation
+        collection: listas
+        file: zonas
+        value_field: '{{zonas.*}}'
+        display_fields: ['{{zonas.*}}']
+        search_fields: ['{{zonas.*}}']
+        required: false
+        hint: 'Obligatoria al publicar. Para añadir una zona: Listas › Zonas.'
+      - { name: grado, label: Grado, widget: string, required: false, hint: '6a, 6b/A1, V+… En una crónica de sector, déjalo vacío.' }
+      - { name: longitud, label: Longitud (m), widget: number, value_type: int, min: 1, required: false }
+      - name: roca
+        label: Roca
+        widget: relation
+        collection: listas
+        file: rocas
+        value_field: '{{valores.*}}'
+        display_fields: ['{{valores.*}}']
+        search_fields: ['{{valores.*}}']
+        required: false
+        hint: 'Obligatoria al publicar. Para añadir una roca: Listas › Rocas.'
+      - name: tipo
+        label: Tipo de escalada
+        widget: relation
+        collection: listas
+        file: tipos
+        value_field: '{{valores.*}}'
+        display_fields: ['{{valores.*}}']
+        search_fields: ['{{valores.*}}']
+        required: false
+        hint: 'Obligatorio al publicar. Para añadir un tipo: Listas › Tipos.'
+      - { name: fechaEscalada, label: Fecha en que se escaló, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false, picker_utc: true, required: false }
+      - { name: material, label: Material, widget: string, required: false }
+      - { name: horario, label: Horario, widget: string, required: false }
+      - name: coordenadas
+        label: Coordenadas
+        widget: string
+        required: false
+        pattern: ['^\s*-?\d+(\.\d+)?\s*,\s*-?\d+(\.\d+)?\s*$', 'Usa el formato «42.64, -0.04», como lo copia Google Maps']
+        hint: 'Una pared, un punto: las vías de la misma pared llevan las mismas coordenadas.'
+      - { name: coordenadasAuto, label: Coordenadas sacadas de una foto, widget: boolean, required: false, hint: 'Desmárcalo si has escrito las coordenadas a mano.' }
+      - { name: portada, label: Foto de portada, widget: image, required: false, hint: 'Obligatoria al publicar.' }
+      - { name: etiquetas, label: Etiquetas, widget: list, required: false }
+      - { name: borrador, label: Borrador (no se publica), widget: boolean, default: false, required: false }
+      - name: comentarios
+        label: Comentarios antiguos de WordPress
+        widget: list
+        required: false
+        collapsed: true
+        summary: '{{fields.autor}}'
+        fields:
+          - { name: autor, label: Autor, widget: string }
+          - { name: fecha, label: Fecha, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false, picker_utc: true }
+          - { name: texto, label: Texto, widget: text }
+          - { name: respuesta, label: Es respuesta a otro comentario, widget: boolean, required: false }
+      - { name: body, label: Texto, widget: markdown }
+
+  - name: paginas
+    label: Páginas fijas
+    label_singular: Página
+    folder: src/content/paginas
+    extension: md
+    format: yaml-frontmatter
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    identifier_field: titulo
+    summary: '{{titulo}}'
+    fields:
+      - { name: titulo, label: Título, widget: string }
+      - { name: portada, label: Foto de portada, widget: image, required: false }
+      - name: comentarios
+        label: Comentarios antiguos de WordPress
+        widget: list
+        required: false
+        collapsed: true
+        summary: '{{fields.autor}}'
+        fields:
+          - { name: autor, label: Autor, widget: string }
+          - { name: fecha, label: Fecha, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false, picker_utc: true }
+          - { name: texto, label: Texto, widget: text }
+          - { name: respuesta, label: Es respuesta a otro comentario, widget: boolean, required: false }
+      - { name: body, label: Texto, widget: markdown }
+
+  # Listas que alimentan los desplegables de la ficha (src/data). Añadir un valor aquí lo ofrece al momento en la ficha.
+  - name: listas
+    label: Listas
+    files:
+      - name: zonas
+        label: Zonas
+        file: src/data/zonas.json
+        fields:
+          - name: zonas
+            label: Zonas
+            widget: list
+            hint: 'Una por línea, de lo general a lo concreto: «Catalunya», «Catalunya › Montserrat», «Catalunya › Montserrat › Agulles». El separador es « › ». Una zona necesita que exista antes la de arriba.'
+      - name: rocas
+        label: Rocas
+        file: src/data/rocas.json
+        fields:
+          - { name: valores, label: Rocas, widget: list }
+      - name: tipos
+        label: Tipos de escalada
+        file: src/data/tipos.json
+        fields:
+          - { name: valores, label: Tipos de escalada, widget: list }

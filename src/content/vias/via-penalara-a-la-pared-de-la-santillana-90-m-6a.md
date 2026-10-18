@@ -2,7 +2,7 @@
 titulo: Vía Peñalara a la Pared de la Santillana (90 m, 6a)
 fecha: 2017-05-29
 autor: peremunar
-zona: [Zona centro, La Pedriza]
+zona: Zona centro › La Pedriza
 grado: 6a
 longitud: 90
 roca: Granito

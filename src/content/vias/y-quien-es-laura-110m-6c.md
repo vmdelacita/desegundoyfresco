@@ -2,7 +2,7 @@
 titulo: ¿Y quién es Laura? (110m, 6c)
 fecha: 2019-12-02
 autor: otnoesmusica
-zona: [Catalunya, Montsant]
+zona: Catalunya › Montsant
 grado: 6c
 longitud: 110
 roca: Conglomerado

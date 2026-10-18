@@ -2,7 +2,7 @@
 titulo: Norte al Puro en Riglos (230m, 6a)
 fecha: 2017-09-06
 autor: otnoesmusica
-zona: [Aragón, Riglos]
+zona: Aragón › Riglos
 grado: 6a
 longitud: 230
 roca: Conglomerado

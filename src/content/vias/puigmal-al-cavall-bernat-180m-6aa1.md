@@ -2,7 +2,7 @@
 titulo: Puigmal al Cavall Bernat (180m, 6a/A1)
 fecha: 2016-05-27
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Cara norte]
+zona: Catalunya › Montserrat › Cara norte
 grado: 6a/A1
 longitud: 180
 roca: Conglomerado

@@ -2,7 +2,7 @@
 titulo: Le Pouce integral en Les Calanques (120m, 6a)
 fecha: 2019-05-01
 autor: otnoesmusica
-zona: [Otros países, Francia]
+zona: Otros países › Francia
 grado: 6a
 longitud: 120
 roca: Caliza

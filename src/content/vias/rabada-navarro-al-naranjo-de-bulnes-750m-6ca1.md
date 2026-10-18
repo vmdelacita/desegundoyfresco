@@ -2,7 +2,7 @@
 titulo: Rabadá Navarro al Naranjo de Bulnes (750m, 6c/A1)
 fecha: 2017-09-13
 autor: otnoesmusica
-zona: [Picos de Europa]
+zona: Picos de Europa
 grado: 6c/A1
 longitud: 750
 roca: Caliza

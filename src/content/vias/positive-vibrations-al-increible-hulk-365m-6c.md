@@ -2,7 +2,7 @@
 titulo: Positive Vibrations al Increíble Hulk (365m, 6c)
 fecha: 2023-01-27
 autor: otnoesmusica
-zona: [Otros países, EEUU]
+zona: Otros países › EEUU
 grado: 6c
 longitud: 365
 roca: Granito

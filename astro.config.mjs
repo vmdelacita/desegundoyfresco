@@ -19,6 +19,7 @@ const feedEnRutaWordPress = {
   },
 };
 
+// Ayudas del servidor de desarrollo: el índice del buscador (Pagefind) y la página del editor.
 // El índice del buscador (Pagefind) se genera al compilar, en dist/pagefind/. En `npm run dev` se sirve desde ahí:
 // basta con haber ejecutado `npm run build` una vez (el índice será el de ese momento).
 const buscadorEnDesarrollo = {
@@ -26,6 +27,13 @@ const buscadorEnDesarrollo = {
   hooks: {
     'astro:server:setup': ({ server }) => {
       const tipos = { '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.wasm': 'application/wasm' };
+      // En desarrollo Astro no sirve el index.html de una carpeta de public/; en GitHub Pages sí.
+      server.middlewares.use((req, res, next) => {
+        if (req.url?.split('?')[0] !== '/admin/') return next();
+        res.statusCode = 302;
+        res.setHeader('Location', '/admin/index.html');
+        res.end();
+      });
       server.middlewares.use('/pagefind', (req, res, next) => {
         const archivo = normalize(join(process.cwd(), 'dist', 'pagefind', decodeURIComponent((req.url ?? '').split('?')[0])));
         if (!archivo.startsWith(join(process.cwd(), 'dist', 'pagefind')) || !existsSync(archivo)) return next();

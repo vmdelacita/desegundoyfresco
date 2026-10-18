@@ -2,7 +2,7 @@
 titulo: Bavaresa Blanca al Pico de la Miel (200m, 6a)
 fecha: 2022-01-09
 autor: otnoesmusica
-zona: [Zona centro, La cabrera]
+zona: Zona centro › La cabrera
 grado: 6a
 longitud: 200
 roca: Granito

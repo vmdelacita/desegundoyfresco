@@ -2,7 +2,7 @@
 titulo: Lotus a la Paret de l'Aeri (250m, 6b)
 fecha: 2017-09-29
 autor: otnoesmusica
-zona: [Catalunya, Montserrat, Cara norte]
+zona: Catalunya › Montserrat › Cara norte
 grado: 6b
 longitud: 250
 roca: Conglomerado

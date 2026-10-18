@@ -2,7 +2,7 @@
 titulo: Globeros en Alaska a la Paret de Catalunya (260m, 7a)
 fecha: 2021-04-19
 autor: otnoesmusica
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: 7a
 longitud: 260
 roca: Caliza

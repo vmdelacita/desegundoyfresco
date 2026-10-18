@@ -2,7 +2,7 @@
 titulo: La Pilastra dels Voltors a la Pared de Aragón (275m, 6c)
 fecha: 2016-11-20
 autor: otnoesmusica
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: 6c
 longitud: 275
 roca: Caliza

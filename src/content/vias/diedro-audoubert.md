@@ -2,7 +2,7 @@
 titulo: Diedro Audoubert a la Paret de Catalunya (375m, 6b+)
 fecha: 2017-06-19
 autor: otnoesmusica
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: 6b+
 longitud: 375
 roca: Caliza

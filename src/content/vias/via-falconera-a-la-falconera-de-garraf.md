@@ -2,7 +2,7 @@
 titulo: Vía "Falconera" a la Falconera de Garraf (115m, 6a)
 fecha: 2016-01-24
 autor: otnoesmusica
-zona: [Catalunya, Garraf]
+zona: Catalunya › Garraf
 grado: 6a
 longitud: 115
 roca: Caliza

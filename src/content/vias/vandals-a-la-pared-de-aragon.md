@@ -2,7 +2,7 @@
 titulo: Vàndals a la Pared de Aragón (400m, 7b)
 fecha: 2019-12-28
 autor: otnoesmusica
-zona: [Catalunya, Montrebei]
+zona: Catalunya › Montrebei
 grado: 7b
 longitud: 400
 roca: Caliza

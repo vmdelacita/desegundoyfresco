@@ -2,7 +2,7 @@
 titulo: Intrépida sirena a la Punta milá (100m, V+)
 fecha: 2017-09-26
 autor: otnoesmusica
-zona: [Catalunya, L'Escala]
+zona: Catalunya › L'Escala
 grado: V+
 longitud: 100
 roca: Caliza

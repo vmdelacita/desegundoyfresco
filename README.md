@@ -21,7 +21,8 @@ Para parar el servidor de desarrollo: `npx astro dev stop`.
 src/content/vias/       una vía por archivo .md (el nombre del archivo es el final de la URL)
 src/content/autores/    un archivo .json por autor (el nombre es su usuario de WordPress)
 src/content/paginas/    páginas fijas (/quienes-somos/…)
-src/data/zonas.json     árbol de zonas (Aragón › Ordesa…)
+src/data/zonas.json     lista de zonas (Aragón, Aragón › Ordesa…); rocas.json y tipos.json, las listas de roca y de tipo
+public/admin/           el editor web (Sveltia CMS) en /admin/ y su configuración, config.yml
 src/content.config.ts   la ficha de la vía y sus validaciones
 src/pages/              las rutas de la web
 src/components/         piezas del diseño (foto grande, tarjeta de vía, zona con foto…)
@@ -40,7 +41,7 @@ import/                 exportación de WordPress y fotos originales (no se sube
 titulo: Àliga al Tozal (200m, 6b)          # obligatorio
 fecha: 2026-07-24                          # obligatorio; con el nombre del archivo forma la URL
 autor: otnoesmusica                        # obligatorio; un archivo de src/content/autores
-zona: [Aragón, Ordesa]                     # obligatorio; debe existir en src/data/zonas.json
+zona: Aragón › Ordesa                       # obligatorio; debe existir en src/data/zonas.json (la lista [Aragón, Ordesa] también vale)
 grado: 6b                                  # opcional; las crónicas de un sector (Gelida) no lo llevan
 longitud: 200                              # metros
 roca: Arenisca                             # obligatorio
@@ -80,7 +81,17 @@ Una vía cuenta en su zona y en todas las zonas que la contienen. El grado se ag
 
 ## Añadir una zona
 
-Edita `src/data/zonas.json` y añade el nodo con su nombre y su `slug` (el nombre sin tildes, en minúsculas y con guiones).
+Edita `src/data/zonas.json` y añade una línea con su ruta, por ejemplo `"Catalunya › Berguedà"`. La zona de arriba tiene que existir antes. El `slug` de la dirección se calcula solo (el nombre sin tildes, en minúsculas y con guiones). En el editor web: «Listas» › «Zonas».
+
+Las rocas y los tipos de escalada se añaden igual en `src/data/rocas.json` y `src/data/tipos.json` («Listas» › «Rocas» y «Tipos»). La web rechaza una roca o un tipo que no esté en su lista.
+
+## El editor web
+
+`/admin/` es [Sveltia CMS](https://sveltiacms.app/). Su configuración está en `public/admin/config.yml` y debe seguir a `src/content.config.ts`: si cambias la ficha de la vía, cambia también allí. El editor se copia de `node_modules` a `public/admin/sveltia/` (no se sube a GitHub) al ejecutar `npm run dev` o `npm run build`.
+
+- **En local** (sin token): abre `http://localhost:4321/admin/` en Chrome o Edge, pulsa «Work with Local Repository» y elige la carpeta del proyecto. Los cambios se escriben en los archivos; después los subes con Git como siempre.
+- **En la web publicada**: «Sign In Using Access Token» con un token de GitHub de grano fino limitado a este repositorio y con permiso de lectura y escritura sobre «Contents». Cada «Guardar» es un commit en `main`. («Sign In with GitHub» necesita un servicio OAuth que no hemos montado.)
+- Las fotos que se suben desde el editor se reducen en el navegador (2000 px, WebP, sin GPS) y van a `public/wp-content/uploads/nuevas/`.
 
 ## Convertir la exportación
 

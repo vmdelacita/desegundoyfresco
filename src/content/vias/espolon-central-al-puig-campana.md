@@ -2,7 +2,7 @@
 titulo: Espolón central al Puig Campana (400m, V)
 fecha: 2015-12-08
 autor: otnoesmusica
-zona: [Levante, Puig Campana]
+zona: Levante › Puig Campana
 grado: V
 longitud: 400
 roca: Caliza
