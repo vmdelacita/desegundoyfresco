@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-09-17
 material: Unas 15 expres o más si se van a empalmar largos, juego de empotradores, friends no muy necesarios.
 horario: 9 horas y media más una hora y media de rápeles.
+coordenadas: 42.34891, -0.72812
 portada: /wp-content/uploads/2016/09/portada.jpg
 etiquetas: [artificial, carlos, diedro, gerard, panzas, puro, rabada, rapel, seron millan]
 ---

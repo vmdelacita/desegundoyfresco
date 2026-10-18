@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-11-27
 material: unas 10-12 expres
 horario: 3 horas y media
+coordenadas: 41.59079, 1.80194
 portada: /wp-content/uploads/2016/12/2016-11-27-15-04-28.jpg
 etiquetas: [can jorba, escabroni escapullini, Montserrat, nadia]
 ---

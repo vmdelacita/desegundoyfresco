@@ -10,8 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2017-10-04
 material: un juego de friends, otro de empotradores y bastantes cintas largas.
 horario: 4 horas y pico. Más 1.5 de aproximación y casi 2 de descenso.
-coordenadas: 42.63244, -0.1108
-coordenadasAuto: true
+coordenadas: 42.66667, -0.07351
 portada: /wp-content/uploads/2017/10/2017-10-04-17-01-011.jpg
 etiquetas: [Arnau, autoproteccion, fisura, pirineos, ravier, tozal]
 ---

@@ -9,6 +9,7 @@ roca: Granito
 tipo: Vía larga
 fechaEscalada: 2015-09-12
 material: Un juego de friends y de empotradores (conviene llevar tamaños repetidos), muchísimas cintas cosidas de distintas longitudes y unas 10 expres. La magnesera casi la puedes dejar en casa.
+coordenadas: 40.26019, -5.17284
 portada: /wp-content/uploads/2015/11/2015-09-13-08-14-12.jpg
 etiquetas: [autoproteccion, crestas, diedro, fisura, Noel]
 ---

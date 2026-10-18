@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2017-08-16
 material: "Un juego de friends hasta el #4, repitiendo el Camalot #1. Mola repetir el #2 y el #3, pero no es necesario. Empotradores y cintas largas."
 horario: 2 horas y media
+coordenadas: 40.82899, -1.99702
 portada: /wp-content/uploads/2017/09/2017-08-16-17-11-20.jpg
 etiquetas: [autoproteccion, diedro, fisura, nadia, rapel]
 ---

@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-04-03
 material: "16 expres, juegos de empotradores y friends hasta el #3"
 horario: 6 horas
+coordenadas: 41.60792, 1.81621
 portada: /wp-content/uploads/2016/04/img-20160404-wa0009.jpg
 etiquetas: [Arnau, autoproteccion, diedro, fisura, mas-brullet, Montserrat, off-width, serrat del moro]
 ---

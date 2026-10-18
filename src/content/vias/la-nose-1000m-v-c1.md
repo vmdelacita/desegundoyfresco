@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2022-05-22
 material: ver foto
 horario: 13 + 14 + 10 horas
+coordenadas: 37.72822, -119.63722
 portada: /wp-content/uploads/2022/06/elcapstartrails.jpg
 etiquetas: [artificial, autoprotección, big wall, el Capitan, fisura, jumar, Noel, the nose, totem, yosemite]
 comentarios:

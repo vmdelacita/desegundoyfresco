@@ -10,8 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2019-12-01
 material: Dos juegos de friends (al menos uno que sea de totem) hasta el camalot 4. Empotradores y tricams muy útiles, sobre todo el rosa y el negro.
 horario: unas 4 horas
-coordenadas: 41.27315, 0.84462
-coordenadasAuto: true
+coordenadas: 41.27333, 0.84665
 portada: /wp-content/uploads/2019/12/img_20191130_172230.jpg
 etiquetas: [Arnau, autoproteccion, puente de roca, totem, tricam]
 ---

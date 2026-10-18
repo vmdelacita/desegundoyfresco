@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2024-03-16
 material: nosotros pasamos con 14 cintas, pero no sobraría echar 3 friends pequeños
 horario: 5 horas
+coordenadas: 42.35231, -0.72982
 portada: /wp-content/uploads/2024/03/20240316_120351.jpg
 etiquetas: [alex, Fire, vuelo]
 ---

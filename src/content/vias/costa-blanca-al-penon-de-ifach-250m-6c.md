@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2024-12-05
 material: unas 15 cintas
 horario: unas 3 horas
+coordenadas: 38.63370, 0.07435
 portada: /wp-content/uploads/2024/12/20241205_100953.jpg
 etiquetas: [caliza, carlos, peñon]
 ---

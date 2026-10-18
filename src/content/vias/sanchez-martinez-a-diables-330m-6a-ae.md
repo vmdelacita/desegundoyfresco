@@ -11,7 +11,6 @@ fechaEscalada: 2019-04-27
 material: 16 cintas expres, juego de empotradores y friends
 horario: 6 horas y media
 coordenadas: 41.63012, 1.86633
-coordenadasAuto: true
 portada: /wp-content/uploads/2019/05/img_20190427_122341.jpg
 etiquetas: [alex, artificial, autoproteccion, Diables, Montserrat, patio, techos]
 ---

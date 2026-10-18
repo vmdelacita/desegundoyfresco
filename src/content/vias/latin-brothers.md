@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2020-10-24
 material: un friends del totem negro al camalot azul y unas 15 cintas.
 horario: 10 horas
+coordenadas: 42.06000, 0.68000
 portada: /wp-content/uploads/2020/10/img20201024174327.jpg
 etiquetas: [Arnau, artificial, autoproteccion, caliza, gerard, pared de catalunya]
 ---

@@ -10,8 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2019-06-08
 material: Unas 15 cintas largas y un juego de friends repitiendo del totem amarillo al rojo.
 horario: 8 horas
-coordenadas: 42.65938, -0.0761
-coordenadasAuto: true
+coordenadas: 42.66667, -0.07351
 portada: /wp-content/uploads/2019/06/img_20190608_131801.jpg
 etiquetas: [Anglada, autoproteccion, brujas, fran, francoespañola, lau, navarro, rabada, tozal del mallo]
 ---

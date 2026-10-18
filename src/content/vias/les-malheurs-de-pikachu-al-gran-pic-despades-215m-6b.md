@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2026-07-14
 material: 14 cintas y algún friend pequeño, está totalmente equipada.
 horario: 3 horas
+coordenadas: 42.81169, 0.10352
 portada: /wp-content/uploads/2026/07/20260713_195844.jpg
 etiquetas: [Arnau, cap de long, diedro, fisura, neouvielle, pic d'espades, Pikachu, rapel, vivac]
 ---

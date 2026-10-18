@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2024-07-31
 material: 12 cintas y un juego de friends
 horario: 5 horas
+coordenadas: 46.63559, 7.36782
 portada: /wp-content/uploads/2024/11/20240731_163237.jpg
 etiquetas: [abadia, autoproteccion, xavi]
 ---

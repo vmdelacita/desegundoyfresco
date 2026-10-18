@@ -10,8 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2020-03-07
 material: 14 cintas
 horario: unas 4 horas
-coordenadas: 42.35022, -0.72681
-coordenadasAuto: true
+coordenadas: 42.34890, -0.72410
 portada: /wp-content/uploads/2020/03/img-20200307-wa0009.jpg
 etiquetas: [biceps, CEG, Marc, visera]
 ---

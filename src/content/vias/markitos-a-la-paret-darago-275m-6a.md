@@ -10,8 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2018-12-08
 material: "Un juego de friends (basta con llevar hasta el #1 de Camalot) y unas 12 cintas."
 horario: unas 5 horas
-coordenadas: 42.07356, 0.66942
-coordenadasAuto: true
+coordenadas: 42.07462, 0.67858
 portada: /wp-content/uploads/2018/12/markitos-02.jpg
 etiquetas: [autoproteccion, markitos, nadia, Noel]
 ---

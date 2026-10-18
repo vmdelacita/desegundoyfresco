@@ -11,7 +11,6 @@ fechaEscalada: 2019-12-08
 material: Un juego de friends del 0.3 al 1 y empotradores. Tricam recomendables. Nosotros llevamos unas 15 cintas, largas.
 horario: Unas 4 horas
 coordenadas: 41.27333, 0.84665
-coordenadasAuto: true
 portada: /wp-content/uploads/2019/12/img_20191207_124744.jpg
 etiquetas: [andrea, autoproteccion, diedro, falconera, friends, primavera]
 comentarios:

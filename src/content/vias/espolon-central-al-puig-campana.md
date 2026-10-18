@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2015-12-08
 material: unas 10 cintas largas y un juego de empotradores. Friends opcionales pero útiles.
 horario: 5 horas de escalada, más una de aproximación y una y media de descenso.
+coordenadas: 38.59678, -0.19370
 portada: /wp-content/uploads/2015/12/2015-12-08-15-39-55.jpg
 etiquetas: [alicante, autoproteccion, caliza, carlos, espolón, Noel, puig campana]
 ---

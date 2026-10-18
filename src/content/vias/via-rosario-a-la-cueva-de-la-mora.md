@@ -9,6 +9,7 @@ roca: Granito
 tipo: Vía larga
 fechaEscalada: 2015-08-09
 material: 8 expres
+coordenadas: 40.75748, -3.88138
 portada: /wp-content/uploads/2015/08/2015-08-09-16-13-501.jpg
 etiquetas: [cueva de la mora, Irene, pedriza, rosario, yelmo]
 ---

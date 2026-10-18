@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2021-01-17
 material: En libre, 10 expres. Para hacer en artifo, repetir del totem azul al verde y llevar un camalot rojo y amarillo.
 horario: 2 horas y media
+coordenadas: 41.73314, 2.24134
 portada: /wp-content/uploads/2021/01/img20210117121924.jpg
 etiquetas: [artificial, autoprotección, fisura, gerard, libre, trona]
 ---

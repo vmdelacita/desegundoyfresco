@@ -9,6 +9,7 @@ roca: Granito
 tipo: Vía larga
 fechaEscalada: 2015-07-05
 material: "Juego de friends hasta el #3 (puede ser últil el #4), empotradores, bagas... solo están montadas las reuniones."
+coordenadas: 42.60243, 0.98478
 portada: /wp-content/uploads/2015/07/2015-07-04-21-03-38.jpg
 etiquetas: [amitges, desequipada, ignasi, rapel, V]
 ---

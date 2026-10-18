@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-03-28
 material: 16 cintas. Pueden ser útiles tricams y aliens para rebajar la exposición del primer largo.
 horario: 3 horas
+coordenadas: 41.59348, 1.83118
 portada: /wp-content/uploads/2016/03/2016-03-28-12-38-221.jpg
 etiquetas: [andrea, Montserrat]
 ---

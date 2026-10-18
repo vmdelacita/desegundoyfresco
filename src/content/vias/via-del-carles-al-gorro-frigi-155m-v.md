@@ -9,6 +9,7 @@ roca: Conglomerado
 tipo: Vía larga
 fechaEscalada: 2014-02-23
 material: 12 Cintas expres
+coordenadas: 41.59000, 1.82592
 portada: /wp-content/uploads/2015/02/img_5248.jpg
 etiquetas: [carlos, Gorro Frigi]
 ---

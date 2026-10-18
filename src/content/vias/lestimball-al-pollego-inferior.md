@@ -7,6 +7,7 @@ grado: 6a/A1
 longitud: 370
 roca: Caliza
 tipo: Vía larga
+coordenadas: 42.24518, 1.71637
 portada: /wp-content/uploads/2020/05/img_20200222_171001.jpg
 etiquetas: [Arnau, Clàssic, pedraforca, Tute]
 ---

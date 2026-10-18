@@ -11,7 +11,6 @@ fechaEscalada: 2017-09-25
 material: 15 expres, quizá alguna más si se empalman largos
 horario: unas 5 horas
 coordenadas: 41.61792, 1.84402
-coordenadasAuto: true
 portada: /wp-content/uploads/2017/09/img_20170925_144855_hdr.jpg
 etiquetas: [aeri, alex, finura, lotus, Montserrat, placa]
 ---

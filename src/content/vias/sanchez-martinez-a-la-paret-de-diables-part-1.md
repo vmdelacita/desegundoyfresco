@@ -8,6 +8,7 @@ roca: Conglomerado
 tipo: Vía larga
 fechaEscalada: 2015-05-09
 material: Friends mitjans i grans, 10 cintes.
+coordenadas: 41.63012, 1.86633
 portada: /wp-content/uploads/2015/05/2015-05-09-16-01-41.jpg
 etiquetas: [Diables, ignasi, Montserrat]
 ---

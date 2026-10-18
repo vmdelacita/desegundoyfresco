@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-12-06
 material: "10 expres y juego discreto de friends. Nosotros no usamos el #4, aunque lo llevábamos."
 horario: 3 horas
+coordenadas: 41.59348, 1.83118
 portada: /wp-content/uploads/2016/12/portada.jpg
 etiquetas: [Arnau, bavaresa, fisura, momia, Montserrat, off-width, santacana]
 ---

@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2024-07-23
 material: "dos juegos hasta el #3, aunque si volviera no repetiría los grandes"
 horario: 7 horas
+coordenadas: 45.89002, 6.92420
 portada: /wp-content/uploads/2024/10/20240724_200731.jpg
 etiquetas: [autoproteccion, chamonix, envers, fisura, Noel]
 ---

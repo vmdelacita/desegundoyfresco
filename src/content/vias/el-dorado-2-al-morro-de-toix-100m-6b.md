@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2024-12-05
 material: unas 12 cintas (no llevamos ningún flotante)
 horario: una hora y media, sin contar aprox ni descenso.
+coordenadas: 38.63245, 0.01097
 portada: /wp-content/uploads/2024/12/20241205_153648.jpg
 etiquetas: [carlos, mar]
 ---

@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2022-06-03
 material: "2 totems negros, 3 del totem azul al morado, y dobles del resto, hasta el #3 de Camalot. Nosotros llevamos también un #4 y un #5, y un gancho. Los empotradores no los usamos. Conviene llevar muchísimas cintas, nosotros fuimos con 12 y nos quedamos cortos"
 horario: 15 horas en pared.
+coordenadas: 37.74593, -119.53305
 portada: /wp-content/uploads/2022/06/img_0297.jpg
 etiquetas: [autoproteccion, chimenea, fisura, half dome, Noel, ryan]
 ---

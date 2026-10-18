@@ -10,8 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2019-05-01
 material: Juego de friends y empotradores, muchas cintas largas
 horario: 2 horas de aprox, 7:30 de escalada, y otras 2 de descenso
-coordenadas: 42.06854, 0.68471
-coordenadasAuto: true
+coordenadas: 42.06000, 0.68000
 portada: /wp-content/uploads/2019/05/img_20190501_170221.jpg
 etiquetas: [autoproteccion, caliza, clavos, delfos, desequipada, nadia, pared de catalunya, totem]
 ---

@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2024-08-04
 material: un juego de friend, repitiendo pequeños
 horario: algo menos de 7 horas
+coordenadas: 45.85180, 6.90006
 portada: /wp-content/uploads/2024/12/20240804_133048.jpg
 etiquetas: [alpes, autoproteccion, chamonix, courmayeur, diedro, fisura, glaciar, grand capucin, rapel, suizos, xavi]
 ---

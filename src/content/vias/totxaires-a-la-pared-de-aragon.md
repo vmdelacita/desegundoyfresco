@@ -11,7 +11,6 @@ fechaEscalada: 2020-03-14
 material: "Friends hasta el Camalot #2, repitiendo casi todos. Un buen juego de empotradores, y muchas cintas largas."
 horario: 10 horas en pared, 16 de coche a coche
 coordenadas: 42.07462, 0.67858
-coordenadasAuto: true
 portada: /wp-content/uploads/2020/03/img_20200314_142628-01.jpeg
 etiquetas: [autoproteccion, caída, camalot, totem, totxaires, xavi]
 ---

@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2024-08-19
 material: un juego de friends
 horario: 3 horas de pie de vía a cima
+coordenadas: 43.20200, -4.81871
 portada: /wp-content/uploads/2024/12/20240819_211025.jpg
 etiquetas: [autoproteccion, marta, naranjo de bulnes, picu, rapel, urriellu]
 ---

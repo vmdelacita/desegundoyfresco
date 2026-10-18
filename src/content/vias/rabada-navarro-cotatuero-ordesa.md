@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2018-06-17
 material: Juego de friends y empotradores, repitiendo del 0.5 al 2 de camalot. El 4 puede ser útil.
 horario: 12 horas en pared, unas 15 horas de coche a coche
+coordenadas: 42.65534, -0.04929
 portada: /wp-content/uploads/2018/06/img_20180617_130837.jpg
 etiquetas: [Arnau, artificial, autoproteccion, libre, navarro, rabada, techo]
 ---

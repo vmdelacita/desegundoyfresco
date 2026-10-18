@@ -2,7 +2,7 @@
 titulo: Le chic, le chèque, le choc al Petit Clocher du Portalet (200m, 6c)
 fecha: 2024-12-01
 autor: otnoesmusica
-zona: [Otros países, Francia]
+zona: [Otros países, Suiza]
 grado: 6c
 longitud: 200
 roca: Granito
@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2024-07-29
 material: un juego de friends y unas 12 cintas
 horario: unas 4 horas
+coordenadas: 45.99670, 7.06541
 portada: /wp-content/uploads/2024/12/estiu24_002.jpg
 etiquetas: [Adherencia, autoproteccion, fisura, Petit Clocher, rapel, Suiza, xavi]
 ---

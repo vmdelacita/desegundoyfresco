@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2018-06-18
 material: "unas 15 cintas, juego de friends hasta el #3 de Camalot"
 horario: unas 4 horas, 5 de coche a coche
+coordenadas: 41.63012, 1.86633
 portada: /wp-content/uploads/2018/07/img_20180618_175322_hdr.jpg
 etiquetas: [Arnau, artifo, autoproteccion, Diables, diedro, ganivet, Montserrat, placa]
 ---

@@ -9,6 +9,7 @@ roca: Caliza
 tipo: Vía larga
 fechaEscalada: 2014-06-22
 material: Juego de empotradores, vagas y 10 cintas (varias largas). Muy recomendables friends, nosotros los echamos de menos.
+coordenadas: 41.24919, 1.89236
 portada: /wp-content/uploads/2015/02/2014-06-22-11-19-08.jpg
 etiquetas: [avenç, carlos, falconera, garraf, ignasi, rapel]
 ---

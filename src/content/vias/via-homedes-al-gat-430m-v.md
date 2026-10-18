@@ -9,6 +9,7 @@ roca: Caliza
 tipo: Vía larga
 fechaEscalada: 2015-08-02
 material: juego de friends y empotradores. Unas 10 cintas si se van a empalmar largos.
+coordenadas: 42.24518, 1.71637
 portada: /wp-content/uploads/2015/09/pedraforca.jpg
 etiquetas: [autoproteccion, caliza, Clásica, ensamble, ignasi, pedraforca]
 ---

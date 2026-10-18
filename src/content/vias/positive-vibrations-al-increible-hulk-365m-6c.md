@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2022-06-09
 material: "dos juegos de friends del totem negro al camalot #3, con triples del totem azul al naranja."
 horario: 6-7 horas
+coordenadas: 38.12232, -119.41701
 portada: /wp-content/uploads/2022/09/gopr0554.jpg
 etiquetas: [autoprotección, diedro, fisura, increíble hulk, Noel, rapel, totem]
 ---

@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2021-04-29
 material: "un juego de empotradores y de friends, del totem azul al camalot #2"
 horario: 4 horas y media
+coordenadas: 42.24518, 1.71637
 portada: /wp-content/uploads/2021/04/img20210329135321.jpg
 etiquetas: [Arnau, autoproteccion, caliza, monodedo, pedraforca, placa, pollego inferior]
 ---

@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2015-12-19
 material: "12 expres, juego de empotradores y de friends hasta el #3"
 horario: 5 horas
+coordenadas: 41.60698, 1.80722
 portada: /wp-content/uploads/2016/01/2015-12-19-16-43-01.jpg
 etiquetas: [A1, Arnau, artificial, autoproteccion, diedro, fisura, techo]
 ---

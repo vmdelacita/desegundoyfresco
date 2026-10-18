@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-10-30
 material: Se puede pasar con 10 cintas, nosotros utilizamos un juego de empotradores y friends medianos, y algunas bagas sabineras.
 horario: 3 horas y media
+coordenadas: 40.08117, -0.53937
 portada: /wp-content/uploads/2016/11/img_1604.jpg
 etiquetas: [autoproteccion, caliza, chimenea, diedro, estrecho de mijares, gp, nadia, parabolt, presa, rapel]
 ---

@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2021-08-24
 material: "Friends hasta el #4, repitiendo los pequeños, y empotradores. Muchas cintas largas y dos cuerdas."
 horario: 12 horas en pared, 17 de tienda a tienda
+coordenadas: 42.77372, -0.14621
 portada: /wp-content/uploads/2021/08/descens.jpg
 etiquetas: [Arnau, autoproteccion, glaciar, vivac]
 ---

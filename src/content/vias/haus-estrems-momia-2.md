@@ -9,6 +9,7 @@ roca: Conglomerado
 tipo: Vía larga
 fechaEscalada: 2014-12-21
 material: "8 cintas. Pueden ser útiles los Camalot #1-3 para disminuir un poco la expo del segundo largo."
+coordenadas: 41.59348, 1.83118
 portada: /wp-content/uploads/2015/01/2014-12-21-08-33-11.jpg
 etiquetas: [Antonio García Picazo, ignasi, la Momia]
 ---

@@ -9,6 +9,7 @@ roca: Granito
 tipo: Vía larga
 fechaEscalada: 2014-12-30
 material: Camalots 1 y 2 y tricams a falta de aliens. 8 cintas (algunas largas)
+coordenadas: 40.87846, -3.60818
 portada: /wp-content/uploads/2015/01/img_20141230_140949580.jpg
 etiquetas: [Adherencia, carlos, Clásica, javi, La Cabrera, V]
 ---

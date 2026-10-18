@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2022-05-18
 material: dos juegos del 0.2 al 3 y un 4
 horario: 7:30 h
+coordenadas: 37.72822, -119.63722
 portada: /wp-content/uploads/2022/06/gopr0277_1652919559312.jpg
 etiquetas: [autoprotección, diedro, east buttress, el Capitan, fisura, Noel, patio, yosemite]
 ---

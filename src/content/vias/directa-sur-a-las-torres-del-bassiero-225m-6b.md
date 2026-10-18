@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2021-07-11
 material: "un juego de friends hasta el #4 de Camalot, repitiendo del 0.5 al 2"
 horario: 6 horas
+coordenadas: 42.60540, 0.99726
 portada: /wp-content/uploads/2021/07/img20210711140033.jpg
 etiquetas: [aiguestortes, Arnau, autoproteccion, diedro, directa, fisura, mestres-lleonart, rapel, vivac]
 ---

@@ -9,6 +9,7 @@ roca: Conglomerado
 tipo: Vía larga
 fechaEscalada: 2015-04-06
 material: 14 expres, alguna vaga, una plaqueta recuperable y un estribo
+coordenadas: 41.60470, 1.80903
 portada: /wp-content/uploads/2015/04/g0020389.jpg
 etiquetas: [Ae, Arestas Brucs, Clásica, Pere, Talaia Gran]
 comentarios:

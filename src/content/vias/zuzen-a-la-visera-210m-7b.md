@@ -7,6 +7,7 @@ longitud: 210
 fechaEscalada: 2025-03-01
 material: 16 cintas
 horario: unas 6 horas
+coordenadas: 42.34890, -0.72410
 etiquetas: []
 borrador: true
 ---

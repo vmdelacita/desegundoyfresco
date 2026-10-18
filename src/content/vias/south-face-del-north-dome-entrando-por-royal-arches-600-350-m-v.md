@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2022-05-16
 material: 2 juegos del 0.2 al 3 y un 4, más empotradores
 horario: 4 + 5,5 h, 15 h de coche a coche.
+coordenadas: 37.75238, -119.56078
 portada: /wp-content/uploads/2022/06/img20220516092132.jpg
 etiquetas: [autoproteccion, bavaresa, fisura, Noel, North dome, Royal arches, south face, yosemite]
 ---

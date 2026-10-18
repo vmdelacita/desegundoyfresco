@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-10-08
 material: "10 expres, friends pequeños (hasta el #1) y tricams pequeños"
 horario: Más de una hora de aproximación, como 4 horas de subida, hora y media de descenso y otra hora de vuelta.
+coordenadas: 41.59821, 1.80603
 portada: /wp-content/uploads/2016/10/img_20161008_165716.jpg
 etiquetas: [agujero, arcarons, aresta arcarons, Armand Ballart, Arnau, artificial, cresta, exposición, merlet, Montserrat, nadia, placa, plecs, plecs del llibre, rapel]
 ---

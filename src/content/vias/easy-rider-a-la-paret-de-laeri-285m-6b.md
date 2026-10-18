@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-07-31
 material: 10 expres, vagas y camalots pequeños (0.3 - 0.5)
 horario: 4-5 horas
+coordenadas: 41.61792, 1.84402
 portada: /wp-content/uploads/2016/08/20160731_172446.jpg
 etiquetas: [6b, aeri, Arnau, easy rider, exposición, hendrix, trampas]
 ---

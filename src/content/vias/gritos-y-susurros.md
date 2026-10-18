@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-03-13
 material: "Dos cuerdas de 60m, unas 15 expres (alguna larga) juego de empotradores y de friends desde el #0.2 al #3 de Camalot, repitiendo el #1."
 horario: unas 8 horas
+coordenadas: 42.06000, 0.68000
 portada: /wp-content/uploads/2016/03/ager0020.jpg
 etiquetas: [autoproteccion, caliza, Clásica, diedro, fisura, gerard]
 ---

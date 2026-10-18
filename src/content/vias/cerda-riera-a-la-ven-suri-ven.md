@@ -9,6 +9,7 @@ roca: Conglomerado
 tipo: Vía larga
 fechaEscalada: 2014-11-08
 material: 14 expres, juego de empotradores (útiles tricam) y vagas para sabinas.
+coordenadas: 41.60640, 1.78491
 portada: /wp-content/uploads/2015/02/img_20141108_171546152_hdr.jpg
 etiquetas: [agulles, Bandereta, GEDE, gerard, Montserrat, Ven-Suri-Ven]
 ---

@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-05-21
 material: unas 20 exprés, un juego de friends y otro de empotradores. El famoso Camalot del 4 es útil, pero no imprescindible.
 horario: 5 horas
+coordenadas: 41.60068, 1.82273
 portada: /wp-content/uploads/2016/05/img-20160522-wa0000-01.jpeg
 etiquetas: [Arnau, artificial, autoproteccion, cavall, Clásica, diedro, estribos, fisura, gerard, Montserrat]
 ---

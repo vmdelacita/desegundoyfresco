@@ -9,6 +9,7 @@ roca: Granito
 tipo: Vía larga
 fechaEscalada: 2015-08-23
 material: Un juego de friends y aliens es suficiente, aunque conviene repetir algún número intermedio si se van a empalmar largos. ¿En torno a 10 cintas? Ah, y cámara de fotos.
+coordenadas: 40.77053, -3.87762
 portada: /wp-content/uploads/2015/08/2015-08-23-11-27-19.jpg
 etiquetas: [autoproteccion, fisura, jaboncillo, Noel, pájaro, pedriza, setas, sur clásica]
 ---

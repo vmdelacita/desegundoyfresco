@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2019-08-16
 material: 15 expres
 horario: 4 horas
+coordenadas: 44.96105, 6.24298
 portada: /wp-content/uploads/2019/10/principal.jpg
 etiquetas: [Arnau, dibona, equipada, love climbing, rapel, visite obligatoire]
 ---

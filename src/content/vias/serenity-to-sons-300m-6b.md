@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2022-05-29
 material: "2 totems negros, 3 piezas entre el #0.3 y el #2 y un #3 (mejor llevar 2). Más empotradores y unas 10 cintas."
 horario: 4:30 h
+coordenadas: 37.74779, -119.57208
 portada: /wp-content/uploads/2022/06/img202205281257462.jpg
 etiquetas: [autoproteccion, fisura, Noel, rapel, serenity crack, sons of yesterday, totem, yosemite]
 ---

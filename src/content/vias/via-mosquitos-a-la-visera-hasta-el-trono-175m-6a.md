@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-05-15
 material: 12 expres
 horario: unas 3 horas
+coordenadas: 42.34890, -0.72410
 portada: /wp-content/uploads/2016/05/20160515_153342_hdr.jpg
 etiquetas: [equipado, error, Noel, travesia, trono]
 ---

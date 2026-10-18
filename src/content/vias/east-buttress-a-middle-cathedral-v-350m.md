@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2022-05-08
 material: dos juegos del 0.3 - 4
 horario: 4-5 horas
+coordenadas: 37.71946, -119.63511
 portada: /wp-content/uploads/2022/06/img_0134.jpg
 etiquetas: [A0, autoprotección, diedro, fisura, middle cathedral, Noel, yosemite]
 comentarios:

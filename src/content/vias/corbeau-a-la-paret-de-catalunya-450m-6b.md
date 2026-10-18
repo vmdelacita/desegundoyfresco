@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2022-11-12
 material: "Para ir bien, dos juegos de friends hasta el #1 y uno de cada del #2, #3 y #4. Sin un #6, hay que hacer el 6b de off-width a pelo. Útiles tricams."
 horario: 8 horas
+coordenadas: 42.06000, 0.68000
 portada: /wp-content/uploads/2022/11/whatsapp-image-2022-11-13-at-19.39.28.jpeg
 etiquetas: [Arnau, autoproteccion, Catalunya, chimenea, corbeau, diedro, fisura, off-width]
 ---

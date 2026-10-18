@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2021-05-22
 material: "unas 20 cintas, un juego de friends hasta el #4, tascones y 2-3 plaquetas recuperables."
 horario: 8 horas
+coordenadas: 41.61792, 1.84402
 portada: /wp-content/uploads/2021/05/img20210522185719.jpg
 etiquetas: [aeri, Arnau, autoprotección, bavaresa, Montserrat, valentin casanovas]
 ---

@@ -10,8 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2017-03-12
 material: "unas 10 cintas, empotradores y friends, repitiendo del #0.5 al #1 de Camalot"
 horario: 6 horas + 2 horas de aproximación + 1.5 de vuelta
-coordenadas: 42.08160, 0.64665
-coordenadasAuto: true
+coordenadas: 42.07462, 0.67858
 portada: /wp-content/uploads/2017/03/img_20170312_174206_hdr.jpg
 etiquetas: [alex, autoproteccion, caliza, fisura, pilastra dels voltors, placa]
 ---

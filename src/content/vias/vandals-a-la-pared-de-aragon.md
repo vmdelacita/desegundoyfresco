@@ -10,8 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2019-12-15
 material: Juego de totems, repitiendo del azul al rojo. Tricams y empotradores útiles.
 horario: 7 horas, más 2 de aproximación y casi otras 2 de descenso
-coordenadas: 42.07455, 0.67184
-coordenadasAuto: true
+coordenadas: 42.07462, 0.67858
 portada: /wp-content/uploads/2019/12/img_20191215_091655.jpg
 etiquetas: [autoproteccion, feixa, pared de aragón, pilastra dels voltors, vandals, xavi]
 comentarios:

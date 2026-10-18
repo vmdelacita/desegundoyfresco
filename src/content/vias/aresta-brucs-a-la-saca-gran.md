@@ -9,6 +9,7 @@ roca: Conglomerado
 tipo: Vía larga
 fechaEscalada: 2014-12-01
 material: Con unas 6-7 cintas se hace, aunque algún tricam (rosa y rojo) y una vaga para lazar una sabina pueden ser útiles para disminuir la exposición.
+coordenadas: 41.60640, 1.78491
 portada: /wp-content/uploads/2015/02/autofoto1.jpg
 etiquetas: [Arestas Brucs, David, Pere, Rosa]
 ---

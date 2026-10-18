@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2021-04-18
 material: "Un juego de friends, del totem negro al camalot #3, más empotradores"
 horario: unas 5 horas
+coordenadas: 42.06000, 0.68000
 portada: /wp-content/uploads/2021/04/original_041776d2-2538-45d4-900c-fb784d5a7d6a_img20210418171730.jpg
 etiquetas: [alex, autoproteccion, caida, caliza, Catalunya, fogata, gerard, globeros en alaska, movil, paret de catalunya, placa, xavi]
 ---

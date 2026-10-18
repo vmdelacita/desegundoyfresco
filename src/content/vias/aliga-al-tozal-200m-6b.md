@@ -11,7 +11,6 @@ fechaEscalada: 2026-07-21
 material: "Un juego de totem, repitiendo del azul al morado y un camalot #3"
 horario: unas 4 horas
 coordenadas: 42.66667, -0.07351
-coordenadasAuto: true
 portada: /wp-content/uploads/2026/07/20260722_115307.jpg
 etiquetas: [autoprotección, fisura, Noel, techo]
 ---

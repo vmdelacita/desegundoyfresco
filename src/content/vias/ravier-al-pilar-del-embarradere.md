@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2020-09-12
 material: nosotros llevamos dos juegos de friends, y empotradores, pero no hace falta repetir más que del 0.4 al 0.75. Tampoco hace falta llevar el camalot 4. Unas 14 cintas
 horario: 7 horas de vía, 13 horas de tienda a tienda
+coordenadas: 42.84369, -0.43733
 portada: /wp-content/uploads/2020/09/img20200912163354.jpg
 etiquetas: [Arnau, autoproteccion, caida, embarradere, midi, navarro, rabada, Riglos, vivac]
 ---

@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2021-12-31
 material: un juego de friends, mejor cuanto más grandes.
 horario: unas 3 horas
+coordenadas: 40.87846, -3.60818
 portada: /wp-content/uploads/2022/01/img-20211231-wa0021.jpg
 etiquetas: [autoproteccion, bavaresa, cabrera, camalot, fisura, marta, Noel, paula, pico de la miel]
 ---

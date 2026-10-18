@@ -10,8 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2019-11-24
 material: 15 expres
 horario: fuimos muy lentos, tranquilamente 4 horas
-coordenadas: 41.59558, 1.83126
-coordenadasAuto: true
+coordenadas: 41.59348, 1.83118
 portada: /wp-content/uploads/2019/11/img_20191124_160351.jpg
 etiquetas: [Arnau, brown sugar, carlos, exposición, momia, rapel]
 ---

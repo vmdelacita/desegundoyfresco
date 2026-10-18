@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2021-03-13
 material: un juego de friends, repitiendo del totem azul al camalot rojo, más empotradores y tricams. Si vas justo de grado, ~~mínimo un gancho~~ mejor no te metas.
 horario: 9 horas
+coordenadas: 42.06000, 0.68000
 portada: /wp-content/uploads/2021/03/img20210313192639.jpg
 etiquetas: [Arnau, autoproteccion, caliza, paret de catalunya, placa, totem]
 ---

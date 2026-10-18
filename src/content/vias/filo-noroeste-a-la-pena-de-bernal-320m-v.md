@@ -11,7 +11,6 @@ fechaEscalada: 2017-12-15
 material: unas 10 expres
 horario: 4 horas
 coordenadas: 20.74985, -99.94598
-coordenadasAuto: true
 portada: /wp-content/uploads/2017/12/img_6522-2.jpg
 etiquetas: [bernal, nadia, rapel]
 ---

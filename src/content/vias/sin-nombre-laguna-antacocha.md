@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2018-07-30
 material: unas 15 expres. Algún friend o empotrador mediano puede ser útil para aumentar la protección.
 horario: unas 3 horas
+coordenadas: -9.70345, -77.49636
 portada: /wp-content/uploads/2018/08/startrail_antacocha.jpg
 etiquetas: [andes, antacocha, laguna, love climbing, miguel, nadia]
 comentarios:

@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2022-05-12
 material: "Dos juegos del 0.2 al 4, microempotradores (que no usamos), empotradores normales y offset. Un camhook estrecho. Aparte, material de big-wall: poleas, jumars, etc."
 horario: 6h + 7h, repartidas en dos días.
+coordenadas: 37.74750, -119.55869
 portada: /wp-content/uploads/2022/06/g0020243_1652417273495.jpg
 etiquetas: [artificial, big wall, cam-hook, fisura, Noel, petate, south face, totem, washington column, yosemite]
 ---

@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2021-08-22
 material: "14 cintas y un juego de friends hasta el #2"
 horario: unas 6 horas de vía
+coordenadas: 42.68942, -0.02336
 portada: /wp-content/uploads/2021/08/original_7716dd4a-b0e1-4cc0-89c1-8998b8a84ce1_img20210822113911.jpg
 etiquetas: [Arnau, caliza, equipado, gavarnie, marbore]
 ---

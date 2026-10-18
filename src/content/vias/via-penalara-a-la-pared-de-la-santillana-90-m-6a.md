@@ -8,6 +8,7 @@ longitud: 90
 roca: Granito
 tipo: Vía larga
 material: Alien rojo y Camalot amarillo (opcional) y unos 7 u 8 anillos de cinta o cordinos **Fecha:** 20 de mayo de 2017 **Horario:** unas 2 horas
+coordenadas: 40.77613, -3.86326
 portada: /wp-content/uploads/2017/05/img_20170520_115121113_hdr-e1495791179621.jpg
 etiquetas: [autoproteccion, Clásica, Noel, Pared de la Santillana, pedriza, Pere, setas]
 ---

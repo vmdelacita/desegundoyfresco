@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-01-31
 material: "16 cintas expres, juego de empotradores, juego de friends hasta el #3, una chapa recuperable y un cordino fino."
 horario: 7 horas y media (nosotros, que fuimos muy lentos)
+coordenadas: 41.61792, 1.84402
 portada: /wp-content/uploads/2016/02/img-20160131-wa0001.jpg
 etiquetas: [aeri, artificial, bavaresa, enero, gerard, Montserrat, vacio]
 ---

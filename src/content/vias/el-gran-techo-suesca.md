@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2018-04-15
 material: Juego de empotradores y friends, cintas largas. Hay dos reuniones sin montar.
 horario: 3 horas
+coordenadas: 5.10017, -73.77746
 portada: /wp-content/uploads/2018/04/img_0141.jpg
 etiquetas: [autoproteccion, Colombia, diedro, fisura, nadia, suesca, techo]
 ---

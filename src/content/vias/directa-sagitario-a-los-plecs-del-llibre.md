@@ -10,8 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2019-11-10
 material: 20 cintas y algunos friends pequeños (por respeto a la montaña, más que nada)
 horario: casi cuatro horas
-coordenadas: 41.59706, 1.80875
-coordenadasAuto: true
+coordenadas: 41.59821, 1.80603
 portada: /wp-content/uploads/2019/11/pano_20191110_151322-01.jpg
 etiquetas: [Armand Ballart, caida, Montserrat, plecs, plecs del llibre, rapel, xavi]
 ---

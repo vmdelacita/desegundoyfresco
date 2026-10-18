@@ -9,6 +9,7 @@ roca: Conglomerado
 tipo: Vía larga
 fechaEscalada: 2015-11-15
 material: 12 cintas y estribos. Puede venir bien algún tricam y alien para suavizar la exposición del primer largo
+coordenadas: 41.60640, 1.78491
 portada: /wp-content/uploads/2015/11/2015-11-15-16-53-04.jpg
 etiquetas: [Armand Ballart, Arnau, artificial]
 ---

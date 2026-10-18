@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2017-06-11
 material: Un juego de friends, doblando del 0.3 al 1, empotradores y cintas largas
 horario: unas 8-9 horas, nosotros que fuimos con la calma
+coordenadas: 42.06000, 0.68000
 portada: /wp-content/uploads/2017/06/img_20170611_063915-02.jpeg
 etiquetas: [Arnau, autoproteccion, caliza, diedro, frontal, nocturna]
 ---

@@ -10,8 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2017-07-30
 material: Juego de friends y empotradores. Cintas largas, la vía zigzaguea mucho.
 horario: unas 3 horas
-coordenadas: 42.28433, -0.70264
-coordenadasAuto: true
+coordenadas: 42.34891, -0.72812
 portada: /wp-content/uploads/2017/09/img_20170813_175122_hdr.jpg
 etiquetas: [6b, Arnau, exposición, puro, rapel]
 ---

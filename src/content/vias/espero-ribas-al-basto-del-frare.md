@@ -9,6 +9,7 @@ roca: Conglomerado
 tipo: Vía larga
 fechaEscalada: 2015-05-23
 material: friends, cordinos, una chapa recuperable...
+coordenadas: 41.60640, 1.78491
 portada: /wp-content/uploads/2015/05/2015-05-23-16-19-50.jpg
 etiquetas: [gerard, Max]
 ---

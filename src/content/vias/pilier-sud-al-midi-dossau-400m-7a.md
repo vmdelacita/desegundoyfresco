@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2021-08-20
 material: "dos juegos de friends hasta el camalot #1, y un 3."
 horario: 6 horas
+coordenadas: 42.84369, -0.43733
 portada: /wp-content/uploads/2021/08/original_20cd4ff4-ac13-4dfc-9851-2f9d0810f191_img20210821074104.jpg
 etiquetas: [Arnau, autoproteccion, fisura, midi]
 comentarios:

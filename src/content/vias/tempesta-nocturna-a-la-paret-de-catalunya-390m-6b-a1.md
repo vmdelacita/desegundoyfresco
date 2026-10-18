@@ -10,8 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2019-05-26
 material: Juego de friends hasta el Camalot 3, repitiendo los medianos, muchas cintas largas y empos.
 horario: 10 horas
-coordenadas: 42.07344, 0.68197
-coordenadasAuto: true
+coordenadas: 42.06000, 0.68000
 portada: /wp-content/uploads/2019/06/img_20190526_170219.jpg
 etiquetas: [autoproteccion, carlos, exposición, pared de catalunya, tempesta nocturna]
 ---

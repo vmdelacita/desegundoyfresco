@@ -9,6 +9,7 @@ roca: Conglomerado
 tipo: Vía larga
 fechaEscalada: 2015-07-19
 material: con 22 expres se hace, aunque pueden ser útiles los friends pequeños y los estribos
+coordenadas: 41.60640, 1.78491
 portada: /wp-content/uploads/2015/07/frares.jpg
 etiquetas: [artificial, bisbe, carlos, diedro, fisura, Isa, kebab, Noel, placa]
 ---

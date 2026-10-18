@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2023-02-21
 material: "juego de friends hasta el #4 y una cuerda de 60"
 horario: 11 horas y media de coche a coche
+coordenadas: 40.77613, -3.86326
 portada: /wp-content/uploads/2023/02/20230221_154020-1.jpg
 etiquetas: [Adherencia, autoproteccion, biologas, fisura, linkup, los guerreros, Noel, pajaro, pedriza, peñalara, platillo volante, rapel, santillana, setas]
 ---

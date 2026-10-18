@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-05-01
 material: 12 cintas expres y algunas bagas. Nosotros usamos también el Camalot 0.4 para la reunión intermedia.
 horario: fuimos muy lentos por la afluencia, 6.5 horas de subida y 2.5 de bajada por los rápeles.
+coordenadas: 42.34891, -0.72812
 portada: /wp-content/uploads/2016/05/img_20160515_160318748.jpg
 etiquetas: [adamelo, espolón, nadia, panzas, pisón]
 ---

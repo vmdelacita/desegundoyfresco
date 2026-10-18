@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-08-06
 material: "Juego de empotradores, friends (desde tamaño alien hasta camalot #3) y cordinillos. Reuniones a reforzar/limpias"
 horario: 1-2 horas
+coordenadas: 40.26019, -5.17284
 portada: /wp-content/uploads/2016/09/2016-08-06-16-00-57.jpg
 etiquetas: [abandono, aguja, autoproteccion, cordino, embarque, fisura, jeronimo lopez, Noel, pequeño galayo, reseña, torreon]
 ---

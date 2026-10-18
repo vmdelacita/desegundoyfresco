@@ -9,6 +9,7 @@ roca: Caliza
 tipo: Vía larga
 fechaEscalada: 2015-12-05
 material: unas 10 expres, algunos friends pequeños
+coordenadas: 38.63370, 0.07435
 portada: /wp-content/uploads/2015/12/2015-12-05-10-27-17.jpg
 etiquetas: [alicante, carlos, diedro, Noel, peñon de ifach, V]
 ---

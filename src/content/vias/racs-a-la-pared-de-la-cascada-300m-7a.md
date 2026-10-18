@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2021-09-04
 material: "Dos juegos de totem, un camalot #3 y #4. Tascones útiles, que no llevamos."
 horario: algo más de 6 horas y media
+coordenadas: 42.65971, -0.04130
 portada: /wp-content/uploads/2021/09/original_92d25b52-6553-47a1-b9cb-b4107e5e0864_img20210904134935.jpg
 etiquetas: [autoprotección, desplome, fisura, galvez, magnesio, racs, xavi]
 ---

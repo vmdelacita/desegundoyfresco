@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-04-30
 material: 12 cintas y algunas bagas. Un juego modesto de friends puede ser útil para ir más tranquilos, pero es prescindible
 horario: 2 horas
+coordenadas: 42.34521, -0.71527
 portada: /wp-content/uploads/2016/05/20160430_170421-011.jpeg
 etiquetas: [camalot, chimenea, Clásica, cored, nadia]
 ---

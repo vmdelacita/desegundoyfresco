@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2022-02-19
 material: 18 cintas expres
 horario: 4 horas
+coordenadas: 42.34891, -0.72812
 portada: /wp-content/uploads/2022/02/img-20220212-wa0014.jpg
 etiquetas: [alex, bolos, gerard, pisón, rapel]
 comentarios:

@@ -11,7 +11,6 @@ fechaEscalada: 2017-10-13
 material: "empotradores, un juego de friends (repitiendo del #0.5 al #2 de camalot) y muchas cintas largas. MUY RECOMENDABLE el #4"
 horario: unas 8 horas, con la calma
 coordenadas: 40.26019, -5.17284
-coordenadasAuto: true
 portada: /wp-content/uploads/2017/10/foto-12-10-17-18-40-56.jpg
 etiquetas: [autoproteccion, ayuso, cresterio, diedro, fisura, fran, friends, guantes, innominata, off-width, rapel, torreon]
 ---

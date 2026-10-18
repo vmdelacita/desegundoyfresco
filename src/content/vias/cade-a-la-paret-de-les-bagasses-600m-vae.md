@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-04-24
 material: "12 cintas, unos cuantos cordinos/cintas cosidas, juego de empotradores y de friends hasta el #1, un estribo por cabeza"
 horario: 8 horas y media
+coordenadas: 42.03988, 0.88393
 portada: /wp-content/uploads/2016/04/img-20160425-wa0000.jpg
 etiquetas: [Arnau, artificial, bagasses, cade, embarque, ignasi, rapel, V]
 ---

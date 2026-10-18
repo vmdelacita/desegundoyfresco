@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2021-05-09
 material: un juego de friends, muchas vagas, 3 plaquetas recuperables y empotradores (tricams útiles). Se pasa sin clavar.
 horario: 6 horas y media
+coordenadas: 41.61792, 1.84402
 portada: /wp-content/uploads/2021/05/img20210509155848-e1620811794130.jpg
 etiquetas: [aeri, alex, autoproteccion, diedro, fisura, Marc, Montserrat, rostoll, tim]
 comentarios:

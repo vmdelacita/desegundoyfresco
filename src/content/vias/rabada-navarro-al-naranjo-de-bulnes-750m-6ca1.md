@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2017-08-02
 material: Un juego de friends, uno de empotradores, 16 cintas (la mitad largas) y muchas vagas. Mejor repetir algún friend mediano
 horario: 11 horas
+coordenadas: 43.20200, -4.81871
 portada: /wp-content/uploads/2017/09/img_20170803_100239_hdr-01.jpg
 etiquetas: [Arnau, autoproteccion, bulnes, diedro, exposición, fisura, helicóptero, naranjo, navarro, picu, placa, rabada, rapel, urriellu]
 ---

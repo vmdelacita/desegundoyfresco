@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2024-07-27
 material: "juego de friends hasta el #3, repitiendo medianos, y empotradores"
 horario: 3 horas y media
+coordenadas: 45.87806, 6.88924
 portada: /wp-content/uploads/2024/10/20240727_062927-edit.jpg
 etiquetas: [aiguille du midi, autoproteccion, chamonix, diedro, glaciar, Kholmann, Noel, piolet, rapel]
 ---

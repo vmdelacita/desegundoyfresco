@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2021-11-13
 material: "12 cintas y un juego discreto de friends (nosotros llevamos del #0.4 al #2)"
 horario: 6 horas
+coordenadas: 42.34891, -0.72812
 portada: /wp-content/uploads/2021/11/img20211114121433.jpg
 etiquetas: [Arnau, bolera, desplome, pisón]
 comentarios:

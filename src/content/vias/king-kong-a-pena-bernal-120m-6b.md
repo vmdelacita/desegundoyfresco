@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2017-12-16
 material: 12 expres
 horario: 3 horas
+coordenadas: 20.74985, -99.94598
 portada: /wp-content/uploads/2018/05/img_0357-2.jpg
 etiquetas: [bernal, king kong, nadia, rapel]
 ---

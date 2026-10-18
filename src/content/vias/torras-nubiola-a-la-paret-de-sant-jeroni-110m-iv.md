@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2021-07-15
 material: friends pequeños y tricams útiles, aunque se pasa sin ellos.
 horario: unas 2 horas de escalada. Bastante más de aprox y descenso.
+coordenadas: 41.60575, 1.81080
 portada: /wp-content/uploads/2021/07/img20210715142307.jpg
 etiquetas: [autoproteccion, chimenea, marta, Montserrat, Sant Jeroni, torras, totem, tricam]
 ---

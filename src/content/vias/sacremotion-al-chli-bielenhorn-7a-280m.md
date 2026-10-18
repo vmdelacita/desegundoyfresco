@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2023-07-11
 material: un juego de friends. La vía está semiequipada
 horario: unas 4-5 horas
+coordenadas: 46.59806, 8.43527
 portada: /wp-content/uploads/2023/11/20230711_143457.jpg
 etiquetas: [Adherencia, Arnau, autoproteccion, fisura, furka]
 ---

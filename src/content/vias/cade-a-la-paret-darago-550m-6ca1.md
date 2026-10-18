@@ -10,8 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2017-04-02
 material: unas 15 expres, un juego de friends y empotradores
 horario: Una hora y cuarto de aproximación, 10 horas de vía y dos horas de descenso. Un buen tute, vaya
-coordenadas: 42.08588, 0.68431
-coordenadasAuto: true
+coordenadas: 42.07462, 0.67858
 portada: /wp-content/uploads/2017/04/img_20170402_195156-01.jpeg
 etiquetas: [Arnau, artificial, autoproteccion, bavaresa, cade, caliza, chimenea, diedro, exposición, fisura, pared de aragón, patio, tapia, travesia]
 ---

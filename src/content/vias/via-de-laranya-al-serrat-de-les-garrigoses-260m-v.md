@@ -9,6 +9,7 @@ roca: Conglomerado
 tipo: Vía larga
 fechaEscalada: 2015-01-25
 material: Juego de friends (del 0.5 al 3) y de empotradores. 10 cintas (algunas largas)
+coordenadas: 41.57335, 1.83329
 portada: /wp-content/uploads/2015/01/2015-01-25-12-01-25.jpg
 etiquetas: [Clásica, Collbato, gerard, V]
 ---

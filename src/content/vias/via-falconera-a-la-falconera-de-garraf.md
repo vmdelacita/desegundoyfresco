@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-01-24
 material: 10 cintas, juego de friends (no imprescindible) y de empotradores, cordinos para puentes de roca.
 horario: 2 horas
+coordenadas: 41.24919, 1.89236
 portada: /wp-content/uploads/2016/01/2016-01-24-13-41-37.jpg
 etiquetas: [Arnau, aventura, caliza, falconera, garraf, ignasi, pas de la mala dona, rapel, tren]
 comentarios:

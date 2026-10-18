@@ -11,7 +11,6 @@ fechaEscalada: 2018-04-13
 material: cintas largas, un juego de friends y uno de empotradores
 horario: 3 horas
 coordenadas: 5.10017, -73.77746
-coordenadasAuto: true
 portada: /wp-content/uploads/2018/04/img_0070-2.jpg
 etiquetas: [autoproteccion, Colombia, diedro, fisura, mecánico, nadia, suesca, techo]
 ---

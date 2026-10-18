@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2018-05-13
 material: friends, tascons i cintes.
 horario: 6 hores
+coordenadas: 42.06000, 0.68000
 portada: /wp-content/uploads/2018/05/img-20180513-wa0021.jpg
 etiquetas: [Arnau, autoproteccion, caida, catala, Sergi]
 ---

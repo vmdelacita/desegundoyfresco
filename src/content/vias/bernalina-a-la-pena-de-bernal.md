@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2017-12-12
 material: unas 10 expres
 horario: unas 3 horas y media
+coordenadas: 20.74985, -99.94598
 portada: /wp-content/uploads/2017/12/img_0329.jpg
 etiquetas: [bernal, nadia, rapel, rescate, V+]
 comentarios:

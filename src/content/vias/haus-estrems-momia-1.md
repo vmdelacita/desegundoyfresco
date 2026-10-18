@@ -7,6 +7,7 @@ grado: 6a
 longitud: 145
 roca: Conglomerado
 tipo: Vía larga
+coordenadas: 41.59348, 1.83118
 portada: /wp-content/uploads/2015/02/2014-12-20-11-26-40.jpg
 etiquetas: [Conglomerado, Montserrat, Sant Benet]
 ---

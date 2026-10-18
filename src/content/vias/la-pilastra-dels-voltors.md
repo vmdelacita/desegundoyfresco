@@ -10,6 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-11-13
 material: "Juego de friends (mejor repetir del #0.5 al #2 de Camalot), juego de empotradores, vagas y cintas largas para triangular reunión."
 horario: 5 horas y media (yendo con calma). La aproximación nos llevó como dos horas y el descenso, una.
+coordenadas: 42.07462, 0.67858
 portada: /wp-content/uploads/2016/11/20161113_093110_hdr-01.jpeg
 etiquetas: [Arnau, artificial, autoproteccion, diedro, libre, pared de aragón, pilastra dels voltors]
 ---

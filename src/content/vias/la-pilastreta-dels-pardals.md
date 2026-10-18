@@ -10,8 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2016-11-12
 material: Un juego de friends y empotradores. Tricams rojo y rosa pueden ser útiles
 horario: 1 hora de aproximación, 2 y media de vía y otra hora de descenso
-coordenadas: 42.07353, 0.66832
-coordenadasAuto: true
+coordenadas: 42.07462, 0.67858
 portada: /wp-content/uploads/2016/11/20161113_140507-01.jpeg
 etiquetas: [Arnau, autoproteccion, caliza, fisuras, oriol, pared de aragón, pilastra dels voltors, pilastreta dels pardals]
 ---

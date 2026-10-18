@@ -10,8 +10,7 @@ tipo: Vía larga
 fechaEscalada: 2017-04-29
 material: Un juego de friends y unas 15 cintas
 horario: unas 5 horas
-coordenadas: 41.54307, 2.07079
-coordenadasAuto: true
+coordenadas: 41.61792, 1.84402
 portada: /wp-content/uploads/2017/05/img_20170423_115330_edited.jpg
 etiquetas: [aeri, Arnau, autoproteccion, caida, carlos, diedro, Montserrat, placa, sostres]
 ---

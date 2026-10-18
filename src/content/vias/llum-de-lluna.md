@@ -1,5 +1,5 @@
 ---
-titulo: Llum de lluna (215m, 6b)
+titulo: Llum de lluna a Sa Gubia (215m, 6b)
 fecha: 2015-03-07
 autor: otnoesmusica
 zona: [Mallorca]
@@ -9,6 +9,7 @@ roca: Caliza
 tipo: Vía larga
 fechaEscalada: 2015-03-07
 material: Un buen puñado de cintas y crema del sol.
+coordenadas: 39.69439, 2.67337
 portada: /wp-content/uploads/2015/07/gopr0359.jpg
 etiquetas: [carlos, Pere, retirada, Sa Gubia]
 ---

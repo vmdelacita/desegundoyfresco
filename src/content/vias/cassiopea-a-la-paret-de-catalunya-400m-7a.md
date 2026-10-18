@@ -11,7 +11,6 @@ fechaEscalada: 2023-11-18
 material: dos juegos de friends hasta el 1, más el 2, 3, y 4 de Camalot
 horario: 8 horas y media
 coordenadas: 42.06000, 0.68000
-coordenadasAuto: true
 portada: /wp-content/uploads/2023/11/20231118_075720.jpg
 etiquetas: [Arnau, autoproteccion, cassiopea, fisura, miku]
 comentarios:
